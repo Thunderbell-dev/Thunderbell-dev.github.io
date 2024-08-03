@@ -88,7 +88,7 @@ nav {
         margin: 0;
     }
 
-    li:hover > .submenu {
+    li:hover > .submenu2 {
         display: block;
     }
 
@@ -102,7 +102,7 @@ nav {
         background-color: #f0f0f0;
     }
 
-    .submenu {
+    .submenu2 {
         display: none;
         position: absolute;
         top: 0;

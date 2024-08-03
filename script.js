@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Loop through each menu item and add a click event listener
     menuItems.forEach(function(item) {
         item.addEventListener('click', function(event) {
-            // Prevent default link behavior
-            event.preventDefault();
+            // Prevent default link behavior only if not clicking on submenu2 links
+            if (!event.target.closest('.submenu2')) {
+                event.preventDefault();
+            }
 
             // Close all other open submenus
             menuItems.forEach(function(otherItem) {
