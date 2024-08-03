@@ -1,0 +1,5 @@
+Wooden Stick Level 1
+Wooden Stick Level 4
+Wooden Sword Level 7
+Wooden Hammer Level 10
+Heavy Wooden Hammer Level 13
