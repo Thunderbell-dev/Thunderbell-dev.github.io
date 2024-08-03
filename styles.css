@@ -88,6 +88,10 @@ nav {
         margin: 0;
     }
 
+    li:hover > .submenu {
+        display: block;
+    }
+
     li a {
         padding: 10px;
         display: block;
@@ -96,6 +100,16 @@ nav {
 
     li a:hover {
         background-color: #f0f0f0;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        width: 150px;
     }
 }
 

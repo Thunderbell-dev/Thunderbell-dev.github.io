@@ -1,2 +1,2 @@
-# Thunderbell-dev.github.io
+# Thunder Wiki
 Thunder Wiki
