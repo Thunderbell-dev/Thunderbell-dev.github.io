@@ -1,33 +1,7 @@
-// Function to fetch the item list from the server
-function loadItems() {
-    fetch('data/all_itemlist.txt')
-        .then(response => response.text())
-        .then(data => {
-            var lines = data.split('\n');
-            var itemList = document.getElementById('itemList');
-            
-            // Clear any existing list items
-            itemList.innerHTML = '';
-
-            // Create a list item for each line in the file
-            lines.forEach(function(line) {
-                if (line.trim() !== '') { // Skip empty lines
-                    var li = document.createElement('li');
-                    li.textContent = line.trim();
-                    li.classList.add('hidden');
-                    itemList.appendChild(li);
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching the item list:', error);
-        });
-}
-
 // Function to search within the list
 function search() {
     var input = document.getElementById('searchInput').value.toLowerCase().trim();
-    var items = document.querySelectorAll('#itemList li');
+    var items = document.querySelectorAll('#itemList div');
     
     if (input === '') {
         // Hide all items if the search input is empty
