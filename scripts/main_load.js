@@ -2,7 +2,7 @@
 async function loadItems() {
     try {
         // Fetch the data and wait for the response
-        const response = await fetch('data/all_itemlist.txt');
+        const response = await fetch('database/all_itemlist.txt');
         
         // Check if the response is OK
         if (!response.ok) {
@@ -46,7 +46,7 @@ async function loadItems() {
 
                 // Set image source based on the identifier
                 if (identifier.toLowerCase().startsWith('weapon')) {
-                    img.src = `data/all_items_pics/weapon/${index + 1}.png`;
+                    img.src = `database/all_items_pics/weapon/${index + 1}.png`;
                     
                     img.onerror = function() {
                         img.src = 'pictures/thunder.ico'; // Fallback image path
