@@ -28,6 +28,7 @@ html, body {
     height: 100%;
     font-family: Arial, sans-serif;
     margin: 0;
+    text-align: center;
 }
 
 .wrapper {
@@ -116,39 +117,11 @@ nav {
     }
 }
 
-.construction{
-    text-align: center;
-    
-    img {
-        margin-top: 30px;
-        width: 400px;
-    }
+.construction_pic{
+    width: 400px;
 }
 
 .hidden {
     display: none;
 }
 
-#itemList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.item {
-    flex: 1 1 calc(33.333% - 20px); /* 3 Items per Row*/
-    box-sizing: border-box; 
-    border: 1px solid #ddd; 
-    
-    p {
-        margin: 0 0 10px 0; 
-    }
-}
-
-.item-image {
-    width: 32px; 
-    height: 32px; 
-    object-fit: contain; 
-    display: block;
-    margin: 0 auto;
-}

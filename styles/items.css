@@ -1,0 +1,27 @@
+#itemList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item {
+    box-sizing: border-box; 
+    border: 1px solid #ddd; 
+    width: calc(12.5% - 20px);
+
+    p {
+        margin: 0 0 10px 0; 
+    }
+}
+
+.item-image {
+    width: 32px; 
+    height: 32px; 
+    object-fit: contain; 
+    margin: 5px auto;
+}
+
+.item_lvl {
+    font-weight: bold;
+    font-size: 12px;
+}
