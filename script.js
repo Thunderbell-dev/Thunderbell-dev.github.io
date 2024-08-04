@@ -36,7 +36,6 @@ function search(triggeredByUser = true, query = '') {
 // Function to apply search based on URL query parameter
 function applySearchFromQuery() {
     var query = getQueryParameter('query');
-    console.log("URL Query Parameter:", query); // Debugging: log the query parameter
     if (query) {
         document.getElementById('searchInput').value = query;
         search(false, query); // Call search without user trigger and pass query
