@@ -132,24 +132,23 @@ nav {
 #itemList {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Abstand zwischen den Items */
+    gap: 10px;
 }
 
 .item {
-    flex: 1 1 calc(33.333% - 20px); /* 33.333% Breite für 3 Items pro Zeile minus Abstand */
-    box-sizing: border-box; /* Damit Padding und Border die Breite nicht beeinflussen */
-    border: 1px solid #ddd; /* Optional: füge eine Umrandung hinzu, um die Items hervorzuheben */
-    padding: 10px; /* Optional: füge Padding hinzu */
+    flex: 1 1 calc(33.333% - 20px); /* 3 Items per Row*/
+    box-sizing: border-box; 
+    border: 1px solid #ddd; 
     
     p {
-        margin: 0 0 10px 0; /* Abstand zwischen Text und Bild */
+        margin: 0 0 10px 0; 
     }
 }
 
 .item-image {
-    width: 32px; /* Fixiere die Breite auf 32px */
-    height: 32px; /* Fixiere die Höhe auf 32px */
-    object-fit: contain; /* Behalte das Seitenverhältnis bei */
+    width: 32px; 
+    height: 32px; 
+    object-fit: contain; 
     display: block;
-    margin: 0 auto; /* Zentriere das Bild im Container */
+    margin: 0 auto;
 }
