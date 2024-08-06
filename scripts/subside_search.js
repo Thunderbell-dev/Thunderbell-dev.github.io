@@ -9,19 +9,23 @@ function search(triggeredByUser = true, query = '') {
     // Determine the input source
     var input = triggeredByUser ? document.getElementById('searchInput').value.toLowerCase().trim() : query.toLowerCase().trim();
     var items = document.querySelectorAll('#itemList .item');
-    
+
     if (input === '') {
-        // Show all items if the search input is empty
+        // Show all items if the search input is empty, except pinned items
         items.forEach(function(item) {
-            item.classList.remove('hidden');
+            if (!item.classList.contains('pinned1') && !item.classList.contains('pinned2')) {
+                item.classList.remove('hidden');
+            }
         });
     } else {
-        // Show only the items that match the search input
+        // Show only the items that match the search input, except pinned items
         items.forEach(function(item) {
-            if (item.textContent.toLowerCase().includes(input)) {
-                item.classList.remove('hidden');
-            } else {
-                item.classList.add('hidden');
+            if (!item.classList.contains('pinned1') && !item.classList.contains('pinned2')) {
+                if (item.textContent.toLowerCase().includes(input)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
             }
         });
     }

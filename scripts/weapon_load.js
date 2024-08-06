@@ -20,9 +20,11 @@ function pin_on(number){
 
     if (item.classList.contains('pinned2')){
         item.classList.remove('pinned2');
+        applySearchFromQuery();
         //textElement.classList.add('hide_more_text');
     } else if (item.classList.contains('pinned1')){
         item.classList.remove('pinned1');
+        applySearchFromQuery();
         //textElement.classList.add('hide_more_text');
     } else {
         if (!pinned_1){
