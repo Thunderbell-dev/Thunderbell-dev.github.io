@@ -1,13 +1,19 @@
 .pinned1 {
-    position: absolute;
+    position: fixed;
     bottom: 10%;
     left: 20%;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid;
 }
 
 .pinned2 {
-    position: absolute;
+    position: fixed;
     bottom: 10%;
     right: 20%;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid;
 }
 
 .hide_more_text {

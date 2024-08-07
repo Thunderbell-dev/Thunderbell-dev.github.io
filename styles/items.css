@@ -1,16 +1,22 @@
 #itemList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    padding-inline-start: 3.333%;
+    padding-inline-end: 3.333%;
 }
 
 .item {
     box-sizing: border-box; 
     border: 1px solid #ddd; 
-    width: calc(12.5% - 20px);
+    width: 160px;
+    height: auto;
 
     p {
         margin: 0 0 10px 0; 
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 

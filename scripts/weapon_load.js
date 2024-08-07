@@ -16,22 +16,27 @@ function pin_on(number){
     });
 
     var item = items[number];
+    var pinButton = item.querySelector('.pin-button');
     //var textElement = more_text[number];
 
     if (item.classList.contains('pinned2')){
         item.classList.remove('pinned2');
+        pinButton.src = '../pictures/thunder.ico';
         applySearchFromQuery();
         //textElement.classList.add('hide_more_text');
     } else if (item.classList.contains('pinned1')){
         item.classList.remove('pinned1');
+        pinButton.src = '../pictures/thunder.ico';
         applySearchFromQuery();
         //textElement.classList.add('hide_more_text');
     } else {
         if (!pinned_1){
             item.classList.add('pinned1');
+            pinButton.src = '../pictures/cloud.ico';
             //textElement.classList.remove('hide_more_text');
         } else if (!pinned_2){
             item.classList.add('pinned2');
+            pinButton.src = '../pictures/cloud.ico';
             //textElement.classList.remove('hide_more_text');
         }
     } 
@@ -44,8 +49,6 @@ function unpinAll() {
         item.classList.remove('pinned1', 'pinned2');
     });
 }
-
-
 
 // Function to load items
 async function loadItems() {
@@ -68,10 +71,30 @@ async function loadItems() {
         // Clear any existing items
         itemList.innerHTML = '';
 
+        // Array of possible image paths
+        const imagePaths = [
+            'adventurer',
+            'swordsman',
+            'archer',
+            'sorcerer',
+            'martial_artist'
+        ];
+
+        const pic_count = [
+            7,
+            50,
+            0,
+            0,
+            0,
+        ]
+
+        var image_index_offset = 0;
+        var image_count = 1;
+        var path_index = 0;
+
         // Create a div for each line in the file
-        lines.forEach(function(line, index) { // Add index parameter
+        lines.forEach(function(line, index) {
             
-            // Split the line by comma and get the segments
             const segments = line.split(',');
 
             if ((line.trim() !== '') && (segments[0].trim().toLowerCase().startsWith('weapon'))) { 
@@ -93,20 +116,30 @@ async function loadItems() {
                 // Create an image element
                 const img = document.createElement('img');
                 img.alt = 'Image for ' + textContent;
+                img.classList.add('item-image');
 
-                // Set image source based on the identifier
-                img.src = `../database/all_items_pics/weapon/${index + 1}.png`;
-                    
+                
+                const src = `../database/all_items_pics/weapon/${imagePaths[path_index]}/${image_count}.png`;
+
+                img.src = src;
+                image_count += 1
+                
+                if (image_count > pic_count[path_index]){
+                    image_count = 1
+                    path_index++
+                    image_index_offset += pic_count[path_index]
+                }
+
                 img.onerror = function() {
                     img.src = '../pictures/thunder.ico'; // Fallback image path
+                    return;
                 };
-                
-                img.classList.add('item-image');
 
                 // Create the pin button
                 const pinButton = document.createElement('input');
                 pinButton.type = 'image';
                 pinButton.src = '../pictures/thunder.ico';
+            
                 pinButton.onclick = function() {
                     pin_on(index);
                 };
