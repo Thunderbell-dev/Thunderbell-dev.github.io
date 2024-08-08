@@ -1,0 +1,188 @@
+Wooden Stick,Level 1
+Wooden Stick,Level 4
+Wooden Sword,Level 7
+Wooden Hammer,Level 10
+Heavy Wooden Hammer,Level 13
+Trainee's Wooden Sword,Level 15
+Adventurer's Sword,Level 18
+Beginner's Sword,Level 15
+Short Sword,Level 20
+Gladius,Level 21
+Sword of Pain,Level 26
+Short Sword,Level 29
+Walloon Sword,Level 30
+Bronze Sword,Level 34
+Sabre,Level 36
+Viking Sword,Level 37
+Broad Sword of Spirit,Level 40
+Falchion,Level 42
+Cutlass,Level 43
+Elvin's Sword,Level 45
+Golden Sabre,Level 46
+Broadsword,Level 48
+Katzbalger,Level 49
+Longsword of Power,Level 52
+Broadsword,Level 53
+Knight's Sword,Level 54
+Skyabona,Level 57
+Claymore,Level 60
+Slayer,Level 63
+Glorious Sabre,Level 65
+Fast Sabre,Level 68
+Flamberge,Level 70
+Loopuster,Level 71
+Heavy Greatsword,Level 73
+Broken Elemental Sword,Level 75
+Broken Sword,Level 79
+Honourable: Calvinas' Firestorm Sword,Level 82
+Desert Robbers' Longsword,Level 83
+Great Leader's Cut Sword,Level 85
+Forgotten Hero's Sword +10,Level 85
+Thronblade,Level 85
+Calvinas' Firestorm Sword,Level 88
+Hatus' Dark Lance,Level 88
+Magmoros' Fire Sword,Level 88
+Eglance,Level 88
+Honourable: Great Leader's Cut Sword,Level 88
+Valakus' Fire Sword,Level 90
+Orc Warchief's Sword,C level 10
+Sealed Hellord Sword,C level 25
+Sealed Heavenly Sword,C level 25
+Broken Krem's Right Blade,C level 45
+Lion Loa Sword,C level 55
+Magic Sword of Belial,C level 60
+Dragon Bone Sword,C level 65
+Dragonslayer,C level 80
+Heated Sword,C level 83
+Sawblade Sword,C level 90
+-
+Beginner's Bow,Level 15
+Small Bow,Level 20
+Bow of Life,Level 21
+Bow of Speed,Level 26
+Bamboo Bow,Level 29
+Flame Bow,Level 30
+Magic Bow,Level 34
+Oak Bow,Level 36
+Synthetic Bow,Level 37
+Wind Bow,Level 40
+Horned Bow,Level 42
+Double Bow,Level 43
+Red Bow,Level 45
+Leather Bow,Level 46
+Hunting Bow,Level 48
+Wild Bow,Level 49
+Bow of Courage,Level 52
+Long Bow,Level 53
+Large Bow,Level 54
+Bronze Bow,Level 57
+Bow of Spirit,Level 60
+Siege Bow,Level 63
+Bow of Peace,Level 65
+Forest Bow,Level 68
+Piercing Force Bow,Level 70
+Seraphion,Level 71
+Dark Angelus Bow,Level 73
+Majestic Bow,Level 75
+Caipe'ru,Level 79
+Honourable: Calvinas' Redwave Bow,Level 82
+Desert Robbers' Bow,Level 83
+Great Leader's Recurve Bow,Level 85
+Elemental Bow,Level 85
+Forgotten Hero's Bow +10,Level 85
+Calvinas' Redwave Bow,Level 88
+Honourable: Great Leader's Recurve Bow,Level 88
+Phoenix Wings,Level 88
+Hatus' Abyss Bow,Level 88
+Hazard Bow,Level 88
+Grail's Wings,Level 90
+Orc Sniper's Bow,C level 10
+Sealed Hellord Bow,C level 25
+Sealed Heavenly Bow,C level 25
+Azrael's Wings,C level 45
+Eagle Loa Bow,C level 55
+Belial's Cursed Bow,C level 60
+Dragon Bow,C level 65
+Breath of Destruction,C level 80
+Gearwheel Bow,C level 83
+Steam Bow,C level 90
+-
+Beginner's Wand,Level 15
+Red Bead Wand,Level 20
+Magic Wand of Life,Level 21
+Wand of Spirit,Level 26
+Ruby Wand,Level 29
+Magic Wand of Flame,Level 30
+Enchanted Magic Wand,Level 34
+Blue Bead Wand,Level 36
+Ice Wand,Level 37
+Magic Wand of Light,Level 40
+Opal Wand,Level 42
+Loon's Wand,Level 43
+Red Sage Wand,Level 45
+Mana Wand,Level 46
+Coral Magic Wand,Level 48
+Magic Spell Wand,Level 49
+Magic Wand of Honour,Level 52
+Crystal Magic Wand,Level 53
+Holy Wand,Level 54
+Magic Wand of Intelligence,Level 57
+Magic Wand of Shadows,Level 60
+Soul Wand,Level 63
+Ghost Whisper Wand,Level 65
+Red Skull Wand,Level 68
+Kai's Wand,Level 70
+Mook'razue,Level 71
+Archmage Wand,Level 73
+Majestic Wand,Level 75
+Fair'losue,Level 79
+Honourable: Calvinas' Waterflower Wand,Level 82
+Desert Robbers' Walking Stick,Level 83
+Forgotten Hero's Magic Wand +10,Level 85
+Yertirand's Wand,Level 85
+Great Leader's Magic Wand,Level 85
+Twisted Yertirand's Wand,Level 85
+Seraphim Wand,Level 85
+Lava Ghost's Wand,Level 88
+Hatus' Infernal Staff,Level 88
+Taracen Wand,Level 88
+Honourable: Great Leader's Magic Wand,Level 88
+Calvinas' Waterflower Wand,Level 88
+Katol's Wand,Level 90
+Warlock's Divine Staff,C level 10
+Sealed Heavenly Staff,C level 25
+Sealed Hellord Wand,C level 25
+Seli-Lusha's Branch of Light,C level 45
+Snake Loa Staff,C level 55
+Spirit King's Staff,C level 60
+Dragon Magic Wand,C level 65
+Dragon Soul Wand,C level 80
+Electro Wand,C level 83
+Energy Wand,C level 90
+-
+Short Riding Gauntlet,Level 80
+Steel Fist,Level 80
+Black Fist,Level 82
+Martial Artist's Gauntlet,Level 82
+Martial Artist's Leather Gauntlet,Level 84
+Toughened Leather Gauntlet,Level 84
+Cold Metal Gauntlet,Level 85
+Ladine's Tear,Level 85
+Apprentice Assassin's Gauntlet,Level 86
+Gauntlet of Power,Level 86
+Sicario's Gauntlet,Level 88
+Fenris' Claw,Level 88
+Doom Fists' Gauntlet,Level 88
+Fire Golem Gauntlet,Level 88
+Chaos Scale Gauntlet,Level 90
+Flame of Ifrit,Level 90
+Orc Sekraz Gauntlets,C level 10
+Sealed Goddess Fist,C level 25
+Divine Fist,C level 45
+Bear Loa Gauntlets,C level 55
+Beast King's Gauntlets,C level 60
+Dragon Claw,C level 65
+Frost Claw,C level 80
+Steam Gauntlets,C level 83
+Spark Gauntlets,C level 90
+

@@ -1,75 +1,8 @@
-function pin_on(number){
-    var items = document.querySelectorAll('.item');
-
-    // Ensure number is within the correct range
-    if (number < 0 || number >= items.length) {
-        console.error('Invalid index passed to pin_on:', number);
-        return;
-    }
-
-    var item = items[number];
-    var pinButton = item.querySelector('.pin-button');
-
-    if (!item || !pinButton) {
-        console.error('Item or pinButton not found:', item, pinButton);
-        return;
-    }
-
-    var pinned_1 = false;
-    var pinned_2 = false;
-
-    // Check if any items are already pinned
-    items.forEach(function(item) {
-        if (item.classList.contains('pinned1')){
-            pinned_1 = true; 
-        }
-        if (item.classList.contains('pinned2')){
-            pinned_2 = true; 
-        }
-    });
-
-    if (item.classList.contains('pinned2')){
-        item.classList.remove('pinned2');
-        pinButton.src = '../pictures/thunder.ico';
-        applySearchFromQuery();
-    } else if (item.classList.contains('pinned1')){
-        item.classList.remove('pinned1');
-        pinButton.src = '../pictures/thunder.ico';
-        applySearchFromQuery();
-    } else {
-        if (!pinned_1){
-            item.classList.add('pinned1');
-            pinButton.src = '../pictures/cloud.ico';
-        } else if (!pinned_2){
-            item.classList.add('pinned2');
-            pinButton.src = '../pictures/cloud.ico';
-        }
-    } 
-}
-
-function unpinAll() {
-    var items = document.querySelectorAll('.item');
-    
-    items.forEach(function(item) {
-        item.classList.remove('pinned1', 'pinned2');
-        
-        // Reset the icon to the default state
-        var pinButton = item.querySelector('.pin-button');
-        pinButton.src = '../pictures/thunder.ico';
-    });
-}
-
-function handleImageLoadError(imgContainer, fallbackSrc) {
-    imgContainer.style.backgroundImage = `url(${fallbackSrc})`;
-    imgContainer.style.backgroundSize = 'contain'; // Ensure the fallback image is visible
-    imgContainer.style.backgroundRepeat = 'no-repeat'; // Prevent repeating of the fallback image
-}
-
 // Function to load items
 async function loadItems() {
     try {
         // Fetch the data and wait for the response
-        const response = await fetch('../database/all_itemlist.txt');
+        const response = await fetch('../database/all_itemlist/main_weapon.txt');
         
         // Check if the response is OK
         if (!response.ok) {
@@ -87,49 +20,49 @@ async function loadItems() {
         itemList.innerHTML = '';
 
         const pic_count = [
-            7,
-            50,
-            50,
-            52,
-            25,
+            7, //main adventurer
+            50,//main swordsman
+            50,//main archer
+            52,//main sourcerer
+            25,//main martial_artist
         ]
 
         var image_count = 0;
         var path_index = 0;
         var index = 0;
 
-        const frameWidth = 36;  // Width of each frame in the sprite sheet
-        const frameHeight = 36; // Height of each frame in the sprite sheet
-        const framesPerRow = 10; // Number of frames per row in the sprite sheet
+        const frameWidth = 36;  
+        const frameHeight = 36; 
+        const framesPerRow = 10;
         
         const sprite_sheetPaths = [
-            '../database/all_items_pics/weapon/adventurer/sprite_sheet.webp',
-            '../database/all_items_pics/weapon/swordsman/sprite_sheet.webp',
-            '../database/all_items_pics/weapon/archer/sprite_sheet.webp',
-            '../database/all_items_pics/weapon/sorcerer/sprite_sheet.webp',
-            '../database/all_items_pics/weapon/martial_artist/sprite_sheet.webp'
+            '../database/all_items_pics/weapon/main/adventurer/sprite_sheet.webp',
+            '../database/all_items_pics/weapon/main/swordsman/sprite_sheet.webp',
+            '../database/all_items_pics/weapon/main/archer/sprite_sheet.webp',
+            '../database/all_items_pics/weapon/main/sorcerer/sprite_sheet.webp',
+            '../database/all_items_pics/weapon/main/martial_artist/sprite_sheet.webp'
         ];
         
         // Create a div for each line in the file
         lines.forEach(function(line) {
             
             const segments = line.split(',');
-
-            if ((line.trim() !== '') && (segments[0].trim().toLowerCase().startsWith('weapon'))) { 
+            console.log(segments[0])
+            if (segments[0].trim() != '-' && segments[0].trim() != '') { 
                 const div = document.createElement('div');
                 div.classList.add('item');
 
-                const textContent = segments[1] ? segments[1].trim() : '';
-                const lvlContent = segments[2] ? segments[2].trim() : '';
+                const object_nameContent= segments[0];
+                const lvlContent = segments[1];
 
                 // Create a text element with the modified text
                 const lvl = document.createElement('p');
-                const text = document.createElement('p');
+                const object_name = document.createElement('p');
                 
                 lvl.textContent = lvlContent;
                 lvl.classList.add("item_lvl")
-                text.textContent = textContent;
-                text.classList.add("item_text");
+                object_name.textContent = object_nameContent;
+                object_name.classList.add("item_text");
                 
                 // Calculate the background position for the current frame
                 const row = Math.floor(image_count / framesPerRow);
@@ -187,7 +120,7 @@ async function loadItems() {
                 // Add the imgContainer and other elements to the div
                 div.appendChild(imgContainer);
                 div.appendChild(lvl);
-                div.appendChild(text);
+                div.appendChild(object_name);
 
                 // Add the div to the item list
                 itemList.appendChild(div);
