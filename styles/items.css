@@ -10,13 +10,11 @@
 .item {
     box-sizing: border-box; 
     border: 1px solid #ddd; 
-    width: 160px;
-    height: auto;
+    width: 180px;
+    height: 160px;
 
     p {
-        margin: 0 0 10px 0; 
-        margin-left: 5%;
-        margin-right: 5%;
+        margin: 10px 0 5% 5%; 
     }
 }
 

@@ -84,9 +84,9 @@ async function loadItems() {
         const pic_count = [
             7,
             50,
-            0,
-            0,
-            0,
+            50,
+            52,
+            25,
         ]
 
         var image_count = 0;

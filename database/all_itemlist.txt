@@ -137,15 +137,15 @@ Weapon,Majestic Wand,Level 75
 Weapon,Fair'losue,Level 79
 Weapon,Honourable: Calvinas' Waterflower Wand,Level 82
 Weapon,Desert Robbers' Walking Stick,Level 83
+Weapon,Forgotten Hero's Magic Wand +10,Level 85
+Weapon,Yertirand's Wand,Level 85
 Weapon,Great Leader's Magic Wand,Level 85
 Weapon,Twisted Yertirand's Wand,Level 85
-Weapon,Forgotten Hero's Magic Wand +10,Level 85
 Weapon,Seraphim Wand,Level 85
-Weapon,Yertirand's Wand,Level 85
-Weapon,Honourable: Great Leader's Magic Wand,Level 88
 Weapon,Lava Ghost's Wand,Level 88
 Weapon,Hatus' Infernal Staff,Level 88
 Weapon,Taracen Wand,Level 88
+Weapon,Honourable: Great Leader's Magic Wand,Level 88
 Weapon,Calvinas' Waterflower Wand,Level 88
 Weapon,Katol's Wand,Level 90
 Weapon,Warlock's Divine Staff,C level 10
@@ -158,22 +158,22 @@ Weapon,Dragon Magic Wand,C level 65
 Weapon,Dragon Soul Wand,C level 80
 Weapon,Electro Wand,C level 83
 Weapon,Energy Wand,C level 90
-Weapon,Steel Fist,Level 80
 Weapon,Short Riding Gauntlet,Level 80
-Weapon,Martial Artist's Gauntlet,Level 82
+Weapon,Steel Fist,Level 80
 Weapon,Black Fist,Level 82
-Weapon,Toughened Leather Gauntlet,Level 84
+Weapon,Martial Artist's Gauntlet,Level 82
 Weapon,Martial Artist's Leather Gauntlet,Level 84
-Weapon,Ladine's Tear,Level 85
+Weapon,Toughened Leather Gauntlet,Level 84
 Weapon,Cold Metal Gauntlet,Level 85
+Weapon,Ladine's Tear,Level 85
 Weapon,Apprentice Assassin's Gauntlet,Level 86
 Weapon,Gauntlet of Power,Level 86
-Weapon,Doom Fists' Gauntlet,Level 88
-Weapon,Fire Golem Gauntlet,Level 88
 Weapon,Sicario's Gauntlet,Level 88
 Weapon,Fenris' Claw,Level 88
-Weapon,Flame of Ifrit,Level 90
+Weapon,Doom Fists' Gauntlet,Level 88
+Weapon,Fire Golem Gauntlet,Level 88
 Weapon,Chaos Scale Gauntlet,Level 90
+Weapon,Flame of Ifrit,Level 90
 Weapon,Orc Sekraz Gauntlets,C level 10
 Weapon,Sealed Goddess Fist,C level 25
 Weapon,Divine Fist,C level 45
