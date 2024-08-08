@@ -45,10 +45,15 @@ function pin_on(number){
 function unpinAll() {
     var items = document.querySelectorAll('.item');
     
-    items.forEach(function(item, index) {
+    items.forEach(function(item) {
         item.classList.remove('pinned1', 'pinned2');
+        
+        // Reset the icon to the default state
+        var pinButton = item.querySelector('.pin-button');
+        pinButton.src = '../pictures/thunder.ico';
     });
 }
+
 
 // Function to load items
 async function loadItems() {
