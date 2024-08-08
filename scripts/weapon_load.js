@@ -1,6 +1,19 @@
 function pin_on(number){
     var items = document.querySelectorAll('.item');
-    //var more_text = document.querySelectorAll('.item .item_text');
+
+    // Ensure number is within the correct range
+    if (number < 0 || number >= items.length) {
+        console.error('Invalid index passed to pin_on:', number);
+        return;
+    }
+
+    var item = items[number];
+    var pinButton = item.querySelector('.pin-button');
+
+    if (!item || !pinButton) {
+        console.error('Item or pinButton not found:', item, pinButton);
+        return;
+    }
 
     var pinned_1 = false;
     var pinned_2 = false;
@@ -15,29 +28,21 @@ function pin_on(number){
         }
     });
 
-    var item = items[number];
-    var pinButton = item.querySelector('.pin-button');
-    //var textElement = more_text[number];
-
     if (item.classList.contains('pinned2')){
         item.classList.remove('pinned2');
         pinButton.src = '../pictures/thunder.ico';
         applySearchFromQuery();
-        //textElement.classList.add('hide_more_text');
     } else if (item.classList.contains('pinned1')){
         item.classList.remove('pinned1');
         pinButton.src = '../pictures/thunder.ico';
         applySearchFromQuery();
-        //textElement.classList.add('hide_more_text');
     } else {
         if (!pinned_1){
             item.classList.add('pinned1');
             pinButton.src = '../pictures/cloud.ico';
-            //textElement.classList.remove('hide_more_text');
         } else if (!pinned_2){
             item.classList.add('pinned2');
             pinButton.src = '../pictures/cloud.ico';
-            //textElement.classList.remove('hide_more_text');
         }
     } 
 }
@@ -91,7 +96,8 @@ async function loadItems() {
 
         var image_count = 0;
         var path_index = 0;
-        
+        var index = 0;
+
         const frameWidth = 36;  // Width of each frame in the sprite sheet
         const frameHeight = 36; // Height of each frame in the sprite sheet
         const framesPerRow = 10; // Number of frames per row in the sprite sheet
@@ -105,7 +111,7 @@ async function loadItems() {
         ];
         
         // Create a div for each line in the file
-        lines.forEach(function(line, index) {
+        lines.forEach(function(line) {
             
             const segments = line.split(',');
 
@@ -141,21 +147,31 @@ async function loadItems() {
                 imgContainer.style.backgroundSize = `${frameWidth * framesPerRow}px auto`;
                 imgContainer.style.backgroundImage = `url(${sprite_sheetPaths[path_index]})`;
   
-                image_count += 1
+                image_count ++;
                 
                 if (image_count > pic_count[path_index]){
                     path_index++;
-
                     image_count = 0
+
                     const row = Math.floor(image_count / framesPerRow);
                     const col = image_count % framesPerRow;
                     const backgroundX = -col * frameWidth + 'px';
                     const backgroundY = -row * frameHeight + 'px';
                     imgContainer.style.backgroundPosition = `${backgroundX} ${backgroundY}`;
                     imgContainer.style.backgroundImage = `url(${sprite_sheetPaths[path_index]})`;
-
-                    image_count++;
+                    image_count++;  
                 }
+
+                const pinButton = document.createElement('input');
+                pinButton.type = 'image';
+                pinButton.src = '../pictures/thunder.ico';
+                pinButton.classList.add('pin-button');
+
+                // Create the pin button
+                const index_button = index
+                pinButton.onclick = function() {
+                    pin_on(index_button);
+                };
                 
                 const img = new Image();
                 img.src = sprite_sheetPaths[path_index];
@@ -165,20 +181,9 @@ async function loadItems() {
                     imgContainer.style.backgroundSize = 'contain';
                     imgContainer.style.backgroundImage = `url(../pictures/thunder.ico)`;
                 };
-
-                // Create the pin button
-                const pinButton = document.createElement('input');
-                pinButton.type = 'image';
-                pinButton.src = '../pictures/thunder.ico';
-            
-                pinButton.onclick = function() {
-                    pin_on(index);
-                };
-                pinButton.classList.add('pin-button');
-
+               
                 // Add the image and pin button to the imgContaine
-                imgContainer.appendChild(pinButton);
-                        
+                imgContainer.appendChild(pinButton);                      
                 // Add the imgContainer and other elements to the div
                 div.appendChild(imgContainer);
                 div.appendChild(lvl);
@@ -186,6 +191,7 @@ async function loadItems() {
 
                 // Add the div to the item list
                 itemList.appendChild(div);
+                index++;
             }
         });
     } catch (error) {
