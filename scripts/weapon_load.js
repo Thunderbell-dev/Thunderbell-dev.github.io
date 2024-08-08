@@ -47,7 +47,7 @@ async function loadItems() {
         lines.forEach(function(line) {
             
             const segments = line.split(',');
-            console.log(segments[0])
+            
             if (segments[0].trim() != '-' && segments[0].trim() != '') { 
                 const div = document.createElement('div');
                 div.classList.add('item');
