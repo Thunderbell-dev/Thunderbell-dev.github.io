@@ -36,14 +36,14 @@ Weapon,Broken Elemental Sword,Level 75
 Weapon,Broken Sword,Level 79
 Weapon,Honourable: Calvinas' Firestorm Sword,Level 82
 Weapon,Desert Robbers' Longsword,Level 83
+Weapon,Great Leader's Cut Sword,Level 85
 Weapon,Forgotten Hero's Sword +10,Level 85
 Weapon,Thronblade,Level 85
-Weapon,Great Leader's Cut Sword,Level 85
-Weapon,Magmoros' Fire Sword,Level 88
-Weapon,Hatus' Dark Lance,Level 88
-Weapon,Honourable: Great Leader's Cut Sword,Level 88
-Weapon,Eglance,Level 88
 Weapon,Calvinas' Firestorm Sword,Level 88
+Weapon,Hatus' Dark Lance,Level 88
+Weapon,Magmoros' Fire Sword,Level 88
+Weapon,Eglance,Level 88
+Weapon,Honourable: Great Leader's Cut Sword,Level 88
 Weapon,Valakus' Fire Sword,Level 90
 Weapon,Orc Warchief's Sword,C level 10
 Weapon,Sealed Hellord Sword,C level 25
@@ -55,6 +55,7 @@ Weapon,Dragon Bone Sword,C level 65
 Weapon,Dragonslayer,C level 80
 Weapon,Heated Sword,C level 83
 Weapon,Sawblade Sword,C level 90
+--------------------------------
 Weapon,Beginner's Bow,Level 15
 Weapon,Small Bow,Level 20
 Weapon,Bow of Life,Level 21
@@ -182,3 +183,4 @@ Weapon,Dragon Claw,C level 65
 Weapon,Frost Claw,C level 80
 Weapon,Steam Gauntlets,C level 83
 Weapon,Spark Gauntlets,C level 90
+

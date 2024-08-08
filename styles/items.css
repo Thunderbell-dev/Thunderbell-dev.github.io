@@ -20,9 +20,9 @@
     }
 }
 
-.item-image {
-    width: 32px; 
-    height: 32px; 
+.img-container {
+    width: 36px; 
+    height: 36px; 
     object-fit: contain; 
     margin: 5px auto;
 }

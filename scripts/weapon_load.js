@@ -54,6 +54,11 @@ function unpinAll() {
     });
 }
 
+function handleImageLoadError(imgContainer, fallbackSrc) {
+    imgContainer.style.backgroundImage = `url(${fallbackSrc})`;
+    imgContainer.style.backgroundSize = 'contain'; // Ensure the fallback image is visible
+    imgContainer.style.backgroundRepeat = 'no-repeat'; // Prevent repeating of the fallback image
+}
 
 // Function to load items
 async function loadItems() {
@@ -76,15 +81,6 @@ async function loadItems() {
         // Clear any existing items
         itemList.innerHTML = '';
 
-        // Array of possible image paths
-        const imagePaths = [
-            'adventurer',
-            'swordsman',
-            'archer',
-            'sorcerer',
-            'martial_artist'
-        ];
-
         const pic_count = [
             7,
             50,
@@ -93,10 +89,21 @@ async function loadItems() {
             0,
         ]
 
-        var image_index_offset = 0;
-        var image_count = 1;
+        var image_count = 0;
         var path_index = 0;
-
+        
+        const frameWidth = 36;  // Width of each frame in the sprite sheet
+        const frameHeight = 36; // Height of each frame in the sprite sheet
+        const framesPerRow = 10; // Number of frames per row in the sprite sheet
+        
+        const sprite_sheetPaths = [
+            '../database/all_items_pics/weapon/adventurer/sprite_sheet.webp',
+            '../database/all_items_pics/weapon/swordsman/sprite_sheet.webp',
+            '../database/all_items_pics/weapon/archer/sprite_sheet.webp',
+            '../database/all_items_pics/weapon/sorcerer/sprite_sheet.webp',
+            '../database/all_items_pics/weapon/martial_artist/sprite_sheet.webp'
+        ];
+        
         // Create a div for each line in the file
         lines.forEach(function(line, index) {
             
@@ -117,27 +124,46 @@ async function loadItems() {
                 lvl.classList.add("item_lvl")
                 text.textContent = textContent;
                 text.classList.add("item_text");
-
-                // Create an image element
-                const img = document.createElement('img');
-                img.alt = 'Image for ' + textContent;
-                img.classList.add('item-image');
-
                 
-                const src = `../database/all_items_pics/weapon/${imagePaths[path_index]}/${image_count}.png`;
+                // Calculate the background position for the current frame
+                const row = Math.floor(image_count / framesPerRow);
+                const col = image_count % framesPerRow;
+                const backgroundX = -col * frameWidth + 'px';
+                const backgroundY = -row * frameHeight + 'px';
 
-                img.src = src;
+                // Create a container for the image and pin button
+                const imgContainer = document.createElement('div');
+                imgContainer.classList.add('img-container');
+                imgContainer.style.position = 'relative';
+                imgContainer.style.width = `${frameWidth}px`;
+                imgContainer.style.height = `${frameHeight}px`;
+                imgContainer.style.backgroundPosition = `${backgroundX} ${backgroundY}`;
+                imgContainer.style.backgroundSize = `${frameWidth * framesPerRow}px auto`;
+                imgContainer.style.backgroundImage = `url(${sprite_sheetPaths[path_index]})`;
+  
                 image_count += 1
                 
                 if (image_count > pic_count[path_index]){
-                    image_count = 1
-                    path_index++
-                    image_index_offset += pic_count[path_index]
-                }
+                    path_index++;
 
-                img.onerror = function() {
-                    img.src = '../pictures/thunder.ico'; // Fallback image path
-                    return;
+                    image_count = 0
+                    const row = Math.floor(image_count / framesPerRow);
+                    const col = image_count % framesPerRow;
+                    const backgroundX = -col * frameWidth + 'px';
+                    const backgroundY = -row * frameHeight + 'px';
+                    imgContainer.style.backgroundPosition = `${backgroundX} ${backgroundY}`;
+                    imgContainer.style.backgroundImage = `url(${sprite_sheetPaths[path_index]})`;
+
+                    image_count++;
+                }
+                
+                const img = new Image();
+                img.src = sprite_sheetPaths[path_index];
+                
+                img.onerror = () => {
+                    imgContainer.style.backgroundPosition = `0 0`;
+                    imgContainer.style.backgroundSize = 'contain';
+                    imgContainer.style.backgroundImage = `url(../pictures/thunder.ico)`;
                 };
 
                 // Create the pin button
@@ -150,13 +176,7 @@ async function loadItems() {
                 };
                 pinButton.classList.add('pin-button');
 
-                // Create a container for the image and pin button
-                const imgContainer = document.createElement('div');
-                imgContainer.classList.add('img-container');
-                imgContainer.style.position = 'relative';
-
-                // Add the image and pin button to the imgContainer
-                imgContainer.appendChild(img);
+                // Add the image and pin button to the imgContaine
                 imgContainer.appendChild(pinButton);
                         
                 // Add the imgContainer and other elements to the div

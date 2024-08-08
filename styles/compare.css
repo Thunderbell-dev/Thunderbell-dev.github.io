@@ -22,8 +22,8 @@
 
 .pin-button{
     position: absolute;
-    padding-top: 5px;
-    padding-left: 35px;
+    margin-top: 5px;
+    margin-left: 35px;
     width: 20px;
     height: 20px;
 }
