@@ -1,0 +1,127 @@
+/* General */
+#Level {
+    width: 8rem;
+}
+
+#CLevel {
+    width: 8rem;
+}
+
+/* Search and Checkbox Container */
+.search-checkbox-container {
+    display: flex;
+    justify-content:center; /* Space between search input and checkbox filter */
+    align-items: center; /* Align items at the start */
+}
+
+/* Search */
+
+.search-container{
+    margin-right: 5px;
+}
+
+.search {
+    background-color: lightgray; /* Light gray background */
+    padding: 8px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+    display: flex;
+    align-items: center; /* Align label and input vertically */
+    gap: 10px; /* Space between the label and input */
+    height: 42px;
+}
+
+.search label {
+    width: 12rem;
+    font-weight: bold; /* Make label text bold */
+}
+
+.search input {
+    border: 2px solid #ccc; /* Light gray border to make input fields stand out */
+    outline: none;
+    background: #fff; /* White background for better contrast */
+    padding: 5px 10px;
+    border-radius: 5px; /* Slight rounding of input corners */
+    text-align: center; /* Center the text and placeholder */
+    width: 100%; /* Ensure the input takes up full available width */
+}
+
+.search input::placeholder {
+    text-align: center; /* Center the placeholder text */
+}
+
+/* Checkbox Filter */
+
+.checkbox-container{
+    margin-left: 5px;
+}
+
+.checkbox-filter {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    gap: 10px; /* Space between each checkbox */
+    background-color: lightgray; /* Light gray background */
+    padding: 8px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better visibility */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.checkbox-item {
+    position: relative; /* Position relative for the border effect */
+}
+
+.checkbox-item input[type="checkbox"] {
+    display: none; /* Hide the actual checkbox */
+}
+
+.checkbox-item img {
+    width: 24px; /* Adjust the size of the images */
+    height: 24px; /* Ensure images are square */
+    border-radius: 5px; /* Rounded corners for images */
+    background-color: white; /* Optional: white background behind the images */
+    padding: 5px; /* Space inside the image border */
+    object-fit: cover; /* Ensure the image covers the area and is properly aligned */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    border: 2px solid transparent; /* Default border color */
+}
+
+.checkbox-item img.selected {
+    border: 2px solid rgba(0, 0, 0, 0.5); /* Border color for selected state */
+}
+
+/* Level Filter */
+.lvl-filter {
+    display: flex;
+    justify-content: center; /* Center the level filters */
+    gap: 10px; /* Space between the level input fields */
+    margin-top: 20px; /* Space above the level filters */
+    padding: 0 20px; /* Consistent horizontal padding from the screen border */
+}
+
+.level-input {
+    display: flex;
+    align-items: center;
+    background-color: lightgray; /* Light gray background */
+    padding: 8px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better visibility */
+}
+
+.level-input label {
+    margin-right: 8px;
+    font-weight: bold; /* Make label text bold */
+}
+
+.level-input input {
+    border: 2px solid #ccc; /* Light gray border to make input fields stand out */
+    outline: none;
+    background: #fff; /* White background for better contrast */
+    padding: 5px 10px;
+    border-radius: 5px; /* Slight rounding of input corners */
+}
+
+.level-input input::placeholder {
+    text-align: center; /* Center the placeholder text */
+}

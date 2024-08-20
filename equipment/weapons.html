@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="pictures/thunder.ico">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../styles/items.css">
+    <link rel="stylesheet" href="../styles/filter.css">
     <link rel="stylesheet" href="../styles/compare.css">
 </head>
 <body>
@@ -112,15 +113,56 @@
         </header>
         <main>
         
-            <h1>Page Under Construction</h1>
+            <h1>Weapons</h1>
             
-            <p><a> We're working hard to finish this page. Please check back soon!</a></p>
+            <div class="filter-container">
+                <div class="search-checkbox-container">
+                    <div class="search-container">
+                        <div class="search">
+                            <label for="searchInput">Weapon Name:</label>
+                            <input type="text" id="searchInput" placeholder="Name">
+                        </div>
+                    </div>
+            
+                    <div class="checkbox-container">
+                        <div class="checkbox-filter">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="filterOption1" value="option1">
+                                <img src="../database/class_pics/class_0.png" alt="Option 1" data-value="option1">
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="filterOption2" value="option2">
+                                <img src="../database/class_pics/class_1.png" alt="Option 2" data-value="option2">
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="filterOption3" value="option3">
+                                <img src="../database/class_pics/class_2.png" alt="Option 3" data-value="option3">
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="filterOption4" value="option4">
+                                <img src="../database/class_pics/class_3.png" alt="Option 4" data-value="option4">
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="filterOption5" value="option5">
+                                <img src="../database/class_pics/class_4.png" alt="Option 5" data-value="option5">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="lvl-filter">
+                    <div class="level-input">
+                        <label for="Level">Level:</label>
+                        <input type="number" id="Level" name="Level" placeholder="Weapon ≥ LvL">
+                    </div>
+                    <div class="level-input">
+                        <label for="CLevel">Champion Level:</label>
+                        <input type="number" id="CLevel" name="CLevel" placeholder="Weapon ≥ CLvL">
+                    </div>
+                </div>
+            </div>            
 
-            <input type="text" id="searchInput" placeholder="Search...">
-            
             <ul id="itemList"></ul>
-            
-        
         
         </main>
         <footer class="footer">
@@ -133,5 +175,6 @@
     <script src="../scripts/pin_item.js"></script>
     <script src="../scripts/weapon_load.js"></script>
     <script src="../scripts/subside_search.js"></script>
+    <script src="../scripts/checkbox_filter.js"></script>
 </body>
 </html>
