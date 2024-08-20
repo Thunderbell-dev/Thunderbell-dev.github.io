@@ -82,6 +82,7 @@
     border-radius: 5px; /* Rounded corners for images */
     background-color: white; /* Optional: white background behind the images */
     padding: 5px; /* Space inside the image border */
+    margin-top: 2px;
     object-fit: cover; /* Ensure the image covers the area and is properly aligned */
     cursor: pointer; /* Show a pointer cursor on hover */
     border: 2px solid transparent; /* Default border color */
