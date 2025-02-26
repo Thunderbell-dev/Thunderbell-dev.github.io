@@ -6,19 +6,23 @@ body {
     color: white;
     text-align: center;
 }
+
 header {
     background: #333;
     padding: 20px;
 }
+
 header h1 {
     margin: 0;
 }
+
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-size: 18px;
 }
+
 .container {
     max-width: 900px;
     margin: 20px auto;
@@ -27,24 +31,100 @@ nav a {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
+
 .stage-pic img {
     max-width: 100%;
     border-radius: 10px;
 }
+
 .role-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
 .role-box {
-    background: #555;
-    padding: 15px;
-    border-radius: 8px;
-    flex: 1 1 250px;
+    background: rgba(50, 50, 50, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     text-align: center;
+    width: 280px;
+    min-height: 150px;
+    color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.role-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
 .role-box i {
-    font-size: 24px;
+    font-size: 40px;
+    color: #f4c542;
     margin-bottom: 10px;
 }
+
+.role-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.role-box p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #ddd;
+}
+
+/* Ensure all role boxes have the same height */
+.role-container .role-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column; /* Stack the player rows vertically */
+    align-items: flex-start; /* Align everything to the left */
+}
+
+.player-row {
+    display: flex; /* Align icon and name horizontally */
+    align-items: center; /* Align icon and name vertically */
+    width: 100%; /* Ensure the player-row takes the full width */
+    justify-content: flex-start; /* Keeps the icon on the left */
+}
+
+.player-icon {
+    margin-right: 10px; /* Space between icon and name */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
+    width: 35px;
+    margin-top: 5px;
+}
+
+.player-name {
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* Adjust icon size */
+.player-box i {
+    text-shadow: unset;
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #fff;
+}
+
+
+
+
