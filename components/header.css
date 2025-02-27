@@ -9,21 +9,28 @@ header {
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    display: flex;
-    padding-left: 20px;
     height: 80px;
     width: auto;
+    display: block;
+    padding-left: 20px;
 }
 
-.header-section{
-   width: 33%;
+.header-section {
+    width: 33%;
+    text-align: center;
 }
 
-.header-section-c{
-    margin-left: auto;
+.header-section-a {
+    display: flex;
+    justify-content: start;
+}
+
+.header-section-a a {
+    display: inline-block;
 }
 
 nav a {
@@ -33,10 +40,10 @@ nav a {
     padding: 5px;
 
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: var(--global-border-radius);
     text-decoration: unset;
 }
 
 nav a:hover {
-    background-color: var(--gray);
+    background-color: var(--light-gray-2);
 }

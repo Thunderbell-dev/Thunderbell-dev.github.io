@@ -1,6 +1,9 @@
 :root{
-    --light-gray: #333;
+    
     --gray: #222;
+    --light-gray: #333;
+    --light-gray-2: #444;
+
     --black: #000;
     --white: #fff;
 
@@ -9,9 +12,11 @@
     --link-color: #7289da;
     --link-color-hover: #a0b4ee;
 
+    --player-icon-color: #f4c542;
 
 
     --global-font-size: 16px;
+    --global-border-radius: 10px;
 
 }
 
