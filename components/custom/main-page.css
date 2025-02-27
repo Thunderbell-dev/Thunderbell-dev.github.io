@@ -1,3 +1,5 @@
-#family-team-title{
-    text-transform: uppercase;
+#family-team-title {
+    background-color: var(--light-gray);
+    padding: 5px;
+    border-radius: var(--global-border-radius);
 }
