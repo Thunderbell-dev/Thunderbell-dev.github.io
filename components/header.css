@@ -16,7 +16,8 @@ header {
     height: 80px;
     width: auto;
     display: block;
-    padding-left: 20px;
+    padding: 20px;
+    border-radius: 80px;
 }
 
 .header-section {
