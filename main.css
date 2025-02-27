@@ -1,28 +1,36 @@
+:root{
+    --light-gray: #333;
+    --gray: #222;
+    --black: #000;
+    --white: #fff;
+
+    --body-font-color: var(--white);
+    
+    --link-color: #7289da;
+    --link-color-hover: #a0b4ee;
+
+
+
+    --global-font-size: 16px;
+
+}
+
 body {
     font-family: "Roboto", Arial, sans-serif;
+    font-size:  var(--global-font-size);
+    
+    color: var(--body-font-color);
+    background-color: var(--gray);
+
     margin: 0;
     padding: 0;
-    background-color: #222;
-    color: white;
+   
     text-align: center;
 }
 
-header {
-    background: #333;
-    padding: 20px;
+h1 {
+    font-size: 36px;
 }
-
-header h1 {
-    margin: 0;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
 
 
 

@@ -1,0 +1,42 @@
+header {
+    background-color: var(--light-gray);
+    color: var(--body-font-color);
+
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    padding-left: 20px;
+    height: 80px;
+    width: auto;
+}
+
+.header-section{
+   width: 33%;
+}
+
+.header-section-c{
+    margin-left: auto;
+}
+
+nav a {
+    color: var(--body-font-color);
+
+    margin: 0 5px;
+    padding: 5px;
+
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: unset;
+}
+
+nav a:hover {
+    background-color: var(--gray);
+}
