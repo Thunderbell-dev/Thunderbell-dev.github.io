@@ -35,15 +35,20 @@ header {
 
 nav a {
     color: var(--body-font-color);
+    background: var(--light-gray);
+    border: 1px solid transparent;
 
     margin: 0 5px;
-    padding: 5px;
+    padding: 10px;
 
     font-size: 18px;
     border-radius: var(--global-border-radius);
+    
     text-decoration: unset;
 }
 
 nav a:hover {
     background-color: var(--light-gray-2);
+    box-shadow: var(--global-box-shadow);
+    border: 1px solid var(--light-gray-3);
 }

@@ -10,7 +10,7 @@
     
     padding: 20px;
     border-radius: var(--global-border-radius);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--global-box-shadow);
     text-align: center;
     width: 280px;
     min-height: 150px;
@@ -20,7 +20,7 @@
 
 .role-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+    box-shadow: var(--global-box-shadow);
 }
 
 .role-box i {
@@ -41,7 +41,6 @@
     color: var(--body-font-color);
 }
 
-/* Ensure all role boxes have the same height */
 .role-container .role-box {
     display: flex;
     flex-direction: column;
@@ -78,7 +77,6 @@
     font-size: 16px;
 }
 
-/* Adjust icon size */
 .player-box i {
     text-shadow: unset;
     font-size: 1.5rem;
