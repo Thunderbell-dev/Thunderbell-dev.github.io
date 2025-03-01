@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="../../components/header.css">
     <link rel="stylesheet" href="../../components/footer.css">
-    <link rel="stylesheet" href="../../components/stage-picture.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <header>
     <div class="header-container">
         <div class="header-section header-section-a">
@@ -33,34 +32,7 @@
 </header>
 
 <body>
-    <div class="stage-container">
-        <a href="legal.md" id="legal-link">
-            <div id="legal-content">Loading...</div>
-        </a>
-    </div>
 
-    <script>
-        fetch('legal.md')
-            .then(response => {
-                if (!response.ok) throw new Error('Markdown file not found');
-                return response.text();
-            })
-            .then(text => {
-                // Insert the Markdown content
-                document.getElementById('legal-content').innerHTML = marked.parse(text);
-
-                // Remove the <a> tag wrapper (fallback is not needed anymore)
-                let legalLink = document.getElementById('legal-link');
-                let legalContent = document.getElementById('legal-content');
-
-                // Replace <a> with just the content
-                legalLink.replaceWith(legalContent);
-            })
-            .catch(error => {
-                console.error("Error loading Markdown:", error);
-                document.getElementById('legal-content').innerHTML = "Click here to view the legal disclaimer.";
-            });
-    </script>
 </body>
 
 <footer>

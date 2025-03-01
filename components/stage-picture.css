@@ -4,7 +4,6 @@
     padding: 20px;
     background: var(--light-gray-2);
     border-radius: var(--global-border-radius);
-    box-shadow: var(--global-box-shadow);
 }
 
 .stage-pic img {
