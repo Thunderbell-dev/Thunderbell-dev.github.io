@@ -17,9 +17,8 @@ header {
     height: 80px;
     width: auto;
     display: block;
-    padding: 10px;
     border-radius: 80px;
-    margin-top: 40px;
+    margin: 40px 0 0 50px;
 }
 
 .header-section {
@@ -68,7 +67,7 @@ nav a:hover {
 
     .logo {
         height: 50px;
-        margin-top: 10px;
+        margin: 0;
     }
 
     .header-section {
