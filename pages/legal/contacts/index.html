@@ -34,31 +34,31 @@
 
 <body>
     <div class="stage-container">
-        <a href="legal.md" id="legal-link">
-            <div id="legal-content">Loading...</div>
+        <a href="contacts.md" id="contacts-link">
+            <div id="contacts-content">Loading...</div>
         </a>
     </div>
 
     <script>
-        fetch('legal.md')
+        fetch('contacts.md')
             .then(response => {
                 if (!response.ok) throw new Error('Markdown file not found');
                 return response.text();
             })
             .then(text => {
                 // Insert the Markdown content
-                document.getElementById('legal-content').innerHTML = marked.parse(text);
+                document.getElementById('contacts-content').innerHTML = marked.parse(text);
 
                 // Remove the <a> tag wrapper (fallback is not needed anymore)
-                let legalLink = document.getElementById('legal-link');
-                let legalContent = document.getElementById('legal-content');
+                let contactsLink = document.getElementById('contacts-link');
+                let contactsContent = document.getElementById('contacts-content');
 
                 // Replace <a> with just the content
-                legalLink.replaceWith(legalContent);
+                    contactsLink.replaceWith(contactsContent);
             })
             .catch(error => {
                 console.error("Error loading Markdown:", error);
-                document.getElementById('legal-content').innerHTML = "Click here to view the legal disclaimer.";
+                document.getElementById('contacts-content').innerHTML = "Click here to view the contacts.";
             });
     </script>
 </body>
