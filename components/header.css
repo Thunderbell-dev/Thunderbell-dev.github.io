@@ -58,3 +58,38 @@ nav a:hover {
     background-color: var(--light-gray-2);
     border: 1px solid var(--light-gray-3);
 }
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .logo {
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .header-section {
+        width: 100%;
+    }
+
+    .header-section-a {
+        justify-content: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    nav a {
+        display: block;
+        width: 70%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}

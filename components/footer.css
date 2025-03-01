@@ -32,3 +32,33 @@ footer .p{
 .footer-text p{
     padding-right: 5px;
 }
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    .footer-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .footer-text p {
+        padding-right: 0;
+        margin-bottom: 5px;
+    }
+}

@@ -10,3 +10,15 @@
     max-width: 100%;
     border-radius: var(--global-border-radius);
 }
+
+@media (max-width: 768px) {
+    .stage-container {
+        max-width: 90%;
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .stage-pic img {
+        border-radius: calc(var(--global-border-radius) / 2);
+    }
+}
