@@ -1,5 +1,23 @@
-#family-team-title {
+.family-team-title {
+    display: flex;
     background-color: var(--light-gray);
     padding: 5px;
     border-radius: var(--global-border-radius);
+    margin: 10px 0;
+}
+
+.family-team-title .title{
+    display: flex;
+    margin-right: auto;
+    padding-left: 10px;
+}
+
+.family-team-title .join{
+    display: flex;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.family-team-title .join a{
+    padding-right: 10px;
 }

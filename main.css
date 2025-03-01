@@ -12,6 +12,10 @@
 
     --link-color: #7289da;
     --link-color-hover: #a0b4ee;
+    --link-decoration: none;
+    --link-decoration-hover: underline;
+    --link-font-weight: bold;
+    --link-transition: color 0.3s ease;
 
     --player-icon-color: #f4c542;
     --construction-color: #ff6347;
@@ -48,4 +52,16 @@ h1 {
 
 .text-center{
     text-align: center;
+}
+
+.hyperlink {
+    color: var(--link-color);
+    text-decoration: var(--link-decoration);
+    font-weight: var(--link-font-weight);
+    transition: var(--link-transition);
+}
+
+.hyperlink:hover {
+    color: var(--link-color-hover);
+    text-decoration: var(--link-decoration-hover);
 }
