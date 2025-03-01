@@ -22,3 +22,7 @@ This script is designed to help update the header and footer sections of multipl
 3. If a header or footer is missing in the target HTML file, it will insert the missing section.
 4. The `href` links in the target HTML file are not altered. They remain intact and unchanged, ensuring no broken links or misdirected navigation.
 5. If the target HTML file is empty, the entire content of the template file is copied over to the target file.
+
+## How to Use it
+
+1. Write `python struckture_build.py` in console and then all Files get updated
