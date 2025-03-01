@@ -10,17 +10,15 @@
     
     padding: 20px;
     border-radius: var(--global-border-radius);
-    box-shadow: var(--global-box-shadow);
     text-align: center;
     width: 280px;
     min-height: 150px;
-
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+    transition: transform 0.3s ease-in-out;
 }
 
 .role-box:hover {
     transform: translateY(-5px);
-    box-shadow: var(--global-box-shadow);
 }
 
 .role-box i {

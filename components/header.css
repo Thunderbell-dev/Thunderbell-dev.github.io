@@ -56,6 +56,5 @@ nav a {
 
 nav a:hover {
     background-color: var(--light-gray-2);
-    box-shadow: var(--global-box-shadow);
     border: 1px solid var(--light-gray-3);
 }

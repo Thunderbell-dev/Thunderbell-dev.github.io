@@ -9,8 +9,6 @@
     --white: #fff;
 
     --body-font-color: var(--white);
-    
-    --box-shadow-color: rgba(255, 255, 255, 0.1);
 
     --link-color: #7289da;
     --link-color-hover: #a0b4ee;
@@ -21,8 +19,6 @@
 
     --global-font-size: 16px;
     --global-border-radius: 10px;
-    --global-box-shadow: 2px 2px 15px var(--box-shadow-color);
-
 }
 
 body {
