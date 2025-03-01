@@ -1,73 +1,83 @@
-from PIL import Image, ImageDraw, ImageEnhance
+from PIL import Image, ImageDraw, ImageFont
 import os
 
-# Function to create a circular watermark with adjusted transparency
-def create_round_watermark(watermark_image_path, base_image_size):
-    # Open the watermark image
-    watermark = Image.open(watermark_image_path).convert("RGBA")
-    
-    # Scale the watermark to fit the image dimensions (based on the smaller dimension of the original image)
+# Function to create a repeated, diagonal text watermark
+def create_text_watermark(base_image_size, text):
     base_width, base_height = base_image_size
-    watermark_size = min(base_width, base_height) // 5  # watermark will be 20% of the smaller dimension
     
-    # Resize watermark maintaining its aspect ratio
-    watermark = watermark.resize((watermark_size, watermark_size), Image.Resampling.LANCZOS)
-
-    # Create a mask for the circular watermark
-    mask = Image.new("L", (watermark_size, watermark_size), 0)
-    draw = ImageDraw.Draw(mask)
-    draw.ellipse((0, 0, watermark_size, watermark_size), fill=255)  # Draw a filled circle
-
-    # Apply the mask to the watermark to make it round and keep transparency
-    round_watermark = Image.new("RGBA", (watermark_size, watermark_size))
-    round_watermark.paste(watermark, (0, 0), mask)
+    # Create an empty image to draw the watermark on
+    watermark_image = Image.new("RGBA", (base_width, base_height), (0, 0, 0, 0))
     
-    # Adjust the transparency of the watermark (optional)
-    alpha = round_watermark.split()[3]  # Get the alpha channel
-    alpha = ImageEnhance.Brightness(alpha).enhance(0.7) 
-    round_watermark.putalpha(alpha)
+    # Initialize the drawing context
+    draw = ImageDraw.Draw(watermark_image)
     
-    return round_watermark
+    # Choose a smaller font (adjust font size here)
+    try:
+        font = ImageFont.truetype("arial.ttf", 30)  # Smaller text
+    except IOError:
+        font = ImageFont.load_default()  # Fallback to default if Arial is not available
+    
+    # Calculate text width and height
+    bbox = draw.textbbox((0, 0), text, font=font)
+    text_width, text_height = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    
+    # Set the angle of rotation (45 degrees)
+    angle = 45
+    rotated_text = Image.new("RGBA", (text_width, text_height))
+    rotated_draw = ImageDraw.Draw(rotated_text)
+    
+    # Draw the text on a small image (this is used to rotate the text)
+    rotated_draw.text((0, 0), text, font=font, fill=(255, 255, 255, 128))  # Semi-transparent white text
+    
+    # Rotate the text
+    rotated_text = rotated_text.rotate(angle, expand=1)
+    
+    # Create watermark and repeat text across the entire image, including beyond the image bounds
+    x_offset = 0
+    y_offset = 0
+    while y_offset < base_height + text_height:  # Go beyond the height of the image
+        while x_offset < base_width + text_width:  # Go beyond the width of the image
+            # Paste the rotated text on the image at the current position
+            watermark_image.paste(rotated_text, (x_offset, y_offset), rotated_text)
+            x_offset += text_width  # Move the position to the right by the text width
+        x_offset = 0  # Reset to the start of the next row
+        y_offset += text_height  # Move the position down by the text height
+    
+    return watermark_image
 
-# Function to add the circular watermark to the original image
-def add_watermark(input_image_path, watermark_image_path, output_image_path):
+# Function to add the watermark (repeated text) to the original image
+def add_text_watermark(input_image_path, output_image_path, text):
     # Open the original image
-    original_image = Image.open(input_image_path)
-    original_image = original_image.convert("RGBA")  # Convert to RGBA to support transparency
+    original_image = Image.open(input_image_path).convert("RGBA")
     
-    # Create the round watermark image
-    watermark = create_round_watermark(watermark_image_path, original_image.size)
-
-    # Calculate watermark position (bottom-right corner with padding)
-    watermark_position = (original_image.width - watermark.width - 10, original_image.height - watermark.height - 10)
-
-    # Paste the watermark onto the original image
-    original_image.paste(watermark, watermark_position, watermark)
-
+    # Create the text watermark image
+    watermark = create_text_watermark(original_image.size, text)
+    
+    # Overlay the watermark on the original image
+    watermarked_image = Image.alpha_composite(original_image, watermark)
+    
     # Save the resulting image
-    original_image.save(output_image_path)
+    watermarked_image.save(output_image_path)
 
-
-# Folder paths
-input_folder = '../images/new-pictures'  # Folder containing the images
-output_folder = '../images/watermark-pictures'  # Folder to save the new images
-watermark_image_path = '../images/watermark/purrfactory-watermark.png'  # Watermark image
-
-
-# Create the output folder if it doesn't exist
-if not os.path.exists(output_folder):
-    os.makedirs(output_folder)
-
-# Loop through all files in the input folder
-for filename in os.listdir(input_folder):
-    input_image_path = os.path.join(input_folder, filename)
+# Function to add watermark manually (one image at a time)
+def process_single_image(input_image_path, output_image_path, name, year):
+    # Format the watermark text
+    watermark_text = f"{name} + Purrfactory + {year}"
     
-    # Check if the file is an image (PNG, JPG, JPEG)
-    if filename.lower().endswith(('png', 'jpg', 'jpeg')):
-        # Path for the new image with watermark
-        output_image_path = os.path.join(output_folder, filename)
+    # Add the watermark and save the image
+    add_text_watermark(input_image_path, output_image_path, watermark_text)
+    print(f"Watermarked image saved to: {output_image_path}")
 
-        # Add watermark and save the new image
-        add_watermark(input_image_path, watermark_image_path, output_image_path)
-
-print("All images have been successfully watermarked with a round, transparent watermark.")
+# Continuous loop to process images until stopped manually
+while True:
+    input_image_path = "../images/new-pictures/"+ input("Picture name (with extension): ")
+    output_image_path = "../images/watermark-pictures/new_watermarked.webp"
+    name = "Their name"  # Replace with dynamic name if needed
+    year = 2025          # Replace with dynamic year if needed
+    
+    process_single_image(input_image_path, output_image_path, name, year)
+    
+    # Ask user if they want to process another image
+    continue_processing = input("Do you want to process another image? (yes/no): ").lower()
+    if continue_processing != "yes":
+        break
