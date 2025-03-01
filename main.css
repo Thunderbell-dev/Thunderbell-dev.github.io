@@ -38,5 +38,10 @@ h1 {
     font-size: 36px;
 }
 
+.bold{
+    font-weight: bold;
+}
 
-
+.italic{
+    font-style: italic;
+}
