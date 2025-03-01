@@ -13,9 +13,9 @@ Before running the script, make sure you have the following requirements:
 
 ## Script Description
 
-### Functionality:
+### Functionality
 
-1. **Circular Watermark Creation**: 
+1. **Circular Watermark Creation**
 
    - The watermark is loaded as an image with transparency (PNG format).
    - The watermark is resized to 20% of the smaller dimension of each original image to ensure that it doesn't become too large.
