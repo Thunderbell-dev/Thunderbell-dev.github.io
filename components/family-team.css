@@ -48,6 +48,7 @@
 }
 
 .player-box {
+    animation: scaleUp 1s ease-in-out forwards;
     background: var(--light-gray-2);
     padding: 10px;
     border-radius: var(--global-border-radius);
@@ -81,4 +82,13 @@
     text-shadow: unset;
     font-size: 1.5rem;
     color: var(--body-font-color);
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
 }

@@ -1,0 +1,28 @@
+.stage-container {
+    text-align: center;
+    background: var(--light-gray);
+    padding: 40px 50px;
+    border-radius: 10px;
+    animation: scaleUp 1s ease-out forwards;
+    margin-top: 40px;
+    width: 66%;
+}
+.stage-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--construction-color);
+}
+.stage-container p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--body-font-color);
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
