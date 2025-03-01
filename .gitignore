@@ -1,3 +1,4 @@
 # DONT Upload Pictures without watermark!
 pictures/new-pictures/*
 !pictures/new-pictures/_.txt
+tools/__pycache__/*
