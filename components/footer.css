@@ -5,7 +5,7 @@ footer{
 
     text-align: center;
 
-    padding: 30px 20px;
+    padding: 20px 20px;
     margin-top: 40px; 
 }
 
@@ -36,5 +36,12 @@ footer .hyperlink:hover {
 }
 
 .footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
+}
+
+.footer-text p{
+    padding-right: 5px;
 }
