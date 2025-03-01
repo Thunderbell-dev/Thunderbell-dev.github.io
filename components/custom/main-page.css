@@ -3,7 +3,7 @@
     background-color: var(--light-gray);
     padding: 5px;
     border-radius: var(--global-border-radius);
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .family-team-title .title{
@@ -20,4 +20,97 @@
 
 .family-team-title .join a{
     padding-right: 10px;
+}
+
+.role-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.role-box {
+    color: var(--body-font-color);
+    background: var(--light-gray);
+    
+    padding: 20px;
+    border-radius: var(--global-border-radius);
+    text-align: center;
+    width: 280px;
+    min-height: 150px;
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.role-box:hover {
+    transform: translateY(-5px);
+}
+
+.role-box i {
+    font-size: 40px;
+    color: var(--player-icon-color);
+    margin-bottom: 10px;
+}
+
+.role-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.role-box p {
+    margin: 5px 0;
+    color: var(--body-font-color);
+}
+
+.role-container .role-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-box {
+    animation: scaleUp 1s ease-in-out forwards;
+    background: var(--light-gray-2);
+    padding: 10px;
+    border-radius: var(--global-border-radius);
+    margin: 5px 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.player-row {
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+    justify-content: flex-start; 
+}
+
+.player-icon {
+    margin-right: 10px; 
+    flex-shrink: 0; 
+    width: 35px;
+    margin-top: 5px;
+}
+
+.player-name {
+    color: var(--body-font-color);
+    font-size: 16px;
+}
+
+.player-box i {
+    text-shadow: unset;
+    font-size: 1.5rem;
+    color: var(--body-font-color);
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
 }
