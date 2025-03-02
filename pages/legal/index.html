@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purrfactory - Under Construction</title>
+    <title>Purrfactory</title>
     <link rel="icon" type="image/png" href="/images/public/Kitten.webp">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/components/header.css">
     <link rel="stylesheet" href="/components/footer.css">
     <link rel="stylesheet" href="/components/stage.css">
-    <link rel="stylesheet" href="/components/custom/under-construction.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/components/custom/legal.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-
 <header>
     <div class="header-container">
         <div class="header-section header-section-a">
@@ -36,14 +35,33 @@
 
 <body>
     <div class="stage-container">
-        <!-- Under construction icon -->
-        <div class="construction-icon">
-            <i class="fas fa-cogs fa-spin" style="font-size: 4rem; color: #ff6347;"></i>
-        </div>
-        <h1>We're crafting something purrfect!</h1>
-        <p>Our website is currently under construction, but we're working hard to bring you something amazing!</p>
-        <p>Check back soon for exciting updates and features.</p>
+        <a href="legal.md" id="legal-link">
+            <div id="legal-content">Loading...</div>
+        </a>
     </div>
+
+    <script>
+        fetch('legal.md')
+            .then(response => {
+                if (!response.ok) throw new Error('Markdown file not found');
+                return response.text();
+            })
+            .then(text => {
+                // Insert the Markdown content
+                document.getElementById('legal-content').innerHTML = marked.parse(text);
+
+                // Remove the <a> tag wrapper (fallback is not needed anymore)
+                let legalLink = document.getElementById('legal-link');
+                let legalContent = document.getElementById('legal-content');
+
+                // Replace <a> with just the content
+                legalLink.replaceWith(legalContent);
+            })
+            .catch(error => {
+                console.error("Error loading Markdown:", error);
+                document.getElementById('legal-content').innerHTML = "Click here to view the legal disclaimer.";
+            });
+    </script>
 </body>
 
 <footer>
