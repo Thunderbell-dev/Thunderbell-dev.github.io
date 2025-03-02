@@ -7,10 +7,11 @@ def apply_changes_to_all_index_html(base_directory, template_file):
         if 'index.html' in files:
             index_file = os.path.join(root, 'index.html')
             print(f"Applying changes to {index_file}...")
-            apply_changes_to_html(template_file, index_file)
+            apply_changes_to_html(template_file, index_file, construction_file)
 
 # Define your template file and base directory
 template_file = '../templates/site.html'  # The template file
+construction_file = "../templates/under-construction/index.html"
 base_directory = '../'  # The base directory to search for index.html files
 
 # Apply the changes to all index.html files in the base directory and subdirectories

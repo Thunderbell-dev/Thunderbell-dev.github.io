@@ -28,7 +28,7 @@ def replace_section(html, old_section, new_section):
 
         return html
 
-def apply_changes_to_html(file1, file2):
+def apply_changes_to_html(file1, file2, construction_file):
     """Read files, extract sections, and apply changes."""
     try:
         with open(file1, 'r', encoding='utf-8') as f1:
@@ -43,11 +43,18 @@ def apply_changes_to_html(file1, file2):
     except Exception as e:
         print(f"Error reading {file2}: {e}")
         return
+    
+    try:
+        with open(construction_file, 'r', encoding='utf-8') as f3:
+            html3 = f3.read()
+    except Exception as e:
+        print(f"Error reading {construction_file}: {e}")
+        return
 
     # If the file2 is empty, just copy the entire content from file1 to file2
     if not html2.strip():  # Check if the file is empty (only whitespace)
         print(f"{file2} is empty. Copying content from {file1} to {file2}...")
-        html2 = html1
+        html2 = html3
     else:
         # Extract header and footer from site.html (template)
         header1 = extract_section(html1, 'header')
