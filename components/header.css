@@ -53,7 +53,7 @@ nav a {
     text-decoration: unset;
 }
 
-nav a:hover {
+nav a:hover, a.active {
     background-color: var(--light-gray-2);
     border: 1px solid var(--light-gray-3);
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/components/header.css">
     <link rel="stylesheet" href="/components/footer.css">
     <link rel="stylesheet" href="/components/stage.css">
-    <link rel="stylesheet" href="/components/custom/under-construction.css">
+    <link rel="stylesheet" href="/components/news.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -36,13 +36,11 @@
 
 <body>
     <div class="stage-container">
-        <!-- Under construction icon -->
-        <div class="construction-icon">
-            <i class="fas fa-cogs fa-spin" style="font-size: 4rem; color: #ff6347;"></i>
-        </div>
-        <h1>We're crafting something purrfect!</h1>
-        <p>Our website is currently under construction, but we're working hard to bring you something amazing!</p>
-        <p>Check back soon for exciting updates and features.</p>
+        <div class="news-container">
+            <div id="latest-news" class="featured-news"></div>
+    
+            <div id="older-news" class="news-grid"></div>
+        </div>    
     </div>
 </body>
 
@@ -66,5 +64,8 @@
         
     </div>
 </footer>
+
+<script src="/scripts/nav-script.js"></script>
+<script src="/scripts/news-loader.js"></script>
 
 </html>
