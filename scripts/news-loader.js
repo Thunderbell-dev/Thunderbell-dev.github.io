@@ -34,7 +34,7 @@ function formatDate(dateString) {
 
 
 async function fetchNews() {
-    const response = await fetch("/pages/news/articles/news-list.json");
+    const response = await fetch("/pages/news/news-list.json");
     if (!response.ok) {
         console.error("Failed to load news-list.json", response.status);
         return;
