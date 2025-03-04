@@ -1,12 +1,11 @@
-:root{
-    
-    --gray: #222;
-    --light-gray: #333;
-    --light-gray-2: #444;
-    --light-gray-3: #555;
+:root {
+    --primary-background: #2A2D34;
+    --secondary-background: #575C66;
 
-    --black: #000;
-    --white: #fff;
+    --section-background: #3F434F;
+
+    --black: #15171B;
+    --white: #EAECEF;
 
     --body-font-color: var(--white);
 
@@ -17,9 +16,10 @@
     --link-font-weight: bold;
     --link-transition: color 0.3s ease;
 
-    --player-icon-color: #f4c542;
-    --construction-color: #ff6347;
-
+    --nav-border-color: #A3A7B2;
+    
+    --player-icon-color: #FFCE56;
+    --construction-color: #F97300;
 
     --global-font-size: 16px;
     --global-border-radius: 10px;
@@ -30,7 +30,7 @@ body {
     font-size:  var(--global-font-size);
     
     color: var(--body-font-color);
-    background-color: var(--gray);
+    background-color: var(--primary-background);
 
     margin: 0;
     padding: 0;

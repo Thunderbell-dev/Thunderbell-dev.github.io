@@ -1,6 +1,6 @@
 .family-team-title {
     display: flex;
-    background-color: var(--light-gray);
+    background-color: var(--section-background);
     padding: 5px;
     border-radius: var(--global-border-radius);
     margin: 20px 0;
@@ -30,7 +30,7 @@
 
 .role-box {
     color: var(--body-font-color);
-    background: var(--light-gray);
+    background: var(--section-background);
     
     padding: 20px;
     border-radius: var(--global-border-radius);
@@ -71,7 +71,7 @@
 
 .player-box {
     animation: scaleUp 1s ease-in-out forwards;
-    background: var(--light-gray-2);
+    background: var(--secondary-background);
     padding: 10px;
     border-radius: var(--global-border-radius);
     margin: 5px 0;

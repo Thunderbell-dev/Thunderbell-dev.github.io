@@ -1,6 +1,6 @@
 footer{
     font-size: var(--global-font-size);
-    background-color: var(--light-gray);
+    background-color: var(--section-background);
     color: var(--body-font-color);
 
     text-align: center;

@@ -88,7 +88,7 @@ function generateFeaturedNewsHTML(news) {
         <div class="featured-news">
             <h2>${news.title}</h2>
             <p class="date">${news.date}</p>
-            <div class="image"><img src="${news.image}" alt="${news.title}" /></div>
+            <div class="main-image"><img src="${news.image}" alt="${news.title}" /></div>
             <p class="teaser">${news.teaser}</p>
             <a href="${news.link}" class="read-more">Read More</a>
         </div>
@@ -100,6 +100,7 @@ function generateNewsCardHTML(news) {
         <div class="news-card">
             <h3>${news.title}</h3>
             <p class="date">${news.date}</p>
+            <div class="image"><img src="${news.image}" alt="${news.title}" /></div>
             <p class="teaser">${news.teaser}</p>
             <a href="${news.link}" class="read-more">Read More</a>
         </div>

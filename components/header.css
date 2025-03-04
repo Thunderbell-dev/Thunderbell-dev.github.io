@@ -1,5 +1,5 @@
 header {
-    background-color: var(--light-gray);
+    background-color: var(--section-background);
     color: var(--body-font-color);
 
     text-align: center;
@@ -41,7 +41,7 @@ nav{
 
 nav a {
     color: var(--body-font-color);
-    background: var(--light-gray);
+    background: var(--section-background);
     border: 1px solid transparent;
 
     margin: 0 5px;
@@ -54,8 +54,8 @@ nav a {
 }
 
 nav a:hover, a.active {
-    background-color: var(--light-gray-2);
-    border: 1px solid var(--light-gray-3);
+    background-color: var(--secondary-background);
+    border: 1px solid var(--nav-border-color);
 }
 
 @media (max-width: 768px) {
