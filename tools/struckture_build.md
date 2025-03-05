@@ -1,4 +1,4 @@
-# HTML Header and Footer Sync Script
+# HTML Header and Footer Sync Script  **[OUTDATED !!!]**
 
 This script is designed to help update the header and footer sections of multiple HTML files across a directory structure. It compares and updates the header and footer sections from a template file (`site.html` or any other template you provide) into other HTML files (e.g., `index.html` or any other HTML files within subdirectories). This is useful when you need to keep your header and footer content consistent across many pages in your website.
 
