@@ -85,12 +85,24 @@ async function fetchNews() {
 
 function generateFeaturedNewsHTML(news) {
     return `
-        <div class="featured-news">
-            <h2>${news.title}</h2>
-            <p class="date">${news.date}</p>
-            <div class="main-image"><img src="${news.image}" alt="${news.title}" /></div>
-            <p class="teaser">${news.teaser}</p>
-            <a href="${news.link}" class="read-more">Read More</a>
+        <div class="featured-container">
+             <div class="featured-news-title">
+                <h2>${news.title}</h2>
+            </div>
+            <div class="date"> 
+                ${news.date}
+            </div>
+            <div class="main-image">
+                <img src="${news.image}" alt="${news.title}" />
+            </div>
+            <div class="teaser-container">
+                <div class="teaser">
+                    ${news.teaser}
+                </div>
+            </div>
+            <div class="read-more-button">
+                <a href="${news.link}" class="read-more">Read More</a>
+            </div>
         </div>
     `;
 }
@@ -98,11 +110,23 @@ function generateFeaturedNewsHTML(news) {
 function generateNewsCardHTML(news) {
     return `
         <div class="news-card">
-            <h3>${news.title}</h3>
-            <p class="date">${news.date}</p>
-            <div class="image"><img src="${news.image}" alt="${news.title}" /></div>
-            <p class="teaser">${news.teaser}</p>
-            <a href="${news.link}" class="read-more">Read More</a>
+            <div class="news-card-title">
+                <h3>${news.title}</h3>
+            </div>
+            <div class="date"> 
+                ${news.date}
+            </div>
+            <div class="image">
+                <img src="${news.image}" alt="${news.title}" />
+            </div>
+            <div class="teaser-container">
+                <div class="teaser">
+                    ${news.teaser}
+                </div>
+            </div>
+            <div class="read-more-button">
+                <a href="${news.link}" class="read-more">Read More</a>
+            </div>
         </div>
     `;
 }
