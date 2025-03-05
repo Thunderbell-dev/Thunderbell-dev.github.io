@@ -18,7 +18,7 @@ function parseMarkdown(md, filename) {
         date: formattedDate,
         image: metaData.image || "/images/public/Kitten.webp",
         teaser: metaData.teaser || content[0] || "No preview available",
-        link: "/pages/news/" + filename.replace(".md", ".html"),
+        link: "/pages/news/articles-html" + filename.replace(".md", ".html"),
     };
 }
 
