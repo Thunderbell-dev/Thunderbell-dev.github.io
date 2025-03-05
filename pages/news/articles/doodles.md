@@ -1,20 +1,22 @@
 ---
 title: Logo and Banner Doodles 🎨
-date: 2025-03-03
+date: 2025-02-26
 image: /images/public/Wonderland.webp
 teaser: Our Discord server is up and running, but we need your help to make it shine! ✨ We're looking for some creative logo and banner doodles that temporarily represent our community till we are settled in. 🎨 We want to see your creative ideas! 🖌️
 ---
 
-Our Discord server is up and running, but we need your help to make it shine! ✨ We're looking for some creative logo and banner **doodles** that temporarily represent our community till we are settled in. 🎨 We want to see your creative ideas! 🖌️
+Our Discord server is up and running, but we need your help to make it shine! ✨  
+We're looking for some creative logo and banner **doodles** that temporarily represent our community till we are settled in. 🎨  
+We want to see your creative ideas! 🖌️  
 
 **What We're Looking For:**  
 
-- Something that reflects our community's personality and style 😸🌟  
-- Perhaps integrate a Cat with yarnball 🧶🐾  
+- Something that reflects our community's personality and style 🌟  
+- Perhaps integrate a Cat with yarnball 🧶😸  
 - It should be simple that'll look great even small 🖼️💫
 
 **How to Submit:**  
 
-- Send us your **doodles** as a PNG in the following thread 📎👇  
+- Send us your **doodles** as a PNG in the Discord thread 📎
 
 Let's make our server stand out with your amazing artwork! 🚀🎉

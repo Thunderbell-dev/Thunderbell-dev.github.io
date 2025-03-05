@@ -18,7 +18,8 @@ function parseMarkdown(md, filename) {
         date: formattedDate,
         image: metaData.image || "/images/public/Kitten.webp",
         teaser: metaData.teaser || content[0] || "No preview available",
-        link: "/pages/news/articles-html" + filename.replace(".md", ".html"),
+        link: "/pages/news/articles-html/" + filename.replace(".md", ".html"),
+        rawDate: metaData.date || filename.substring(0, 10), // Store the raw date for sorting
     };
 }
 
@@ -32,7 +33,6 @@ function formatDate(dateString) {
     return `${day}.${month}.${year}`;
 }
 
-
 async function fetchNews() {
     const response = await fetch("/pages/news/news-list.json");
     if (!response.ok) {
@@ -42,13 +42,6 @@ async function fetchNews() {
 
     const newsFiles = await response.json();
     console.log("✅ Loaded news files:", newsFiles);
-
-    // Sort the files by date, from newest to oldest
-    newsFiles.sort((a, b) => {
-        const dateA = new Date(a.substring(0, 10)); // Extract date from filename
-        const dateB = new Date(b.substring(0, 10)); // Extract date from filename
-        return dateB - dateA; // Compare dates to sort in descending order (newest first)
-    });
 
     const newsFolder = "/pages/news/articles/";
     const newsItems = await Promise.all(newsFiles.map(async (file) => {
@@ -72,6 +65,13 @@ async function fetchNews() {
         console.warn("⚠ No news items found!");
         return;
     }
+
+    // Sort the files by date, from newest to oldest
+    filteredNews.sort((a, b) => {
+        const dateA = new Date(a.rawDate); // Use raw date (from md file)
+        const dateB = new Date(b.rawDate); // Use raw date (from md file)
+        return dateB - dateA; // Compare dates to sort in descending order (newest first)
+    });
 
     // Show the latest news
     const latestNews = filteredNews.shift();

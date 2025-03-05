@@ -1,0 +1,44 @@
+.article-container{
+    border-radius: var(--global-border-radius);
+    background-color: var(--section-background);
+    padding: 20px;
+}
+
+.article-title{
+    text-align: center;
+}
+
+.article-image{
+    display: flex;
+    justify-content: center;
+}
+
+.article-date {
+    padding: 10px;
+    border-radius: var(--global-border-radius);
+    background-color: var(--secondary-background);
+    width: 25%;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+.article-image img{
+    max-width: 66%; 
+    height: auto;
+    border-radius: var(--global-border-radius);
+    margin-bottom: 20px;
+}
+
+.article-content{
+    font-size: 18px;
+    border-radius: var(--global-border-radius);
+    background-color: var(--secondary-background);
+    padding: 20px;
+}
+
+.article-content a[href] {
+    color: var(--link-color);
+    text-decoration: var(--link-decoration);
+    font-weight: var(--link-font-weight);
+    transition: var(--link-transition);
+}

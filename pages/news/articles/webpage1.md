@@ -7,12 +7,14 @@ teaser: Alright, fluff enthusiasts this is it! 🚀 Purrfactory is live! A cozy 
 
 ---
 
-### 🐱 Purrfactory is Live – And It’s Already Something Special! 🎉  
+## 🐱 Purrfactory is Live – And It’s Already Something Special! 🎉  
 
-Alright, fluff enthusiasts this is it! 🚀 Purrfactory is live! A cozy little corner on the web just for us, where ✨ creativity flows, 💡 ideas come to life, and 🐱 good company is always around. No rush,nopressure—just a space to be.  
+Alright, fluff enthusiasts this is it! 🚀 Purrfactory is live!  
+A cozy little corner on the web just for us, where ✨ creativity flows, 💡 ideas come to life, and 🐱 good company is always around.  
+No rush, no pressure — just a space to be.  
 
-🔹 **Curious?** You don’t have to wait—the website is **up and running!** 🎨 The first small demo is already there, and more are on the way.  
-🔹 **No strict schedules,** but fresh content will keep coming. 🛠️ We’re building something with care, and **you’ll be the first to know** when new things drop!  
+🔶 **Curious?** You don’t have to wait—the website is **up and running!** 🎨 The first small demo is already there, and more are on the way.  
+🔶 **No strict schedules,** but fresh content will keep coming. 🛠️ We’re building something with care, and **you’ll be the first to know** when new things drop!  
 
 It’s **happening**. It’s **growing**. And it’s gonna be **pawsome**. 🐱✨ Check it out now and be part of it from the start!
 
