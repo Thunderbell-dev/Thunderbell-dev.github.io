@@ -43,17 +43,19 @@ h2, h3 {
 .read-more {
     position: absolute;
     bottom: 20px;
-    right: 20px; 
+    right: 20px;
     padding: 6px 10px;
     border-radius: var(--global-border-radius);
     background: var(--link-color);
-    color: var(--body-font-color);
-    text-decoration: none;
+    color: var(--section-background);
+    text-decoration: none; 
     font-weight: bold;
     transition: background 0.3s ease;
     align-self: flex-end;
     text-align: center;
     justify-self: self-end;
+    border: none; 
+    cursor: pointer; 
 }
 
 .read-more:hover{

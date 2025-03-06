@@ -1,7 +1,7 @@
 ---
 title: Logo and Banner Doodles 🎨
 date: 2025-02-26
-image: /images/public/Wonderland.webp
+image: /images/public/TBD.webp
 teaser: Our Discord server is up and running, but we need your help to make it shine! ✨ We're looking for some creative logo and banner doodles that temporarily represent our community till we are settled in. 🎨 We want to see your creative ideas! 🖌️
 ---
 

@@ -1,16 +1,16 @@
 :root {
-    --primary-background: #2A2D34;
-    --secondary-background: #575C66;
+    --primary-background: #202328;
+    --secondary-background: #42464e;
 
-    --section-background: #3F434F;
+    --section-background: #2e3139;
 
     --black: #15171B;
     --white: #EAECEF;
 
     --body-font-color: var(--white);
 
-    --link-color: #C4B8FF;
-    --link-color-hover: #DCD7FE;
+    --link-color: #98c3ff;
+    --link-color-hover: #bed9ff;
     --link-decoration: none;
     --link-decoration-hover: underline;
     --link-font-weight: bold;

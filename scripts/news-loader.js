@@ -31,8 +31,6 @@ function formatDate(dateString) {
     return `Published on: ${day}.${month}.${year}`;
 }
 
-
-
 async function fetchNews() {
     const response = await fetch("https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/news/news-list.json");
     if (!response.ok) {
@@ -103,7 +101,7 @@ function generateFeaturedNewsHTML(news) {
                 </div>
             </div>
             <div class="read-more-button">
-                <a href="${news.link}" class="read-more">Read More</a>
+                <button onclick="window.location.href='${news.link}'" class="read-more">Read More</button>
             </div>
         </div>
     `;
@@ -127,7 +125,7 @@ function generateNewsCardHTML(news) {
                 </div>
             </div>
             <div class="read-more-button">
-                <a href="${news.link}" class="read-more">Read More</a>
+                <button onclick="window.location.href='${news.link}'" class="read-more">Read More</button>
             </div>
         </div>
     `;

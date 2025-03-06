@@ -1,7 +1,5 @@
 # ToDo List
 
-- news script to update json
-
 - struckture_build script update needed
   - fix meta inforamtion  
 
