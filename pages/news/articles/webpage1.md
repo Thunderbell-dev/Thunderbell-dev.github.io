@@ -1,10 +1,8 @@
 ---
-
 title: Purrfactory Webpage 0.1.0 🚀
 date: 2025-03-03
 image: /images/public/TBD.webp
 teaser: Alright, fluff enthusiasts this is it! 🚀 Purrfactory is live! A cozy little corner on the web just for us, where ✨ creativity flows, 💡 ideas come to life, and 🐱 good company is always around. No rush, nopressure just a space to be.
-
 ---
 
 ## Purrfactory is Live :Congratz:  

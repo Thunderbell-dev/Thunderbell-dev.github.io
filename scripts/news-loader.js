@@ -7,11 +7,9 @@ function parseMarkdown(md, filename) {
     }
 
     const metaData = Object.fromEntries(meta.split("\n").map(line => line.split(": ")));
-
-    // Format the date to European format (DD.MM.YYYY)
-    const formattedDate = metaData.date 
-        ? formatDate(metaData.date)
-        : formatDate(filename.substring(0, 10)); // Default to filename's date if not provided
+  
+    const filenameDate = filename.substring(0, 10); 
+    const formattedDate = metaData.date ? formatDate(metaData.date) : formatDate(filenameDate);
 
     return {
         title: metaData.title || "Untitled",
@@ -19,21 +17,20 @@ function parseMarkdown(md, filename) {
         image: metaData.image || "/images/public/TBD.webp",
         teaser: metaData.teaser || content[0] || "No preview available",
         link: "/pages/news/articles-html/" + filename.replace(".md", ".html"),
-        rawDate: metaData.date || filename.substring(0, 10), // Store the raw date for sorting
+        rawDate: metaData.date || filenameDate,
     };
 }
 
 // Helper function to format the date in European format (DD.MM.YYYY)
 function formatDate(dateString) {
     const date = new Date(dateString);
-    if (isNaN(date)) {
-        return "Published on: Unknown Date"; // Fallback for invalid date
-    }
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
+
     return `Published on: ${day}.${month}.${year}`;
 }
+
 
 
 async function fetchNews() {
@@ -63,6 +60,8 @@ async function fetchNews() {
 
     const filteredNews = newsItems.filter(item => item !== null);
     console.log("📜 Parsed news items:", filteredNews);
+
+    console.log("Raw dates before sorting:", filteredNews.map(item => item.rawDate));
 
     if (filteredNews.length === 0) {
         console.warn("⚠ No news items found!");
