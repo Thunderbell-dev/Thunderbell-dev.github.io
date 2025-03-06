@@ -17,6 +17,12 @@ function replaceIcons() {
         ":Idea:": "💡",
         ":Scheme:": "📝",
         ":Beggar:": "🙏",
+        ":confetti_ball:": "🎊",
+        ":Aristocat:": "😺", 
+        ":Newspaper:": "📰", 
+        ":lady_beetle:": "🐞", 
+        ":BONK:": "💥",
+        ":star2:": "🌟",
 
         // Image icons
         // ":Daze:": '<img src="/images/public/Kitten.webp" alt="Daze Icon" class="icon">',

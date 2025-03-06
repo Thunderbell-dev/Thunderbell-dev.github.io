@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purrfactory - Under Construction</title>
+    <link rel="icon" type="image/png" href="/images/public/Kitten.webp">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/components/header.css">
+    <link rel="stylesheet" href="/components/footer.css">
+    <link rel="stylesheet" href="/components/stage.css">
+    <link rel="stylesheet" href="/components/custom/articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/scripts/icon-loader.js"></script>
+</head>
+
+<header>
+    <div class="header-container">
+        <div class="header-section header-section-a">
+            <a href="/index.html">
+                <img src="/images/public/Kitten.webp" alt="Purrfactory Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-section header-section-b">
+            <h1 id="main-title">Purrfactory</h1>
+        </div>
+        <div class="header-section header-section-c"></div>
+    </div>
+    <nav>
+        <a href="/pages/guides/index.html">Guides</a>
+        <a href="/pages/art/index.html">Art Gallery</a>
+        <a href="/pages/news/index.html">News</a>
+        <a href="/pages/achievements/index.html">Achievements</a>
+        <a href="/pages/affiliates/index.html">Affiliates</a>
+    </nav>
+</header>
+
+<body>
+    <div class="stage-container">
+        <div class="article-container">
+            <div class="article-title">
+                <h1 id="md-title"></h1>
+                <div id="md-date" class="article-date"></div>
+            </div>
+            <div class="article-image">
+                <img id="md-image" src="" alt="article-image">
+            </div>
+            <div class="article-content">
+                <div id="md-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            if (isNaN(date)) return ''; // Handle invalid date
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            return `${day}.${month}.${year}`;
+        }
+    
+        fetch('../articles/webpage_0-1-0.md') // Ensure correct file path
+            .then(response => response.text())
+            .then(text => {
+                // Extract metadata (title, image, date)
+                const metadataMatch = text.match(/^---([\s\S]*?)---/);
+                let metadata = {};
+                if (metadataMatch) {
+                    const metaLines = metadataMatch[1].trim().split("\n");
+                    metaLines.forEach(line => {
+                        const [key, ...value] = line.split(": ");
+                        metadata[key.trim()] = value.join(": ").trim();
+                    });
+                    text = text.replace(metadataMatch[0], "").trim(); // Remove metadata from content
+                }
+    
+                // Set title and image
+                if (metadata.title) document.getElementById("md-title").innerText = metadata.title;
+                if (metadata.image) document.getElementById("md-image").src = metadata.image;
+    
+                // Format and display the date
+                if (metadata.date) {
+                    const dateElement = document.getElementById("md-date");
+                    const formattedDate = formatDate(metadata.date);
+                    if (formattedDate) dateElement.innerText = `Published on: ${formattedDate}`;
+                }
+    
+                // Render markdown content
+                document.getElementById('md-content').innerHTML = marked.parse(text);
+    
+                // Call icon replacement function AFTER markdown is rendered
+                if (typeof replaceIcons === "function") {
+                    replaceIcons();
+                }
+            })
+            .catch(error => console.error('Error loading markdown:', error));
+    </script>
+
+    </div>
+</body>
+
+<footer>
+    <div class="footer footer-container">
+        <div class="footer-text bold">
+            &copy; 2025 Purrfactory. All rights reserved.
+        </div>
+        
+        <div class="footer-text">
+            <p><a href="/pages/legal/index.html" class="hyperlink">Legal</a></p>
+            <p class="hide-on-mobile">|</p>
+            <p><a href="/pages/legal/credits/index.html" class="hyperlink">Credits</a></p>
+            <p class="hide-on-mobile">|</p>
+            <p><a href="/pages/legal/contacts/index.html" class="hyperlink">Contacts</a></p>
+            
+        </div>
+        <div class="footer-text">
+           <a href="mailto:purrfactory@proton.me" class="hyperlink">purrfactory@proton.me</a>
+        </div>
+        
+    </div>
+</footer>
+<script src="/scripts/nav-script.js"></script>
+
+</html>
