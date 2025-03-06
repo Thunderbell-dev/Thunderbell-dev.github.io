@@ -5,18 +5,20 @@ image: /images/public/Wonderland.webp
 teaser: Our Discord server is up and running, but we need your help to make it shine! ✨ We're looking for some creative logo and banner doodles that temporarily represent our community till we are settled in. 🎨 We want to see your creative ideas! 🖌️
 ---
 
-Our Discord server is up and running, but we need your help to make it shine! ✨  
-We're looking for some creative logo and banner **doodles** that temporarily represent our community till we are settled in. 🎨  
-We want to see your creative ideas! 🖌️  
+Hey all :PinkiePaw: :Help:  
 
-**What We're Looking For:**  
+Our Discord server is up and running, but we need your help to make it shine! :Daze:  
+We're looking for some creative logo and banner **doodles** that **temporary** represents our community till we are settled in.  
+We want to see your creative ideas! :Hanw:  
 
-- Something that reflects our community's personality and style 🌟  
-- Perhaps integrate a Cat with yarnball 🧶😸  
-- It should be simple that'll look great even small 🖼️💫
+**What We're Looking For:** :Scheme:  
 
-**How to Submit:**  
+- Something that reflects our community's personality and style  
+- Perhaps integrate a Cat with yarnball  :yarn: :Beggar:
+- It should be simple that'll look great even small :UrWelcome:  
 
-- Send us your **doodles** as a PNG in the Discord thread 📎
+**How to Submit:** :Thinker:  
 
-Let's make our server stand out with your amazing artwork! 🚀🎉
+- Send us your **doodles** as an PNG in the following thread :Idea:  
+
+Let's make our server stand out with your amazing artwork! :Hype:

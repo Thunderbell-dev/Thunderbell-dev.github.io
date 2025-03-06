@@ -14,8 +14,6 @@ h2, h3 {
 }
 
 .news-card-title, .featured-news-title{
-    border-radius: var(--global-border-radius);
-    background-color: var(--secondary-background);
     margin-bottom: 10px;
     justify-self: center;
 }
@@ -34,15 +32,12 @@ h2, h3 {
 }
 
 .date {
-    font-size: 14px;
-    margin-bottom: 10px;
-    padding: 6px 10px;
-    background-color: var(--secondary-background);
-    border: 1px solid var(--nav-border-color);
+    padding: 10px;
     border-radius: var(--global-border-radius);
-    display: inline-block;
-    text-align: left;
-    align-self: flex-start;
+    background-color: var(--secondary-background);
+    justify-self: center;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .read-more {
