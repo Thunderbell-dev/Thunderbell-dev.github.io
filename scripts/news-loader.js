@@ -15,8 +15,8 @@ function parseMarkdown(md, filename) {
 
     return {
         title: metaData.title || "Untitled",
-        date: formattedDate,
-        image: metaData.image || "/images/public/Kitten.webp",
+        date: formattedDate || "No Date added",
+        image: metaData.image || "/images/public/TBD.webp",
         teaser: metaData.teaser || content[0] || "No preview available",
         link: "/pages/news/articles-html/" + filename.replace(".md", ".html"),
         rawDate: metaData.date || filename.substring(0, 10), // Store the raw date for sorting
