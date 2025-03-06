@@ -1,3 +1,7 @@
+// First, include the `marked.js` library to parse Markdown files
+// Add this script tag to your HTML before your custom script
+// <script src="https://cdn.jsdelivr.net/npm/marked@4.0.10/lib/marked.min.js"></script>
+
 function parseMarkdown(md, filename) {
     const [meta, ...content] = md.split("\n\n");
     
@@ -34,7 +38,7 @@ function formatDate(dateString) {
 }
 
 async function fetchNews() {
-    const response = await fetch("/pages/news/news-list.json");
+    const response = await fetch("https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/news/news-list.json");
     if (!response.ok) {
         console.error("Failed to load news-list.json", response.status);
         return;
@@ -43,7 +47,7 @@ async function fetchNews() {
     const newsFiles = await response.json();
     console.log("✅ Loaded news files:", newsFiles);
 
-    const newsFolder = "../news/articles/";
+    const newsFolder = "https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/news/articles/";
     const newsItems = await Promise.all(newsFiles.map(async (file) => {
         const filePath = newsFolder + file;
         console.log("📂 Fetching file:", filePath);
