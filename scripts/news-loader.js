@@ -43,7 +43,7 @@ async function fetchNews() {
     const newsFiles = await response.json();
     console.log("✅ Loaded news files:", newsFiles);
 
-    const newsFolder = "/pages/news/articles/";
+    const newsFolder = "../news/articles/";
     const newsItems = await Promise.all(newsFiles.map(async (file) => {
         const filePath = newsFolder + file;
         console.log("📂 Fetching file:", filePath);
