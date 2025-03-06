@@ -26,12 +26,15 @@ function parseMarkdown(md, filename) {
 // Helper function to format the date in European format (DD.MM.YYYY)
 function formatDate(dateString) {
     const date = new Date(dateString);
+    if (isNaN(date)) {
+        return "Published on: Unknown Date"; // Fallback for invalid date
+    }
     const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
-
     return `Published on: ${day}.${month}.${year}`;
 }
+
 
 async function fetchNews() {
     const response = await fetch("https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/news/news-list.json");
