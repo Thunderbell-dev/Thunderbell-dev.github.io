@@ -7,7 +7,9 @@ teaser: Alright, fluff enthusiasts this is it! 🚀 Purrfactory is live! A cozy 
 
 ---
 
-## Purrfactory is Live :Congratz: – And It’s Already Something Special! :Daze: –
+## Purrfactory is Live :Congratz:  
+
+## And It’s Already Something Special! :Daze:  
 
 Alright, fluff enthusiasts — this is it. Purrfactory is live! :Hype:  
 A cozy little corner on the web just for us, where creativity flows, ideas come to life, and good company is always around.  

@@ -3,18 +3,26 @@ function replaceIcons() {
     if (!mdContent) return;
 
     const iconMap = {
-        // Unicode emojis
-        ":Sleep:": "😴",
-        ":Happy:": "😊",
-        ":Fire:": "🔥",
+        ":Congratz:": "🎉",
+        ":Hype:": "🥳",
+        ":Daze:": "🤩",
+        ":Hanw:": "🥰",
+        ":PrettyPlease:": "🙏",
+        ":Badump:": "💓",
+        ":YesSir:": "🫡",
+        ":Help:": "🆘",
+        ":yarn:": "🧶",
+        ":UrWelcome:": "🤗",
+        ":Thinker:": "🤔",
+        ":Idea:": "💡",
+        ":Scheme:": "📝",
+        ":Beggar:": "🙏",
 
         // Image icons
-        ":Daze:": '<img src="/images/public/Kitten.webp" alt="Daze Icon" class="icon">',
+        // ":Daze:": '<img src="/images/public/Kitten.webp" alt="Daze Icon" class="icon">',
 
         // FontAwesome icons
-        ":Bed:": '<i class="fas fa-bed"></i>',
-        ":Smile:": '<i class="fas fa-smile"></i>',
-        ":Flame:": '<i class="fas fa-fire"></i>'
+        ":PinkiePaw:": '<i class="fas fa-paw" style="color: pink;"></i>',
     };
 
     mdContent.innerHTML = mdContent.innerHTML.replace(/:\w+:/g, match => {

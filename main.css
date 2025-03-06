@@ -67,7 +67,9 @@ h1 {
 }
 
 .emoji {
-    font-size: 1.1em;
+    display: contents;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
 }
 
