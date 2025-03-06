@@ -1,7 +1,3 @@
-// First, include the `marked.js` library to parse Markdown files
-// Add this script tag to your HTML before your custom script
-// <script src="https://cdn.jsdelivr.net/npm/marked@4.0.10/lib/marked.min.js"></script>
-
 function parseMarkdown(md, filename) {
     const [meta, ...content] = md.split("\n\n");
     
