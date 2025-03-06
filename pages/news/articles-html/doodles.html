@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/components/custom/articles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/scripts/icon-loader.js"></script>
 </head>
 
 <header>
@@ -60,7 +61,7 @@
             const year = date.getFullYear();
             return `${day}.${month}.${year}`;
         }
-
+    
         fetch('../articles/doodles.md') // Ensure correct file path
             .then(response => response.text())
             .then(text => {
@@ -75,20 +76,25 @@
                     });
                     text = text.replace(metadataMatch[0], "").trim(); // Remove metadata from content
                 }
-
+    
                 // Set title and image
                 if (metadata.title) document.getElementById("md-title").innerText = metadata.title;
                 if (metadata.image) document.getElementById("md-image").src = metadata.image;
-
+    
                 // Format and display the date
                 if (metadata.date) {
                     const dateElement = document.getElementById("md-date");
                     const formattedDate = formatDate(metadata.date);
                     if (formattedDate) dateElement.innerText = `Published on: ${formattedDate}`;
                 }
-
+    
                 // Render markdown content
                 document.getElementById('md-content').innerHTML = marked.parse(text);
+    
+                // Call icon replacement function AFTER markdown is rendered
+                if (typeof replaceIcons === "function") {
+                    replaceIcons();
+                }
             })
             .catch(error => console.error('Error loading markdown:', error));
     </script>
