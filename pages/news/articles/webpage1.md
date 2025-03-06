@@ -15,7 +15,7 @@ Alright, fluff enthusiasts — this is it. Purrfactory is live! :Hype:
 A cozy little corner on the web just for us, where creativity flows, ideas come to life, and good company is always around.  
 No rush, no pressure — just a space to be. :Hanw:  
 
-🔸 Curious? You don’t have to wait—the website is up and running! First small demo is already there, and more are on the way. :YesSir:  
+🔸 Curious? You don’t have to wait — the website is up and running! First small demo is already there, and more are on the way. :YesSir:  
 🔸 No strict schedules :PrettyPlease:, but fresh content will keep coming. We’re building something with care, and you’ll be the first to know when new things drop.
 
 It’s happening. It’s growing. And it’s gonna be pawsome. :Badump:  Check it out now and be part of it from the start!
