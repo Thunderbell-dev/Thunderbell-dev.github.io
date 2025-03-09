@@ -1,6 +1,6 @@
-# Description of `setup-news.py`
+# Description of `update_news.py`
 
-The `setup-news.py` script is designed to automate the setup process for a news website or project. It scans a folder of Markdown files, generates HTML files from them using a template, and creates a JSON file listing all the articles. This script is particularly useful for managing and publishing news articles on a website.
+The `update_news.py` script is designed to automate the setup process for a news website or project. It scans a folder of Markdown files, generates HTML files from them using a template, and creates a JSON file listing all the articles. This script is particularly useful for managing and publishing news articles on a website.
 
 ## Purpose of the Script
 
@@ -87,4 +87,4 @@ Generated: ../pages/news/articles-html/article3.html
 
 ## Conclusion
 
-The `setup-news.py` script simplifies the process of transforming a collection of Markdown files into HTML files suitable for publishing on a website. It also organizes the articles into a JSON file for easy indexing and reference. This is especially useful for managing news content on a website or for projects where content is regularly updated.
+The `update_news.py` script simplifies the process of transforming a collection of Markdown files into HTML files suitable for publishing on a website. It also organizes the articles into a JSON file for easy indexing and reference. This is especially useful for managing news content on a website or for projects where content is regularly updated.

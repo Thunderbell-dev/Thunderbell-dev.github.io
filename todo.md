@@ -1,8 +1,8 @@
 # ToDo List
 
-- write update-affiliates.md file
 - write update-header-footer
-- write affiliates-loader.js
+
+- build affiliates family pages
 
 ## Later
 
