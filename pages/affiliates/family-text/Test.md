@@ -1,7 +1,7 @@
 ---
 title: Ritterorden
-image: /images/public/Berios_Crew_Bis.webp
-description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et acLorem 
+image: /images/public/TBD.webp
+description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 ---
 
 ## Test
