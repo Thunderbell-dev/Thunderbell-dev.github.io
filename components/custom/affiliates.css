@@ -1,0 +1,14 @@
+.affiliates-main-title{
+    border-radius: var(--global-border-radius);
+    background-color: var(--section-background);
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 30vh;
+    justify-self: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.affiliates-main-title .title{
+    margin: 0;
+}

@@ -8,7 +8,7 @@ h2, h3 {
     background-color: var(--section-background);
     padding: 10px;
     margin-bottom: 20px;
-    width: 15%;
+    width: 20vh;
     justify-self: center;
     text-transform: uppercase;
 }
