@@ -1,6 +1,6 @@
 # ToDo List
 
-- affiliate template md
+- update affiliates-family.html && affiliates-loader.js for livepage
 - write update-header-footer
 
 ## Later
