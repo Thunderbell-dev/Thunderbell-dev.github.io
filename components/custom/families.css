@@ -1,14 +1,17 @@
-.affiliates-container {
-    position: relative;
-    overflow: hidden;
-    height: 720px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body{
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.affiliates-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px; 
 }
 
 .affiliates-title {
@@ -29,15 +32,29 @@
 }
 
 .affiliates-content {
-    position: absolute;
-    top: 20%;
-    left: 2%;
-    width: 45%;
+    margin-top: 8%;
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center;
+}
+
+.affiliates-content .content-card {
+    width: 40%; 
     padding: 20px;
     background: var(--section-background-90);
     border-radius: var(--global-border-radius);
     animation: slideUp 0.8s ease-in-out forwards 0.5s;
     opacity: 0;
+    margin-bottom: 20px;
+}
+
+.affiliates-content .content-card.empty {
+    width: 35%;
+    height: 100%; 
+    background: transparent; 
+    padding: 0;
 }
 
 @keyframes fadeIn {
@@ -49,3 +66,70 @@
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+@media (max-width: 1300px){
+    .affiliates-content{
+        margin-top: 12%;
+    }
+
+}
+
+@media (max-width: 996px){
+    .affiliates-content{
+        margin-top: 16%;
+    }
+
+}
+
+@media (max-width: 768px){
+    .affiliates-content{
+        margin-top: 18%;
+    }
+    .affiliates-content .content-card.empty{
+        width: 0;
+    }
+}
+
+@media (max-width: 656px){
+    .affiliates-content{
+        margin-top: 24%;
+    }
+    .affiliates-content .content-card.empty{
+        width: 0;
+    }
+}
+
+@media (max-width: 565px){
+    .affiliates-content{
+        margin-top: 30%;
+    }
+    .affiliates-content .content-card.empty{
+        width: 0;
+    }
+}
+
+@media (max-width: 482px){
+    .affiliates-content{
+        margin-top: 38%;
+        gap: 0;
+    }
+    .affiliates-content .content-card.empty{
+        width: 0;
+    }
+}
+
+@media (max-width: 414px){
+
+    .affiliates-content .content-card{
+        font-size: 12px;
+    }
+
+    .affiliates-content{
+        margin-top: 60%;
+        gap: 0;
+    }
+    .affiliates-content .content-card.empty{
+        width: 0;
+    }
+}
+
