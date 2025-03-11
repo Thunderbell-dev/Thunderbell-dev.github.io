@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/components/header.css">
     <link rel="stylesheet" href="/components/footer.css">
+    <link rel="stylesheet" href="/components/stage.css">
     <link rel="stylesheet" href="/components/custom/families.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -42,77 +43,77 @@
 </header>
 
 <body>
- 
-        <div class="affiliates-container">
-            <div class="affiliates-title">
-                <h1 id="md-title"></h1>
-            </div>
-            <div class="affiliates-content" id="md-content"></div>
+    <div class="affiliates-container">
+        <div class="affiliates-title">
+            <h1 id="md-title"></h1>
         </div>
+        <div class="affiliates-content" id="md-content"></div>
+    </div>
 
-    <script>
-        fetch('../family-text/Ritterorden.md') 
-            .then(response => response.text())
-            .then(text => {
-                const metadataMatch = text.match(/^---([\s\S]*?)---/);
-                let metadata = {};
+<script>
+    fetch('../family-text/Ritterorden.md') 
+        .then(response => response.text())
+        .then(text => {
+            const metadataMatch = text.match(/^---([\s\S]*?)---/);
+            let metadata = {};
 
-                if (metadataMatch) {
-                    const metaLines = metadataMatch[1].trim().split("\n");
-                    metaLines.forEach(line => {
-                        const [key, ...value] = line.split(": ");
-                        metadata[key.trim()] = value.join(": ").trim();
-                    });
-                    text = text.replace(metadataMatch[0], "").trim();
-                }
-    
-      
-                if (metadata.title) {
-                    document.getElementById("md-title").innerText = metadata.title;
-                }
-    
-         
-                const container = document.querySelector('body');
-                if (metadata.image) {
-                    container.style.backgroundImage = `url(${metadata.image})`;  // Set the image as background
-                }
-    
-                // Split content at each "## " (H2) while keeping the delimiter
-                const sections = text.split(/(?=## )/).map(section => section.trim()).filter(Boolean);
-    
-                // Select the content container
-                const contentContainer = document.getElementById('md-content');
-
-
-                // Loop through each section and create a content card
-                sections.forEach((section, index) => {
-                    // Create the content card
-                    const card = document.createElement('div');
-                    card.classList.add('content-card'); // Add the content-card class
-    
-                    // Assign unique ID to each card
-                    card.id = `content-card-${index}`;
-    
-                    // Set the inner HTML to the parsed markdown content
-                    card.innerHTML = marked.parse(section);
-    
-                    // Alternate the alignment for each card
-                    if (index % 2 === 0) {
-                        const emptyCardAfterLeft = document.createElement('div');
-                        emptyCardAfterLeft.classList.add('content-card', 'empty');
-                        contentContainer.appendChild(emptyCardAfterLeft);
-                    } else {
-                   
-                    }
-    
-                    // Append the card to the content container
-                    contentContainer.appendChild(card);
+            if (metadataMatch) {
+                const metaLines = metadataMatch[1].trim().split("\n");
+                metaLines.forEach(line => {
+                    const [key, ...value] = line.split(": ");
+                    metadata[key.trim()] = value.join(": ").trim();
                 });
-            })
-            .catch(error => console.error('Error loading markdown:', error));
-    </script>
-    
+                text = text.replace(metadataMatch[0], "").trim();
+            }
+
+  
+            if (metadata.title) {
+                document.getElementById("md-title").innerText = metadata.title;
+            }
+
+     
+            const container = document.querySelector('body');
+            if (metadata.image) {
+                container.style.backgroundImage = `url(${metadata.image})`;  // Set the image as background
+            }
+
+            // Split content at each "## " (H2) while keeping the delimiter
+            const sections = text.split(/(?=## )/).map(section => section.trim()).filter(Boolean);
+
+            // Select the content container
+            const contentContainer = document.getElementById('md-content');
+
+
+            // Loop through each section and create a content card
+            sections.forEach((section, index) => {
+                // Create the content card
+                const card = document.createElement('div');
+                card.classList.add('content-card'); // Add the content-card class
+
+                // Assign unique ID to each card
+                card.id = `content-card-${index}`;
+
+                // Set the inner HTML to the parsed markdown content
+                card.innerHTML = marked.parse(section);
+
+                // Alternate the alignment for each card
+                if (index % 2 === 0) {
+                    const emptyCardAfterLeft = document.createElement('div');
+                    emptyCardAfterLeft.classList.add('content-card', 'empty');
+                    contentContainer.appendChild(emptyCardAfterLeft);
+                } else {
+               
+                }
+
+                // Append the card to the content container
+                contentContainer.appendChild(card);
+            });
+        })
+        .catch(error => console.error('Error loading markdown:', error));
+</script>
+
 </body>
+
 <footer>
     <div class="footer footer-container">
         <div class="footer-text bold">

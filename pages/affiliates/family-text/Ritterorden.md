@@ -4,7 +4,7 @@ image: /images/public/affiliates/Ritterorden1.webp
 description: The Ritterorden of Thunderbell is a medieval-themed Nostale family created to bring together German players. Though it faced inactivity due to leveling differences, it remains alive with the founder's characters. Currently on hold.
 ---
 
-## ⚔️ The History of the Ritterorden (Thunderbell's Perspective) 🏰  
+## ⚔️The History of the Ritterorden (Thunderbell's Perspective)🏰  
 
 It all began with a small idea 💡. I decided to restructure my existing Discord server.  
 At the time of its creation, I was deeply interested in the medieval era 🏹, so it quickly became clear what theme the family should have – the "Ritterorden" (Knight Order) 🛡️.  
@@ -13,7 +13,7 @@ My goal was to create a community for German players on an international server 
 
 However, due to the varying leveling speeds within the family, some members had to wait a long time ⏳ for suitable level partners. Unfortunately, this led to the family gradually becoming inactive 💤 and eventually almost ceasing to exist.  
 
-## 🏰 The Current State of the Family ⚔️  
+## 🏰The Current State of the Family⚔️  
 
 Today, the family is largely empty 🏜️.  
 
@@ -21,7 +21,7 @@ At the beginning of the year, some of my friends started playing Nostale 🎮, a
 
 For now, the family remains on hold 🛑 and will not be reactivated in the near future. However, I will keep it existing as a fallback for various situations 🔄.
 
-## 🎭 [Fun Fact] Character Name Origins 🌟  
+## 🎭[Fun Fact] Character Name Origins🌟  
 
 My main character is named "Todes_Ritter" (Death Knight 💀⚔️), fitting the theme of the family. However, to create a guild, at least two additional characters are required – and thus, my "main sub-characters" were born:
 
