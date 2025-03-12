@@ -51,7 +51,7 @@
     </div>
 
 <script>
-    fetch('../family-text/Ritterorden.md') 
+    fetch('https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/family-text/Ritterorden.md') 
         .then(response => response.text())
         .then(text => {
             const metadataMatch = text.match(/^---([\s\S]*?)---/);

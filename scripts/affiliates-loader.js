@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", fetchAffiliates);
 
 async function fetchAffiliates() {
-    const response = await fetch("/pages/affiliates/affiliates-list.json");
+    const response = await fetch("https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/affiliates/affiliates-list.json");
     if (!response.ok) {
         console.error("❌ Failed to load affiliates list:", response.status);
         return;
@@ -10,7 +10,7 @@ async function fetchAffiliates() {
     const affiliatesFiles = await response.json();
     console.log("✅ Loaded affiliate files:", affiliatesFiles);
 
-    const affiliatesFolder = "/pages/affiliates/family-text/";
+    const affiliatesFolder = "https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/affiliates/family-text/";
     const affiliates = await Promise.all(
         affiliatesFiles.map(async (file) => {
             const filePath = affiliatesFolder + file;
