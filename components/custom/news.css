@@ -173,6 +173,12 @@ h2, h3 {
     }
 }
 
+@media (max-width: 768px) {
+    .read-more-button{
+        margin: 20px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .news-title {
         width: 90%;
@@ -192,3 +198,6 @@ h2, h3 {
         margin-bottom: 60px;
     }
 }
+
+
+
