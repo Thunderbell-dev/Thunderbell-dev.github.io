@@ -2,7 +2,7 @@
 title: Purrfactory Webpage 0.3.0 🚀
 date: 2025-03-11
 image: /images/public/Berios_Crew.webp
-teaser: New update! 🚀 The Purrfactory now has a Partners & Affiliate Guilds section—check it out! 🐾✨
+teaser: New update! 🚀 The Purrfactory now has a Partners & Affiliate Guilds section — check it out! 🐾✨
 ---
 
 ## Hey there, exciting news from the Purrfactory! 🎊
@@ -14,4 +14,4 @@ This update celebrates our extended family, making it easier to discover and con
 Whether you’re looking for a friendly alliance or just want to explore, this is the place to be! :UrWelcome:
 
 Check it out and show some love to our community! :YesSir:
-We’re growing stronger together—this is just the start! 🚀💫 :Hanw:
+We’re growing stronger together — this is just the start! 🚀💫 :Hanw:
