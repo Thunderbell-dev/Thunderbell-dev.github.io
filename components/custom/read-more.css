@@ -2,7 +2,7 @@
     display: flex;
     bottom: 20px;
     right: 20px;
-    padding: 6px 10px;
+    padding: 10px;
     border-radius: var(--global-border-radius);
     background: var(--link-color);
     color: var(--section-background);

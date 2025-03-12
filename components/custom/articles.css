@@ -8,9 +8,12 @@
     text-align: center;
 }
 
-.article-image{
+.article-image {
     display: flex;
+    width: 100%;
     justify-content: center;
+    height: 500px;
+    margin-bottom: 20px;
 }
 
 .article-date {
@@ -23,10 +26,10 @@
 }
 
 .article-image img{
-    max-width: 66%; 
-    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: var(--global-border-radius);
-    margin-bottom: 20px;
 }
 
 .article-content{
