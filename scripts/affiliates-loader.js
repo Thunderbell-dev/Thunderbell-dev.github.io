@@ -56,7 +56,7 @@ function parseMarkdown(md, filename) {
 
     return {
         title: metaData.title || "Untitled",
-        image: metaData.image || "/images/public/TBD.webp",
+        image: metaData.image || "",
         description: metaData.description || content.join(" ") || "No description available",
         link: `/pages/affiliates/family-html/${htmlFileName}`,
     };

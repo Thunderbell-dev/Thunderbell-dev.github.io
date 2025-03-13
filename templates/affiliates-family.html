@@ -73,10 +73,12 @@
 
      
             const container = document.querySelector('body');
-            if (metadata.image) {
+            if (metadata.image && metadata.image.trim() !== '') {
                 container.style.backgroundImage = `url(${metadata.image})`;  // Set the image as background
+            } else {
+                container.style.backgroundImage = 'none';  // Entfernt das Hintergrundbild
             }
-
+            
             // Split content at each "## " (H2) while keeping the delimiter
             const sections = text.split(/(?=## )/).map(section => section.trim()).filter(Boolean);
 

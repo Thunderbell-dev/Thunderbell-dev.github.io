@@ -1,6 +1,6 @@
 ---
 title: Calamity
-image: /images/public/TBD.webp
+image: 
 description: Welcome to Calamity – Where Chaos Meets Strength!
 ---
 
