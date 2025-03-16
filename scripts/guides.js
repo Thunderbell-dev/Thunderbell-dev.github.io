@@ -1,15 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch the list of guides from guides.json
     fetch('/pages/guides/guides.json')
         .then(response => response.json())
         .then(data => {
             const guides = data.guides;
             const guideList = document.getElementById("guide-list");
 
-            // Create a list of guides in the sidebar
             guides.forEach((guide, index) => {
                 const listItem = document.createElement("li");
-                listItem.classList.add("guide-item"); // Added class to the li element
+                listItem.classList.add("guide-item");
 
                 const link = document.createElement("a");
                 link.href = "#";
@@ -18,22 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     event.preventDefault();
                     loadGuide(guide.path, guide.name, guide.chapters);
 
-                    // Close all chapter lists and open only the clicked guide's
                     closeAllChapters();
                     const chapterList = listItem.querySelector(".chapters");
-                    chapterList.style.display = "block"; // Expand the clicked guide's chapters
+                    chapterList.style.display = "block";
 
-                    // Highlight the selected guide
                     highlightActiveGuide(guide.name);
                 });
                 listItem.appendChild(link);
 
-                // Create an unordered list to hold chapters for this guide
                 const chapterList = document.createElement("ul");
                 chapterList.classList.add("chapters");
-                chapterList.style.display = "none"; // Hide chapters initially
+                chapterList.style.display = "none";
 
-                // Add chapters under the guide
                 guide.chapters.forEach(chapter => {
                     const chapterItem = document.createElement("li");
                     const chapterLink = document.createElement("a");
@@ -43,46 +37,37 @@ document.addEventListener("DOMContentLoaded", function () {
                     chapterList.appendChild(chapterItem);
                 });
 
-                // Append chapter list under guide item
                 listItem.appendChild(chapterList);
                 guideList.appendChild(listItem);
 
-                // Expand first guide’s chapters by default, but don't mark any chapter as active
                 if (index === 0) {
                     loadGuide(guide.path, guide.name, guide.chapters);
                     highlightActiveGuide(guide.name);
-                    chapterList.style.display = "block"; // Open first guide's chapters
+                    chapterList.style.display = "block";
                 }
             });
         })
         .catch(error => console.error("Error loading guides:", error));
 
-    // Function to load the content of the selected guide
     function loadGuide(guidePath, guideName, chapters) {
-        // Hide the content while loading
         const guideContent = document.getElementById("guide-content");
-        guideContent.style.display = "none"; // Hide content to avoid flicker
+        guideContent.style.display = "none";
 
-        // Clear the hash from the URL when loading a new guide
-        history.pushState("", document.title, window.location.pathname + window.location.search); // Clear the URL hash
+        history.pushState("", document.title, window.location.pathname + window.location.search);
 
         fetch(`/pages/guides/guides-html/${guidePath}`)
             .then(response => response.text())
             .then(content => {
-                // Insert the guide content into the page
                 guideContent.innerHTML = content;
 
-                // Optionally, scroll to the top of the guide when switching guides
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
 
-                // Show content after it has loaded
-                guideContent.style.display = "block"; // Make the content visible
+                guideContent.style.display = "block";
             })
             .catch(error => console.error("Error loading guide:", error));
     }
 
-    // Function to highlight the active guide and expand its chapters
     function highlightActiveGuide(guideName) {
         const guideItems = document.querySelectorAll("#guide-list > .guide-item");
         guideItems.forEach(item => {
@@ -91,20 +76,41 @@ document.addEventListener("DOMContentLoaded", function () {
             if (link.textContent.trim() === guideName.trim()) {
                 item.classList.add("active");
 
-                // Expand the associated chapter list
                 const chapterList = item.querySelector(".chapters");
                 if (chapterList) {
-                    chapterList.style.display = "block"; // Show chapters for the active guide
+                    chapterList.style.display = "block";
                 }
             }
         });
     }
 
-    // Function to close all chapter lists
     function closeAllChapters() {
         const allChapterLists = document.querySelectorAll(".sidebar .chapters");
         allChapterLists.forEach(list => {
             list.style.display = "none";
         });
     }
+
+    const sidebar = document.querySelector('.sidebar');
+    const footer = document.querySelector('footer');
+
+    function adjustSidebarHeight() {
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        const footerRect_bottom = Math.round(footerRect.bottom);
+
+        if (footerRect_bottom <= windowHeight) {
+            sidebar.style.maxHeight = `calc(100vh - 160px)`; 
+        } else if (footerRect_bottom - 100 <= windowHeight){
+            sidebar.style.maxHeight = `calc(100vh - 60px)`; 
+        } else {
+            sidebar.style.maxHeight = `100vh`;
+        }
+    }
+
+    window.addEventListener('scroll', adjustSidebarHeight);
+    window.addEventListener('resize', adjustSidebarHeight);
+
+    adjustSidebarHeight();
 });

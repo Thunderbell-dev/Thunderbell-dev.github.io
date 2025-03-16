@@ -5,6 +5,7 @@ footer {
 /* General Container Styling */
 .guides-container {
     display: flex;
+    height: 100%;
 }
 
 /* Sidebar Styling */
@@ -22,6 +23,10 @@ footer {
     background-color: var(--secondary-background);
     border-radius: 0 10px 10px 0;
     margin: 0 20px 0 0;
+    max-height: 100vh;
+    height: 100%;
+    overflow-y: auto;
+    transition: 0.2s ease-in-out;
 }
 
 /* Sidebar List Styling */
@@ -76,4 +81,19 @@ main.content {
 
 body {
     background-color: var(--section-background);
+}
+
+/* WebKit Browsers */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: none;
+}
+
+/* For older browsers */
+body {
+    -ms-overflow-style: none;
 }
