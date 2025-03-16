@@ -30,6 +30,10 @@ footer {
     padding: 0;
 }
 
+li.guide-item {
+    padding-top: 20px;
+}
+
 .sidebar ul li {
     margin-bottom: 10px;
 }
@@ -39,7 +43,7 @@ footer {
 }
 
 .sidebar ul li:last-child {
-    margin-bottom: 20px;
+    margin-bottom: -10px;
 }
 
 /* Chapter Styling */
@@ -56,6 +60,10 @@ footer {
 #guide-content {
     margin-left: 20px;
     flex-grow: 1;
+}
+
+.guide-title{
+    margin-bottom: 10px;
 }
 
 /* Main Content */

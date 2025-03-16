@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Create a list of guides in the sidebar
             guides.forEach((guide, index) => {
                 const listItem = document.createElement("li");
+                listItem.classList.add("guide-item"); // Added class to the li element
+
                 const link = document.createElement("a");
                 link.href = "#";
                 link.textContent = guide.name;
@@ -82,14 +84,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to highlight the active guide and expand its chapters
     function highlightActiveGuide(guideName) {
-        const guideLinks = document.querySelectorAll("#guide-list > li > a");
-        guideLinks.forEach(link => {
-            link.classList.remove("active");
+        const guideItems = document.querySelectorAll("#guide-list > .guide-item");
+        guideItems.forEach(item => {
+            item.classList.remove("active");
+            const link = item.querySelector("a");
             if (link.textContent.trim() === guideName.trim()) {
-                link.classList.add("active");
+                item.classList.add("active");
 
                 // Expand the associated chapter list
-                const chapterList = link.parentElement.querySelector(".chapters");
+                const chapterList = item.querySelector(".chapters");
                 if (chapterList) {
                     chapterList.style.display = "block"; // Show chapters for the active guide
                 }
