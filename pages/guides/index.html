@@ -43,15 +43,21 @@
 
 <body>
     <div class="guides-container">
-        <nav class="sidebar">
-            <h2>Guides</h2>
-            <ul>
-                <li><a href="#" onclick="loadGuide('Test.html')">Test</a></li>
-            </ul>
-        </nav>
+    
+        <div class="sidebar-container">
+            <nav class="sidebar">
+                <h2>Guides</h2>
+                <ul id="guide-list">
+                    <!-- List of guides will be populated here dynamically -->
+                </ul>
+            </nav>
+        </div>
+        
 
         <main class="content">
-            <iframe id="guide-frame" src="/pages/guides/guides-html/Test.html"></iframe>
+            <article id="guide-content">
+                <!-- The content of the selected guide will appear here -->
+            </article>
         </main>
     </div>
 </body>

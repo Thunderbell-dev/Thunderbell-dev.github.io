@@ -1,57 +1,71 @@
+footer {
+    margin-top: 0;
+}
+
+/* General Container Styling */
 .guides-container {
     display: flex;
-    flex-direction: row;
-    max-width: 75%;
-    margin: 20px auto;
-    padding: 20px;
+}
+
+/* Sidebar Styling */
+
+.sidebar-container{
     background-color: var(--section-background);
-    border-radius: var(--global-border-radius);
+    width: 15%;
 }
 
-.sidebar {
-    width: 20%;
+.sidebar{
+    font-size: 20px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
     background-color: var(--secondary-background);
-    border-radius: var(--global-border-radius);
-    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    margin: 0 20px 0 0;
 }
 
+/* Sidebar List Styling */
 .sidebar ul {
     list-style: none;
     padding: 0;
 }
 
-.sidebar li {
+.sidebar ul li {
     margin-bottom: 10px;
 }
 
-.sidebar a {
+.sidebar ul li:first-child {
+    margin-top: 20px;
+}
+
+.sidebar ul li:last-child {
+    margin-bottom: 20px;
+}
+
+/* Chapter Styling */
+.sidebar ul li .chapters {
+    margin-left: 20px;
+    display: none;
+}
+
+.sidebar ul li .chapters a {
     display: flex;
-    margin: 0;
-    border: unset;
 }
 
-.sidebar a:hover {
-    background: var(--link-color-hover);
-    color: var(--black);
-    font-weight: bold;
-    border: unset;
+/* Guide Content */
+#guide-content {
+    margin-left: 20px;
+    flex-grow: 1;
 }
 
-.sidebar a.active {
-    background: var(--link-color);
-    color: var(--black);
-    font-weight: bold;
-    border: unset;
-}
-
-.content {
-    flex: 1;
-    padding-left: 20px;
-}
-
-iframe {
-    width: 100%;
-    height: auto;
-    border: unset;
+/* Main Content */
+main.content {
+    padding-bottom: 40px;
+    width: 85%;
+    background: var(--primary-background);
     border-radius: var(--global-border-radius);
+}
+
+body {
+    background-color: var(--section-background);
 }
