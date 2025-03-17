@@ -2,19 +2,16 @@ footer {
     margin-top: 0;
 }
 
-/* General Container Styling */
 .guides-container {
     display: flex;
     height: 100%;
 }
 
-/* Sidebar Container */
 .sidebar-container {
     background-color: var(--section-background);
     width: 15%;
 }
 
-/* Sidebar */
 .sidebar {
     font-size: 18px;
     font-weight: bold;
@@ -30,12 +27,10 @@ footer {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Sidebar Hidden (For Mobile) */
 .sidebar.hidden {
     transform: translateX(-100%);
 }
 
-/* Sidebar Toggle Button */
 .sidebar-toggle {
     display: none;
     position: fixed;
@@ -52,14 +47,12 @@ footer {
     z-index: 10;
 }
 
-/* Sidebar List Styling */
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* Guide Items */
 .sidebar ul li {
     margin-bottom: 10px;
 }
@@ -68,27 +61,23 @@ footer {
     margin-top: 10px;
 }
 
-/* Guide Links */
 .sidebar ul li a {
     display: block;
     padding: 10px;
     border-radius: var(--global-border-radius);
 }
 
-/* Active Guide Styling */
 .sidebar ul li.active > a {
     font-weight: bold;
     padding-left: 18px;
     border-left: 3px solid var(--link-color);
 }
 
-/* Hover Effects */
 .sidebar ul li a:hover {
     background: var(--link-color);
     color: var(--primary-background);
 }
 
-/* Chapter Links */
 .sidebar ul li .chapters {
     margin-left: 15px;
     display: none;
@@ -104,20 +93,17 @@ footer {
     color: var(--primary-background);
 }
 
-/* Active Chapter Link */
 .sidebar ul li .chapters a.active {
     font-weight: bold;
     border-left: 3px solid var(--link-color);
     padding-left: 18px;
 }
 
-/* Guide Content */
 #guide-content {
     margin-left: 20px;
     flex-grow: 1;
 }
 
-/* Main Content */
 main.content {
     padding-bottom: 40px;
     width: 85%;
@@ -125,7 +111,6 @@ main.content {
     border-radius: var(--global-border-radius);
 }
 
-/* Mobile Styles */
 @media (max-width: 1320px) {
     .sidebar {
         position: fixed;
@@ -164,19 +149,14 @@ main.content {
     }
 }
 
-
-
-/* WebKit Browsers */
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* Firefox */
 * {
     scrollbar-width: none;
 }
 
-/* For older browsers */
 body {
     -ms-overflow-style: none;
 }
