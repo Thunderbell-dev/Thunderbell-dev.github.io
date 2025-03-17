@@ -33,6 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     const chapterLink = document.createElement("a");
                     chapterLink.href = `#${chapter.id}`;
                     chapterLink.textContent = chapter.name;
+                    chapterLink.addEventListener("click", function (event) {
+                        highlightActiveChapter(chapter.id);
+                    
+                        // Allow anchor to jump after setting active class
+                        setTimeout(() => {
+                            window.location.hash = chapter.id;
+                        }, 0);
+                    });
+                    
+
                     chapterItem.appendChild(chapterLink);
                     chapterList.appendChild(chapterItem);
                 });
@@ -64,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.documentElement.scrollTop = 0;
 
                 guideContent.style.display = "block";
+
+                highlightActiveGuide(guideName);
             })
             .catch(error => console.error("Error loading guide:", error));
     }
@@ -72,9 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const guideItems = document.querySelectorAll("#guide-list > .guide-item");
         guideItems.forEach(item => {
             item.classList.remove("active");
+
             const link = item.querySelector("a");
             if (link.textContent.trim() === guideName.trim()) {
                 item.classList.add("active");
+
+                document.querySelectorAll(".chapters").forEach(chapterList => {
+                    chapterList.style.display = "none";
+                });
 
                 const chapterList = item.querySelector(".chapters");
                 if (chapterList) {
@@ -82,6 +99,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         });
+    }
+
+    function highlightActiveChapter(chapterId) {
+        document.querySelectorAll(".chapters a").forEach(chapterLink => {
+            chapterLink.classList.remove("active");
+        });
+
+        const activeChapter = document.querySelector(`.chapters a[href="#${chapterId}"]`);
+        if (activeChapter) {
+            activeChapter.classList.add("active");
+        }
     }
 
     function closeAllChapters() {

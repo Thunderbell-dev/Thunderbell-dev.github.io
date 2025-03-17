@@ -41,16 +41,16 @@
             "path": "Test3.html",
             "chapters": [
                 {
-                    "name": "Getting Started",
-                    "id": "getting-started"
+                    "name": "Getting Started2",
+                    "id": "getting-started2"
                 },
                 {
-                    "name": "Advanced Topics",
-                    "id": "advanced-topics"
+                    "name": "Advanced Topics2",
+                    "id": "advanced-topics2"
                 },
                 {
-                    "name": "Conclusion",
-                    "id": "conclusion"
+                    "name": "Conclusion2",
+                    "id": "conclusion2"
                 }
             ]
         }
