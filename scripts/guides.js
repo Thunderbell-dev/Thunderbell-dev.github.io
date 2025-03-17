@@ -141,4 +141,37 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', adjustSidebarHeight);
 
     adjustSidebarHeight();
+
+
+    const toggleButton = document.createElement('button');
+    toggleButton.classList.add('sidebar-toggle');
+    toggleButton.innerHTML = '☰'; 
+    document.body.appendChild(toggleButton);
+    
+    toggleButton.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+        toggleButton.style.opacity = '0';
+    
+        if (sidebar.classList.contains('show')) {
+            sidebar.addEventListener('transitionend', () => {
+                toggleButton.innerHTML = '×';
+                toggleButton.style.opacity = '1';
+            }, { once: true });
+        } else {
+            sidebar.addEventListener('transitionend', () => {
+                toggleButton.innerHTML = '☰';
+                toggleButton.style.opacity = '1';
+            }, { once: true });
+        }
+    });
+    
+    document.addEventListener('click', (event) => {
+        if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+            sidebar.classList.remove('show');
+            toggleButton.innerHTML = '☰';
+            toggleButton.style.opacity = '1';
+        }
+    });
+
+
 });

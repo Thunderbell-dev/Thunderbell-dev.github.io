@@ -37,6 +37,7 @@ footer .p{
 @media (max-width: 768px) {
     footer {
         padding: 15px;
+        height: 160px;
     }
 
     .footer-container {
