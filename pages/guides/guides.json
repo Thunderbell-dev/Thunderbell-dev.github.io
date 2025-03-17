@@ -17,42 +17,6 @@
                     "id": "Strategy"
                 }
             ]
-        },
-        {
-            "name": "Introduction1",
-            "path": "Test2.html",
-            "chapters": [
-                {
-                    "name": "Getting Started",
-                    "id": "getting-started"
-                },
-                {
-                    "name": "Advanced Topics",
-                    "id": "advanced-topics"
-                },
-                {
-                    "name": "Conclusion",
-                    "id": "conclusion"
-                }
-            ]
-        },
-        {
-            "name": "Introduction2",
-            "path": "Test3.html",
-            "chapters": [
-                {
-                    "name": "Getting Started2",
-                    "id": "getting-started2"
-                },
-                {
-                    "name": "Advanced Topics2",
-                    "id": "advanced-topics2"
-                },
-                {
-                    "name": "Conclusion2",
-                    "id": "conclusion2"
-                }
-            ]
         }
     ]
 }
