@@ -85,3 +85,18 @@ h1 {
         display: none;
     }
 }
+
+.text-50 {
+    width: 50%;
+    background-color: var(--section-background);
+    border-radius: var(--global-border-radius);
+    padding: 20px;
+}
+
+
+.text-100 {
+    width: 100%;
+    background-color: var(--section-background);
+    border-radius: var(--global-border-radius);
+    padding: 20px;
+}

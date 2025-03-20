@@ -36,12 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     chapterLink.addEventListener("click", function (event) {
                         highlightActiveChapter(chapter.id);
                     
-                        // Allow anchor to jump after setting active class
                         setTimeout(() => {
                             window.location.hash = chapter.id;
                         }, 0);
                     });
-                    
 
                     chapterItem.appendChild(chapterLink);
                     chapterList.appendChild(chapterItem);
@@ -62,23 +60,27 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadGuide(guidePath, guideName, chapters) {
         const guideContent = document.getElementById("guide-content");
         guideContent.style.display = "none";
-
+    
         history.pushState("", document.title, window.location.pathname + window.location.search);
-
+    
         fetch(`/pages/guides/guides-html/${guidePath}`)
             .then(response => response.text())
             .then(content => {
                 guideContent.innerHTML = content;
-
+    
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
-
+    
                 guideContent.style.display = "block";
-
+    
                 highlightActiveGuide(guideName);
+    
+                // Dispatch event to notify the lightbox script
+                document.dispatchEvent(new Event("guideLoaded"));
             })
             .catch(error => console.error("Error loading guide:", error));
     }
+        
 
     function highlightActiveGuide(guideName) {
         const guideItems = document.querySelectorAll("#guide-list > .guide-item");
@@ -142,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     adjustSidebarHeight();
 
-
     const toggleButton = document.createElement('button');
     toggleButton.classList.add('sidebar-toggle');
     toggleButton.innerHTML = '☰'; 
@@ -172,6 +173,4 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleButton.style.opacity = '1';
         }
     });
-
-
 });
