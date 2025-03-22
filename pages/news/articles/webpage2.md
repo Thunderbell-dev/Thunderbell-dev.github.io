@@ -1,7 +1,7 @@
 ---
 title: Purrfactory Webpage 0.2.0 🚀
 date: 2025-03-06
-image: /images/public/Hot_Slumber_Party_2.webp
+image: /images/public/Family-Pictures/Hot_Slumber_Party_2.webp
 teaser: Hey there, the Purrfactory just got an update 🎊 — and there are some exciting new features! We’ve rolled out Version 0.2.0, and it brings some awesome improvements!  
 ---
 

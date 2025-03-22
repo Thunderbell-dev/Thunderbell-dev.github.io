@@ -1,7 +1,7 @@
 ---
 title: Purrfactory Webpage 0.3.0 🚀
 date: 2025-03-12
-image: /images/public/Berios_Crew.webp
+image: /images/public/Family-Pictures/Berios_Crew.webp
 teaser: New update! 🚀 The Purrfactory now has a Partners & Affiliate Guilds section — check it out! 🐾✨
 ---
 

@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
             return validExtensions.some(ext => src.toLowerCase().endsWith(ext));
         }
 
-        const validImages = images.filter(img => isValidImage(img.src));
+        const validImages = images.filter(img => 
+            isValidImage(img.src) && !img.classList.contains('icon')
+        );
         if (validImages.length === 0) {
             console.error("No valid images found.");
             return;
