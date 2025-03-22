@@ -100,3 +100,13 @@ h1 {
     border-radius: var(--global-border-radius);
     padding: 20px;
 }
+
+.icon{
+    width: 32px; 
+    height: 32px; 
+    object-fit: scale-down;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+}

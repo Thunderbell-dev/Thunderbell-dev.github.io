@@ -77,7 +77,7 @@ function replaceTextWithImages() {
 
             // Perform the replacement for all occurrences of the placeholder
             newText = newText.replace(regex, (match) => {
-                return `<img src="${imgSrc}" alt="${placeholder} Icon" class="icon" style="width: 32px; height: 32px; object-fit: scale-down;">`;
+                return `<img src="${imgSrc}" alt="${placeholder} Icon" class="icon">`;
             });
         });
 
