@@ -214,7 +214,6 @@ const imageMap = {
     ":LightSpeedAttack:": "/images/public/icons/nostale/Skills/LightSpeedAttack.webp",
     ":LotusSnare:": "/images/public/icons/nostale/Skills/LotusSnare.webp",
     ":LunarSlice:": "/images/public/icons/nostale/Skills/LunarSlice.webp",
-    ":ManaDagger:": "/images/public/icons/nostale/Skills/ManaDagger.webp",
     ":ManaExtraction:": "/images/public/icons/nostale/Skills/ManaExtraction.webp",
     ":Megamandra:": "/images/public/icons/nostale/Skills/Megamandra.webp",
     ":MPDrains:": "/images/public/icons/nostale/Skills/MPDrains.gif",
