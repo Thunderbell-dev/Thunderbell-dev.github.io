@@ -105,7 +105,7 @@ h1 {
 .icon{
     width: 32px; 
     height: 32px; 
-    object-fit: scale-down;
+    object-fit: contain;
     display: inline-block;
     vertical-align: middle;
     margin: 2.5px;
