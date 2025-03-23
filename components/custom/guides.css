@@ -192,6 +192,9 @@ h2{
     gap: 20px;
 }
 
+.container-text-50{
+    width: 50%;
+}
 
 .container-text{
     flex-grow: 1;
@@ -214,9 +217,9 @@ ul {
 
 
 
+.attention-title{}
 
-
-.attention{
+.attention-text{
     border: 4px solid #FF474D;
     border-radius: var(--global-border-radius);
     padding: 10px;
