@@ -165,3 +165,64 @@ body {
 .main-title{
     justify-self: center;
 }
+
+h2{
+    margin-top: 0;
+}
+
+.container-box-50{
+    display: flex;
+    width: 50%;
+    padding: 20px;
+    background-color: var(--section-background);
+    border-radius: var(--global-border-radius);
+}
+
+.container-content{
+    flex-grow: 1;
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row{
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.container-text{
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.container-text h4{
+    margin-top: 0;
+}
+
+.container-text-background{
+    background-color: var(--secondary-background); 
+    border-radius: var(--global-border-radius);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+
+
+
+
+.attention{
+    border: 4px solid #FF474D;
+    border-radius: var(--global-border-radius);
+    padding: 10px;
+}
+
+
+
+
+
