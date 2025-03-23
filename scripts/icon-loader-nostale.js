@@ -4,7 +4,6 @@ document.addEventListener("guideLoaded", function () {
 
 function replaceTextWithImages() {
 const imageMap = {
-// Generated imageMap based on the icons folder
     // Icons from folder: Archer/
     ":SP10A:": "/images/public/icons/nostale/Archer/SP10A.gif",
     ":SP11A:": "/images/public/icons/nostale/Archer/SP11A.gif",
