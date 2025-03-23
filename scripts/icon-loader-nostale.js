@@ -55,7 +55,6 @@ function replaceTextWithImages() {
 
         //items
         ":45Wand:": "/images/public/icons/nostale/items/45wand.webp",
-        ":67Kris82Calvinas88:": "/images/public/icons/nostale/items/67kris82calvinas88.webp",
         ":RedBow:": "/images/public/icons/nostale/items/redbow.webp",
 
         //general
