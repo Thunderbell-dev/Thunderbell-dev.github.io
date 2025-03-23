@@ -165,6 +165,10 @@
     margin: 5px 0;
 }
 
+.player-name.hyperlink{
+    color: var(--link-color);
+}
+
 @media (max-width: 768px) {
     .family-team-title {
         flex-direction: column;
