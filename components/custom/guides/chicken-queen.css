@@ -19,5 +19,9 @@
 }
 
 .space-for2image{
-    width: 20%;
+    width: 10%;
+}
+
+p{
+    min-height: 37px;
 }

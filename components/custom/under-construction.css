@@ -10,7 +10,7 @@
 .stage-container h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: var(--construction-color);
+    color: var(--warning-color);
 }
 .stage-container p {
     font-size: 1.2rem;

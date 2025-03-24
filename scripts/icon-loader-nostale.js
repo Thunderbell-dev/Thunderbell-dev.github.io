@@ -49,8 +49,12 @@ const imageMap = {
     ":SP7MA:": "/images/public/icons/nostale/MartialArtist/SP7MA.gif",
     ":SPMA:": "/images/public/icons/nostale/MartialArtist/SPMA.gif",
     // Icons from folder: Mechanics/
+    ":BigChicken:": "/images/public/icons/nostale/Mechanics/BigChicken.webp",
     ":Bomb:": "/images/public/icons/nostale/Mechanics/Bomb.webp",
     ":BoneTP:": "/images/public/icons/nostale/Mechanics/BoneTP.gif",
+    ":ChickenEgg:": "/images/public/icons/nostale/Mechanics/ChickenEgg.webp",
+    ":ChickenKing:": "/images/public/icons/nostale/Mechanics/ChickenKing.webp",
+    ":ChickenQueen:": "/images/public/icons/nostale/Mechanics/ChickenQueen.webp",
     ":ChickyEggBomb:": "/images/public/icons/nostale/Mechanics/ChickyEggBomb.webp",
     ":EasterEggBomb:": "/images/public/icons/nostale/Mechanics/EasterEggBomb.webp",
     ":Gourd:": "/images/public/icons/nostale/Mechanics/Gourd.webp",
@@ -64,6 +68,7 @@ const imageMap = {
     ":RiceCake:": "/images/public/icons/nostale/Mechanics/RiceCake.webp",
     ":Rope:": "/images/public/icons/nostale/Mechanics/Rope.webp",
     ":SealedVessel:": "/images/public/icons/nostale/Mechanics/SealedVessel.webp",
+    ":SmallChicken:": "/images/public/icons/nostale/Mechanics/SmallChicken.webp",
     ":Teleport:": "/images/public/icons/nostale/Mechanics/Teleport.gif",
     ":Trigger:": "/images/public/icons/nostale/Mechanics/Trigger.gif",
     // Icons from folder: Misc/

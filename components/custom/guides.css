@@ -215,12 +215,8 @@ ul {
     padding-left: 40px;
 }
 
-
-
-.attention-title{}
-
 .attention-text{
-    border: 4px solid #FF474D;
+    border: 10px solid var(--warning-color);
     border-radius: var(--global-border-radius);
     padding: 10px;
 }
