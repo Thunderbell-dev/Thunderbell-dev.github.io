@@ -5,12 +5,12 @@
             "path": "Chicken Queen.html",
             "chapters": [
                 {
-                    "name": "Requirements",
-                    "id": "Requirements"
-                },
-                {
                     "name": "Basics",
                     "id": "Basics"
+                },
+                {
+                    "name": "Requirements",
+                    "id": "Requirements"
                 },
                 {
                     "name": "Strategy",

@@ -56,6 +56,10 @@ h1 {
     text-align: center;
 }
 
+.text-underline{
+    text-decoration: underline;
+}
+
 .hyperlink {
     color: var(--link-color);
     text-decoration: var(--link-decoration);
