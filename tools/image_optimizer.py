@@ -2,6 +2,16 @@ import os
 from pathlib import Path
 from PIL import Image
 
+def sanitize_filename(file_path):
+    """
+    Removes '¤' and spaces from the filename.
+    """
+    new_name = file_path.name.replace('¤', '').replace(' ', '').replace('·', '')
+    new_path = file_path.parent / new_name
+    if new_path != file_path:  # Rename only if different
+        file_path.rename(new_path)
+    return new_path
+
 def convert_images_to_webp(input_folder, output_folder, quality=75):
     """
     Converts all PNG, JPEG, and GIF images in the input folder (including subdirectories)
@@ -19,6 +29,9 @@ def convert_images_to_webp(input_folder, output_folder, quality=75):
     for img_file in input_path.rglob("*.*"):  # Recursively find all files
         if img_file.suffix.lower() in ['.png', '.jpg', '.jpeg', '.gif', '.webp']:
             try:
+                # Sanitize filename
+                img_file = sanitize_filename(img_file)
+                
                 # Define output file path with preserved structure
                 relative_path = img_file.relative_to(input_path)
                 target_path = output_path / relative_path.parent
