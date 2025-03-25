@@ -26,6 +26,28 @@
     width: 25%;
 }
 
-p{
-    min-height: 37px;
+.container-text h4{
+    margin-bottom: 20px;
+}
+
+.container-text p {
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+    line-height: 32px; 
+    margin-bottom: 16px;
+}
+
+.container-text ul {
+    padding-left: 20px;
+    line-height: 32px; 
+    margin-bottom: 16px;
+}
+
+.container-text li {
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+    line-height: 32px; 
+    margin-bottom: 8px;
 }
