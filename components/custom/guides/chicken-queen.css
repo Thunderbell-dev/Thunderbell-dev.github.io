@@ -7,6 +7,7 @@
 .map-image img{
     width: auto;
     height: 400px;
+    object-fit: contain;
     cursor: pointer;
     border-radius: var(--global-border-radius);
 }
@@ -32,6 +33,7 @@
 
 .container-text p {
     display: flex; 
+    flex-wrap: wrap;
     align-items: center; 
     gap: 5px; 
     line-height: 32px; 
@@ -46,8 +48,36 @@
 
 .container-text li {
     display: flex;
+    flex-wrap: wrap;
     align-items: center; 
     gap: 5px;
     line-height: 32px; 
     margin-bottom: 8px;
 }
+
+@media (max-width: 1780px) {
+    .container{
+        flex-direction: column;
+    }
+    .container-box-50{
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 850px) {
+    .map-image{
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 470px) {
+    .row{
+        flex-direction: column;
+    }
+    .container-text-50{
+        width: calc(100% - 40px);
+    }
+}
+
+
