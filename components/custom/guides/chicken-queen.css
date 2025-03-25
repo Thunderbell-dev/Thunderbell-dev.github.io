@@ -55,6 +55,13 @@
     margin-bottom: 8px;
 }
 
+.check-box {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+
 @media (max-width: 1780px) {
     .container{
         flex-direction: column;
