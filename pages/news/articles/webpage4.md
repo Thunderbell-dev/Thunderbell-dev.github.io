@@ -1,6 +1,6 @@
 ---
 title: Purrfactory Webpage 0.4.0 🚀
-date: 2025-03-??
+date: 2025-03-26
 image: /images/public/Family-Pictures/Borderline.png
 teaser: Say hello to the brand-new Guides section 📖✨ — a place for our NosTale Guides!  
 ---
