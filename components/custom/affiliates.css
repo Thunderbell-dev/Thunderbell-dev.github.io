@@ -82,6 +82,32 @@
     padding: 10px;
 }
 
+.affiliate-image {
+    position: relative;
+    
+}
+
+.copyright-text {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 15px;
+    left: 15px;
+    font-size: 12px;
+    color: var(--body-font-color);
+    background-color: rgba(211, 211, 211, 0.2);
+    padding: 5px;
+    border-radius: var(--global-border-radius);
+    max-width: 60%;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+.affiliate-image:hover .copyright-text {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
 @media (max-width: 1300px){
     .affiliates-family-card {
         flex-direction: column-reverse;

@@ -58,9 +58,11 @@ function parseMarkdown(md, filename) {
         title: metaData.title || "Untitled",
         image: metaData.image || "/images/public/TBD.webp",
         description: metaData.description || content.join(" ") || "No description available",
+        copyright: metaData.copyright || null,
         link: `/pages/affiliates/family-html/${htmlFileName}`,
     };
 }
+
 
 // Renders affiliate cards to the page
 function displayAffiliates(affiliates) {
@@ -77,6 +79,7 @@ function generateAffiliateCardHTML(affiliate, index) {
         <div class="affiliates-family-card ${alignmentClass}">
             <div class="affiliate-image">
                 <img src="${affiliate.image}" alt="${affiliate.title}">
+                ${affiliate.copyright ? `<div class="copyright-text">${affiliate.copyright}</div>` : ""}
             </div>
             <div class="affiliate-info">
                 <h3 class="affiliate-name">${affiliate.title}</h3>
@@ -88,6 +91,7 @@ function generateAffiliateCardHTML(affiliate, index) {
         </div>
     `;
 }
+
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {

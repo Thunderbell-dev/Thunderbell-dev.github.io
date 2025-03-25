@@ -2,6 +2,7 @@
 title: ⚔️ Ritterorden 🏰
 image: /images/public/affiliates/Ritterorden1.webp
 description: The Ritterorden of Thunderbell ⚔️ is a medieval-themed family 🏰 created to bring together German players. Though it faced inactivity due to leveling differences, it remains alive with the founder's characters 👑. Currently on hold ⏸️.
+copyright: © 2024 All Rights Reserved, Leonardo Interactive Pty Ltd®
 ---
 
 ## ⚔️The History of the Ritterorden (Thunderbell's Perspective)🏰  

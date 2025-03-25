@@ -2,6 +2,7 @@
 title: Calamity
 image: 
 description: Welcome to Calamity – Where Chaos Meets Strength!
+copyright:
 ---
 
 ## Welcome to Calamity – Where Chaos Meets Strength!
