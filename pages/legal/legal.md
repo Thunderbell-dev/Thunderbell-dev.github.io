@@ -5,6 +5,13 @@
 *remain the property of their respective copyright holders.*  
 *All other artwork and content on this website are original creations and belong to Purrfactory.*  
 
+## Disclaimer  
+
+We do not claim ownership over the Nosapki fansite, nor affiliation.  
+In our game & raid guides, we reference pages of the external database created by Cous for ease-of-access,  
+in the absence of any official material available, also towards users who speak & play in languages supported  
+by the game & Nosapki, other than english.
+
 ## Copyrights
 
 **© 2007 Entwell Co., Ltd. Published by Gameforge 4D GmbH.**  
