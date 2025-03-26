@@ -1,8 +1,8 @@
 ---
 title: Purrfactory Webpage 0.4.0 🚀
 date: 2025-03-26
-image: /images/public/Family-Pictures/Borderline.png
-teaser: Say hello to the brand-new Guides section 📖✨ — a place for our NosTale Guides!  
+image: /images/public/Family-Pictures/Borderline.webp
+teaser: Hey there, the Purrfactory Webpage just got another exciting update! 🎊 Version 0.4.0 is live, and it’s packed with fresh features that will take your NosTale experience to the next level! 🚀Say hello to the brand-new Guides section 📖✨ — a place for our NosTale Guides!  
 ---
 Hey there, the Purrfactory Webpage just got another exciting update! 🎊
 
