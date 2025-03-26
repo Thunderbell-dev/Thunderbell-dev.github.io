@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/pages/guides/guides.json')
+    fetch('https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/guides/guides.json')
         .then(response => response.json())
         .then(data => {
             const guides = data.guides;
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         history.pushState("", document.title, window.location.pathname + window.location.search);
     
-        fetch(`/pages/guides/guides-html/${guidePath}`)
+        fetch(`https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/guides/guides-html/${guidePath}`)
             .then(response => response.text())
             .then(content => {
                 guideContent.innerHTML = content;
