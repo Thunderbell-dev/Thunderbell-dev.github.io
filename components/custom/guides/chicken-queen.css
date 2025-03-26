@@ -27,7 +27,7 @@
     width: 25%;
 }
 
-.container-text h4{
+.container-text h4, .container-text h3{
     margin-bottom: 20px;
 }
 

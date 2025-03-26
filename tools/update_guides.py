@@ -29,7 +29,7 @@ def update_guides():
                 chapters = []
 
                 # Find all <h2> and <h3> tags to list as chapters
-                for heading in soup.find_all(["h2", "h3"]):
+                for heading in soup.find_all(["h2"]):
                     chapter_name = heading.get_text().strip()
                     # Get the 'id' attribute of the heading, if it exists
                     chapter_id = heading.get("id", None)

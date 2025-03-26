@@ -165,7 +165,7 @@ h2{
     padding: 20px;
 }
 
-.container-text h4{
+.container-text h4, .container-text h3{
     margin-top: 0;
 }
 
