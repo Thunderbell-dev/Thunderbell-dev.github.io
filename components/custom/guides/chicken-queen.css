@@ -58,7 +58,11 @@
 .check-box {
     display: flex;
     flex-wrap: nowrap;
-    gap: 10px;
+    align-items: center; 
+}
+
+.check-box label {
+    margin: 10px 0; 
 }
 
 
