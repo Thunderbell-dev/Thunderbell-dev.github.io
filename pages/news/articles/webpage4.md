@@ -8,7 +8,7 @@ Hey there, the Purrfactory Webpage just got another exciting update! 🎊
 
 Version 0.4.0 is live, and it’s packed with fresh features that will take your NosTale experience to the next level! 🚀
 
-### Say hello to the brand-new Guides section 📖✨ — a place for our NosTale Guides!
+## Say hello to the brand-new Guides section 📖✨ — a place for our NosTale Guides!
 
 We’re adding:
 
@@ -16,7 +16,7 @@ We’re adding:
 - ⚔️ Expert raid strategies to lead your team to victory — especially for the upcoming Easter event! 🐰🌸
 - 💡 Nice-to-know tips and much more!
 
-### 💬 Easy Discord Connection 💬
+## 💬 Easy Discord Connection 💬
 
 We’ve made it easier to connect with our community! Head to the Startpage for:
 
