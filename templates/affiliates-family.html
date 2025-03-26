@@ -47,74 +47,100 @@
         <div class="affiliates-title">
             <h1 id="md-title"></h1>
         </div>
-        <div id="copyright-text" class="copyright-text"></div>
+        <div id="copyright-text" class="copyright-text">
+            <i class="fas fa-chevron-right"></i> Image Copyright: 
+        </div>
+                     
         <div class="affiliates-content" id="md-content"></div>
     </div>
 
-<script>
-    fetch('https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/affiliates/family-text/MARKDOWN-NAME') 
-    .then(response => response.text())
-    .then(text => {
-        const metadataMatch = text.match(/^---([\s\S]*?)---/);
-        let metadata = {};
-
-        if (metadataMatch) {
-            const metaLines = metadataMatch[1].trim().split("\n");
-            metaLines.forEach(line => {
-                const [key, ...value] = line.split(": ");
-                metadata[key.trim()] = value.join(": ").trim();
-            });
-            text = text.replace(metadataMatch[0], "").trim();
-        }
-
-        // Set the title if available
-        if (metadata.title) {
-            document.getElementById("md-title").innerText = metadata.title;
-        }
-
-        // Set the copyright text if available
-        if (metadata.copyright) {
-            document.getElementById("copyright-text").innerText = "Image: " + metadata.copyright;
-        }
-
-        const container = document.querySelector('body');
-        if (metadata.image && metadata.image.trim() !== '') {
-            container.style.backgroundImage = `url(${metadata.image})`;  // Set the image as background
-        } else {
-            container.style.backgroundImage = 'none';  // Remove background image
-        }
-
-        // Split content at each "## " (H2) while keeping the delimiter
-        const sections = text.split(/(?=## )/).map(section => section.trim()).filter(Boolean);
-
-        // Select the content container
-        const contentContainer = document.getElementById('md-content');
-
-        // Loop through each section and create a content card
-        sections.forEach((section, index) => {
-            // Create the content card
-            const card = document.createElement('div');
-            card.classList.add('content-card'); // Add the content-card class
-
-            // Assign unique ID to each card
-            card.id = `content-card-${index}`;
-
-            // Set the inner HTML to the parsed markdown content
-            card.innerHTML = marked.parse(section);
-
-            // Alternate the alignment for each card
-            if (index % 2 === 0) {
-                const emptyCardAfterLeft = document.createElement('div');
-                emptyCardAfterLeft.classList.add('content-card', 'empty');
-                contentContainer.appendChild(emptyCardAfterLeft);
+    <script>
+        fetch('/pages/affiliates/family-text/MARKDOWN-NAME')
+            .then(response => response.text())
+            .then(text => {
+                const metadataMatch = text.match(/^---([\s\S]*?)---/);
+                let metadata = {};
+            
+                if (metadataMatch) {
+                    const metaLines = metadataMatch[1].trim().split("\n");
+                    metaLines.forEach(line => {
+                        const [key, ...value] = line.split(": ");
+                        metadata[key.trim()] = value.join(": ").trim();
+                    });
+                    text = text.replace(metadataMatch[0], "").trim();
+                }
+            
+                // Set the title if available
+                if (metadata.title) {
+                    document.getElementById("md-title").innerText = metadata.title;
+                }
+            
+                // Store copyright metadata globally for later use
+                const copyrightText = document.getElementById("copyright-text");
+                if (metadata.copyright) {
+                    copyrightText.setAttribute("data-copyright", metadata.copyright);
+                }
+            
+                // Set background image if available
+                const container = document.querySelector('body');
+                if (metadata.image && metadata.image.trim() !== '') {
+                    container.style.backgroundImage = `url(${metadata.image})`;
+                } else {
+                    container.style.backgroundImage = 'none';
+                }
+            
+                // Split content at each "## " (H2) while keeping the delimiter
+                const sections = text.split(/(?=## )/).map(section => section.trim()).filter(Boolean);
+            
+                // Select the content container
+                const contentContainer = document.getElementById('md-content');
+            
+                // Loop through each section and create a content card
+                sections.forEach((section, index) => {
+                    // Create the content card
+                    const card = document.createElement('div');
+                    card.classList.add('content-card'); // Add the content-card class
+                
+                    // Assign unique ID to each card
+                    card.id = `content-card-${index}`;
+                
+                    // Set the inner HTML to the parsed markdown content
+                    card.innerHTML = marked.parse(section);
+                
+                    // Alternate the alignment for each card
+                    if (index % 2 === 0) {
+                        const emptyCardAfterLeft = document.createElement('div');
+                        emptyCardAfterLeft.classList.add('content-card', 'empty');
+                        contentContainer.appendChild(emptyCardAfterLeft);
+                    }
+                
+                    // Append the card to the content container
+                    contentContainer.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error loading markdown:', error));
+        
+        document.getElementById("copyright-text").addEventListener("click", function () {
+            this.classList.toggle("open");
+        
+            let copyrightInfo = document.getElementById("copyright-info");
+        
+            // If the copyright info doesn't exist, create it
+            if (!copyrightInfo) {
+                copyrightInfo = document.createElement("span");
+                copyrightInfo.id = "copyright-info";
+            
+                // Get actual copyright info from the data attribute
+                const copyrightData = this.getAttribute("data-copyright") || "No copyright info available";
+            
+                copyrightInfo.innerText = " " + copyrightData;
+                this.appendChild(copyrightInfo);
+            } else {
+                // If the info is already visible, remove it
+                copyrightInfo.remove();
             }
-
-            // Append the card to the content container
-            contentContainer.appendChild(card);
         });
-    })
-    .catch(error => console.error('Error loading markdown:', error));
-</script>
+    </script>
 
 </body>
 

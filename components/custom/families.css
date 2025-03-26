@@ -39,6 +39,7 @@ body{
     flex-wrap: wrap; 
     gap: 20px; 
     justify-content: center;
+    margin-bottom: 65px;
 }
 
 .affiliates-content .content-card {
@@ -60,18 +61,44 @@ body{
 
 #copyright-text {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 20px;
-    text-align: left;
     font-size: 14px;
     color: var(--body-font-color);
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px;
+    padding: 8px 12px;
     border-radius: var(--global-border-radius);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s; /* Fade-in effect */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: fit-content;
+    overflow: hidden;
+    transition: max-width 0.4s ease-in-out, padding 0.3s ease-in-out;
 }
+
+#copyright-text i {
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hidden by default */
+#copyright-info {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Open state */
+#copyright-text.open i {
+    transform: rotate(90deg);
+}
+
+#copyright-text.open #copyright-info {
+    display: inline;
+    opacity: 1;
+}
+
 
 .affiliates-container:hover #copyright-text {
     visibility: visible;
