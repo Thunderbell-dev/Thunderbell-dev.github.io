@@ -55,7 +55,7 @@
     </div>
 
     <script>
-        fetch('/pages/affiliates/family-text/MARKDOWN-NAME')
+        fetch('https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/affiliates/family-text/MARKDOWN-NAME')
             .then(response => response.text())
             .then(text => {
                 const metadataMatch = text.match(/^---([\s\S]*?)---/);
