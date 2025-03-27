@@ -1,5 +1,6 @@
 const guildId = '1342428692093079562';
 const apiUrl = `https://discord.com/api/guilds/${guildId}/widget.json`;
+const permanentInvite = 'https://discord.gg/46jYCVRv9f';
 
 async function fetchServerData() {
     try {
@@ -11,9 +12,7 @@ async function fetchServerData() {
         
         document.getElementById("discord-widget").innerHTML = `
             <p class="online">Online: ${onlineMembers}</p>
-            ${data.instant_invite ? `
-                <a href="${data.instant_invite}" target="_blank" class="hyperlink discord-invite">Join Now</a>
-            ` : '<p>No invite available</p>'}
+            <a href="${permanentInvite}" target="_blank" class="hyperlink discord-invite">Join Now</a>
         `;
     } catch (error) {
         document.getElementById("discord-widget").innerHTML = `<p>Error: ${error.message}</p>`;
@@ -21,4 +20,3 @@ async function fetchServerData() {
 }
 
 fetchServerData();
-
