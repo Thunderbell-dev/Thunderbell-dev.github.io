@@ -62,6 +62,7 @@ footer {
 }
 
 .sidebar ul li a {
+    transition: 0.3s;
     display: block;
     padding: 10px;
     border-radius: var(--global-border-radius);

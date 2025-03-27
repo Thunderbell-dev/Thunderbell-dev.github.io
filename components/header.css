@@ -40,6 +40,7 @@ nav{
 }
 
 nav a {
+    transition: 0.3s;
     color: var(--body-font-color);
     background: var(--section-background);
     border: 1px solid transparent;

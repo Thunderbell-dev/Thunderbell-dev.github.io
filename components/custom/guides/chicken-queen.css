@@ -61,10 +61,16 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center; 
+    cursor: pointer;
 }
 
 .check-box label {
     margin: 10px 0; 
+    cursor: pointer;
+}
+
+.check-box input {
+    cursor: pointer;
 }
 
 .beware-title{
