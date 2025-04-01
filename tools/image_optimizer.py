@@ -77,7 +77,7 @@ def convert_images_to_webp(input_folder, output_folder, quality=75):
                 print(f"Error processing {img_file}: {e}")
 
 # Define paths
-input_directory = "../images/private"
+input_directory = "../../purrfactory-backup/images/"
 output_directory = "../images/public"
 
 convert_images_to_webp(input_directory, output_directory)

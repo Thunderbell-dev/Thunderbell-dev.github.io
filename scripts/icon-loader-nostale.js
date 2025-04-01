@@ -27,6 +27,8 @@ const imageMap = {
     ":Melee:": "/images/public/icons/nostale/Elements/Melee.webp",
     ":Neutral:": "/images/public/icons/nostale/Elements/Neutral.webp",
     ":Water:": "/images/public/icons/nostale/Elements/Water.webp",
+    // Icons from folder: font/
+    ":NosTale_N:": "/images/public/icons/nostale/font/NosTale_N.webp",
     // Icons from folder: Mage/
     ":SP10M:": "/images/public/icons/nostale/Mage/SP10M.gif",
     ":SP11M:": "/images/public/icons/nostale/Mage/SP11M.gif",

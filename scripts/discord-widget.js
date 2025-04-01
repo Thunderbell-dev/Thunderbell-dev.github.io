@@ -9,9 +9,16 @@ async function fetchServerData() {
         
         const data = await response.json();
         const onlineMembers = data.presence_count;
+
+        console.log(data.members?.filter(member => member.game && member.game.name));
+        
+        const playingNostale = data.members?.filter(member => 
+            member.game && member.game.name === "NosTale"
+        ).length || 0;
         
         document.getElementById("discord-widget").innerHTML = `
-            <p class="online">Online: ${onlineMembers}</p>
+            <div class="online"><i id="discord-icon" class="fab fa-discord"></i> Online: ${onlineMembers}</div>
+            <div class="online-nostale"><img id="nostale-icon" src="/images/public/icons/nostale/font/NosTale_N.webp" alt="NostaleIcon"> Ingame: ${playingNostale}</div>
             <a href="${permanentInvite}" target="_blank" class="hyperlink discord-invite">Join Now</a>
         `;
     } catch (error) {

@@ -1,3 +1,13 @@
+#discord-icon{
+    color: var(--body-font-color);
+}
+
+#nostale-icon{
+    height: 22px;
+    width: auto;
+    margin-right: 5px;
+}
+
 .family-team-title {
     display: flex;
     background-color: var(--section-background);
@@ -124,7 +134,6 @@
     }
 }
 
-
 .discord-widget {
     display: flex;
     flex-direction: column;
@@ -133,7 +142,7 @@
     background-color: var(--secondary-background);
     border-radius: var(--global-border-radius);
     text-align: center;
-    width: 16%;
+    width: 13%;
 }
 
 .discord-widget .online {
@@ -141,6 +150,15 @@
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
+}
+
+.discord-widget .online-nostale {
+    color: var(--current-online-color);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .discord-invite {
