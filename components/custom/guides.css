@@ -207,7 +207,7 @@ ul {
 
     .sidebar-toggle {
         display: block;
-        right: 15px;
+        right: 0;        
         left: unset;
         top: 10px;
         border: none;
