@@ -1,0 +1,44 @@
+#birthdayMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    padding: 30px 50px;
+    background: linear-gradient(45deg, #ffe6f0, #fff0f5);
+    border: 5px double deeppink;
+    border-radius: 25px;
+    z-index: 1000;
+    box-shadow: 0 0 30px hotpink;
+    color: hotpink;
+    animation: fadeInOut 5s ease-in-out;
+    text-shadow: 2px 2px white;
+  }
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  20% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+  80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+}
+
+.confetti {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: hsl(var(--hue), 100%, 50%);
+  top: -20px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall var(--duration) linear forwards;
+  z-index: 999;
+  transform: rotate(45deg);
+}
+
+@keyframes fall {
+  to {
+    transform: translateX(var(--x)) translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
