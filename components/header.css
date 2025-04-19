@@ -35,7 +35,7 @@ header {
     display: inline-block;
 }
 
-nav{
+nav {
     padding: 10px;
 }
 
@@ -50,11 +50,12 @@ nav a {
 
     font-size: 18px;
     border-radius: var(--global-border-radius);
-    
+
     text-decoration: unset;
 }
 
-nav a:hover, a.active {
+nav a:hover,
+a.active {
     background-color: var(--secondary-background);
     border: 1px solid var(--nav-border-color);
 }
@@ -81,16 +82,18 @@ nav a:hover, a.active {
     }
 
     nav {
+
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        padding: 20px;
+        gap: 10px;
     }
 
     nav a {
         display: block;
-        width: 70%;
+        width: calc(45% - 40px);
         text-align: center;
-        margin: 5px 0;
     }
 }

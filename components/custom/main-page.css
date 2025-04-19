@@ -8,6 +8,10 @@
     margin-right: 5px;
 }
 
+.stage-pic {
+    justify-self: center;
+}
+
 .family-team-title {
     display: flex;
     background-color: var(--section-background);

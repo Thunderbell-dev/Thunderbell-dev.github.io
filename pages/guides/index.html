@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,22 +45,119 @@
 
 <body>
     <div class="guides-container">
-    
+
         <div class="sidebar-container">
             <nav class="sidebar">
                 <h2>Guides</h2>
+
+                <div id="search-container" style="display: none;">
+                    <input type="text" id="search-input" placeholder="Search Guides...">
+                </div>
+
                 <ul id="guide-list">
                     <!-- List of guides will be populated here dynamically -->
                 </ul>
             </nav>
         </div>
-        
+
 
         <main class="content">
+            <div class="button-container"></div>
+
+            <div class="introduction">
+                <!-- The introduction content appear here -->
+                <div class="box-layout">
+                    <div class="box-33">
+                        <h3 class="text-center">Guides in Pawprint <i class="fa-solid fa-paw"></i></h3>
+
+                        <p>
+                            At our Purrfactory <i class="fa-solid fa-paw"></i> we believe that knowledge should be
+                            clear, accessible, and community-driven 🤝
+                        </p>
+
+                        <p>
+                            That's why we write together our own library of guides 📚 A collection by kittens, for all
+                            our playmates
+                        </p>
+
+                        <ul>
+                            <li> Most resources out there are either outdated, hard to navigate, or simply not detailed
+                                enough 🔍</li>
+                            <br>
+                            <li>We wanted something relevant to us, that reflects our play styles, how we learn and
+                                improve together ✨</li>
+                        </ul>
+
+                    </div>
+                    <div class="box-33">
+                        <h3 class="text-center">The Pawsome Recipe 💡</h3>
+
+                        <p>
+                            Raid guides have their own collection, we've gone the extra mile 🛤️
+                        </p>
+
+                        <ul>
+                            <li>We’ve built dedicated sections 🧪 specifically designed to test different tactics,
+                                setups, and approaches 🛠️</li>
+                            <br>
+                            <li>This allows us to find the most efficient ⚡ and enjoyable 😄 strategies and share them
+                                with everyone 📢</li>
+                        </ul>
+
+                        <p>
+                            Whether you're new to a raid 🐣 or looking to optimize your run 🏃‍♂️💨<br>
+                            we're confident our tips will prepare you for good times and victory🏆 🛡️
+                        </p>
+                    </div>
+
+                    <div class="box-33">
+                        <h3 class="text-center">Community driven 💯</h3>
+
+                        <p>
+                            Our guides are a group effort 🤝 and we’re proud of the teamwork 💪 behind them
+                        </p>
+
+                        <p>
+                            Every strategy, tip and insight 💡 comes from hands-on experience 🎮 
+                            paws-up epic fails 🙀 by amazing members of our community 
+                            <i class="fa-solid fa-paw"></i> who kindly share all they know ❤️ 
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contributed-player">
+                    <h4>✨ Our Purr Providers ✨</h4>
+
+                    <ul class="player-list">
+                        <li>Tempestieg</li>
+                        <li>Thunderbell</li>
+                    </ul>
+
+                    <p>
+                        This is just the beginning
+                    </p>
+                    <p>
+                        As the game evolves, so will our guides always with the same mission
+                    </p>
+                    <p>
+                        <strong>Funnier, accessible Nostale experience 🎮 Pawsome for every furball out there
+                            💖</strong>
+                    </p>
+
+                </div>
+
+
+            </div>
+
             <article id="guide-content">
                 <!-- The content of the selected guide will appear here -->
             </article>
-        </main>
+
+    </div>
+
+
+    </main>
     </div>
 </body>
 
@@ -68,19 +166,19 @@
         <div class="footer-text bold">
             &copy; 2025 Purrfactory. All rights reserved.
         </div>
-        
+
         <div class="footer-text">
             <p><a href="/pages/legal/index.html" class="hyperlink">Legal</a></p>
             <p class="hide-on-mobile">|</p>
             <p><a href="/pages/legal/credits/index.html" class="hyperlink">Credits</a></p>
             <p class="hide-on-mobile">|</p>
             <p><a href="/pages/legal/contacts/index.html" class="hyperlink">Contacts</a></p>
-            
+
         </div>
         <div class="footer-text">
-           <a href="mailto:purrfactory@proton.me" class="hyperlink">purrfactory@proton.me</a>
+            <a href="mailto:purrfactory@proton.me" class="hyperlink">purrfactory@proton.me</a>
         </div>
-        
+
     </div>
 </footer>
 
@@ -88,5 +186,6 @@
 <script src="/scripts/guides.js"></script>
 <script src="/scripts/lightbox.js"></script>
 <script src="/scripts/icon-loader-nostale.js"></script>
+<script src="/scripts/guides-dropdown.js"></script>
 
 </html>

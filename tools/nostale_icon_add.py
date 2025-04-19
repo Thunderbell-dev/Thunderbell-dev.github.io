@@ -11,14 +11,15 @@ def generate_icon_lines(icons_folder):
         for file in files:
             if file.endswith(('gif', 'webp')):
                 original_file_name = file
-                
+
+                # Entferne ungewollte Zeichen im Dateinamen
                 if '¤' in file:
                     new_file_name = file.replace('¤', '')
                     old_file_path = os.path.join(root, file)
                     new_file_path = os.path.join(root, new_file_name)
                     os.rename(old_file_path, new_file_path)
                     file = new_file_name
-                
+
                 if ' ' in file:
                     new_file_name = file.replace(' ', '')
                     old_file_path = os.path.join(root, file)
@@ -26,16 +27,18 @@ def generate_icon_lines(icons_folder):
                     os.rename(old_file_path, new_file_path)
                     file = new_file_name
 
+                # Relativer Pfad (mit Web-kompatiblen Slashes)
                 relative_path = os.path.relpath(root, icons_folder)
+                relative_path = relative_path.replace('\\', '/')  # <-- wichtig für Web
+
                 if relative_path != '.':
                     relative_path += '/'
-                
+
                 if relative_path != last_folder:
                     icon_lines.append(f"    // Icons from folder: {relative_path}")
                     last_folder = relative_path
-                
-                icon_name = file.split('.')[0]
-                icon_name = icon_name.replace(' ', '')
+
+                icon_name = file.split('.')[0].replace(' ', '')
                 icon_line = f'    ":{icon_name}:": "/images/public/icons/nostale/{relative_path}{file}",'
                 icon_lines.append(icon_line)
 
@@ -54,18 +57,14 @@ def update_js_file(js_file_path, icon_lines):
             if image_map_start is not None and line.strip() == '};':
                 image_map_end = i
                 break
-        
+
         if image_map_start is None or image_map_end is None:
             print("Error: Couldn't find the imageMap definition in the JavaScript file.")
             return
 
-        new_image_map_content = [
-            'const imageMap = {\n'
-        ]
-        
+        new_image_map_content = ['const imageMap = {\n']
         for icon_line in icon_lines:
             new_image_map_content.append(icon_line + "\n")
-
         new_image_map_content.append('};\n')
 
         js_content = js_content[:image_map_start] + new_image_map_content + js_content[image_map_end + 1:]
@@ -79,5 +78,6 @@ def update_js_file(js_file_path, icon_lines):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+# Ausführen
 icon_lines = generate_icon_lines(icons_folder)
 update_js_file(js_file_path, icon_lines)

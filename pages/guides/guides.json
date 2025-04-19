@@ -3,6 +3,7 @@
         {
             "name": "Chicken Queen",
             "path": "Chicken Queen.html",
+            "category": "Raids",
             "chapters": [
                 {
                     "name": "Basics",
@@ -21,6 +22,31 @@
                     "id": "Beware"
                 }
             ]
+        },
+        {
+            "name": "Mad March Hare",
+            "path": "Mad March Hare.html",
+            "category": "Raids",
+            "chapters": [
+                {
+                    "name": "Basics",
+                    "id": "Basics"
+                },
+                {
+                    "name": "Checklist",
+                    "id": "Checklist "
+                },
+                {
+                    "name": "Strategy",
+                    "id": "Strategy"
+                }
+            ]
+        },
+        {
+            "name": "Under Construction",
+            "path": "UC.html",
+            "category": "Gameplay",
+            "chapters": []
         }
     ]
 }

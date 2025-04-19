@@ -4,53 +4,47 @@ from bs4 import BeautifulSoup
 
 def update_guides():
     def update_guides_json(guides_folder, json_file):
-        # Get all guide files in the folder
         guides = [f for f in os.listdir(guides_folder) if f.endswith(".html")]
 
         if not guides:
             print("No guides found. Aborting update.")
             return
 
-        # Create a list to hold guide data
         guides_data = {"guides": []}
 
         for guide_file in guides:
             guide_path = os.path.join(guides_folder, guide_file)
 
-            # Open each guide file and parse the title (name)
             with open(guide_path, "r", encoding="utf-8") as file:
                 content = file.read()
                 soup = BeautifulSoup(content, "html.parser")
 
-                # Find the first <h1> tag to use as the name
-                guide_name = soup.find("h1").get_text() if soup.find("h1") else guide_file
+                # Name aus <h1>
+                guide_name = soup.find("h1").get_text().strip() if soup.find("h1") else guide_file
 
-                # Find all <h2> and <h3> tags to treat as chapters
+                # Kategorie aus <meta name="category" content="...">
+                category_meta = soup.find("meta", attrs={"name": "category"})
+                category = category_meta["content"].strip() if category_meta else "Uncategorized"
+
+                # Kapitel aus <h2>
                 chapters = []
-
-                # Find all <h2> and <h3> tags to list as chapters
-                for heading in soup.find_all(["h2"]):
+                for heading in soup.find_all("h2"):
                     chapter_name = heading.get_text().strip()
-                    # Get the 'id' attribute of the heading, if it exists
-                    chapter_id = heading.get("id", None)
-                    
-                    # If an id is present, use it; otherwise, use a generic id (e.g., 'chapter1', 'chapter2')
-                    if not chapter_id:
-                        chapter_id = f"chapter{len(chapters) + 1}"
-                    
+                    chapter_id = heading.get("id") or f"chapter{len(chapters) + 1}"
                     chapters.append({
                         "name": chapter_name,
                         "id": chapter_id
                     })
 
-            # Add the guide data to the list
+            # Guide-Objekt inklusive Kategorie speichern
             guides_data["guides"].append({
                 "name": guide_name,
                 "path": guide_file,
+                "category": category,
                 "chapters": chapters
             })
 
-        # Write the updated JSON data to the file
+        # JSON schreiben
         with open(json_file, "w", encoding="utf-8") as file:
             json.dump(guides_data, file, indent=4)
 

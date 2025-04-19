@@ -1,5 +1,6 @@
 #lightbox {
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
@@ -55,8 +56,10 @@
 
 .prev {
     left: 10px;
+    font-size: 80px;
 }
 
 .next {
     right: 10px;
+    font-size: 80px;
 }

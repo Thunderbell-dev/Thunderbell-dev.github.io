@@ -1,141 +1,17 @@
-.map-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.map-image img{
-    width: 400px;
-    height: 400px;
-    object-fit: contain;
-    cursor: pointer;
-    border-radius: calc(var(--global-border-radius) + 10px);
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
 .space-for-chickens{
     width: 15%;
 }
 
-.space-for2image{
+.space-for2image {
     width: 25%;
 }
 
-.container-text h4, .container-text h3{
-    margin-bottom: 20px;
+.basic-block{
+    margin-bottom: 10px;
+    padding: 0;
+    padding: 10px;
 }
 
-.container-text p {
-    display: flex; 
-    flex-wrap: wrap;
-    align-items: center; 
-    gap: 5px; 
-    line-height: 32px; 
-    margin-bottom: 16px;
-}
-
-.container-text ul {
-    padding-left: 20px;
-    line-height: 32px; 
-    margin-bottom: 16px;
-}
-
-.container-text li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center; 
-    gap: 5px;
-    line-height: 32px; 
-    margin-bottom: 8px;
-}
-
-.check-box {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center; 
-    cursor: pointer;
-}
-
-.check-box label {
-    margin: 10px 0; 
-    cursor: pointer;
-}
-
-.check-box input {
-    cursor: pointer;
-}
-
-.beware-title{
-    text-decoration: underline;
-}
-
-.beware-title:first-child{
-    margin-top: 10px;
-}
-
-.beware-title i{
-    margin-right: 10px;
-}
-
-ul.beware-ul{
-    padding-left: 25px;
-}
-
-#Checklistcontainer{
+#basic-blocks {
     align-content: center;
 }
-
-#Strategycontainer{
-    align-content: center;
-}
-
-@media (max-width: 1780px) {
-    .container{
-        flex-direction: column;
-    }
-    .container-box-50{
-        width: calc(100% - 40px);
-    }
-}
-
-@media (max-width: 1022px) {
-    .map-image{
-        flex-direction: column;
-    }
-    
-}
-
-@media (max-width: 1022px) {
-    .space-for2image{
-        width: 0;
-        height: 20px;
-    }
-    
-}
-
-@media (max-width: 470px) {
-    .row{
-        flex-direction: column;
-    }
-    .container-text-50{
-        width: calc(100% - 40px);
-    }
-}
-
-@media (max-width: 400px) {
-    .map-image img{
-        width: 250px;
-        height: 250px;
-    }
-}
-
-
-
