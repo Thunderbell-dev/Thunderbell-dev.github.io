@@ -2,10 +2,12 @@
   justify-content: space-evenly;
 }
 
-#Checklist-container .mad-march-hare-chicken {
-  width: 200px;
-  height: 250px;
+#Checklist-container .mad-march-hare-chicken{
   align-self: center;
+}
+
+.mad-march-hare-chicken{
+  scale: 2;
 }
 
 #fat-arrow {
