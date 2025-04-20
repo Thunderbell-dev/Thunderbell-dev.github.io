@@ -19,6 +19,10 @@ ul.beware-ul {
     padding-left: 25px;
 }
 
+.li-margin li{
+    margin-bottom: 10px;
+}
+
 /* ========== UTILS ========== */
 .fade-in {
     opacity: 0;
