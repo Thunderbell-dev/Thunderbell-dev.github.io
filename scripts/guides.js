@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let allGuides = [];
     let currentCategory = null;
 
-    fetch('/pages/guides/guides.json')
+    fetch('https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/guides/guides.json')
         .then(response => response.json())
         .then(data => {
             allGuides = data.guides;
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
         guideContent.classList.remove("show");
         guideContent.classList.add("fade-in");
 
-        fetch(`/pages/guides/guides-html/${guidePath}`)
+        fetch(`https://raw.githubusercontent.com/thunderbell-dev/thunderbell-dev.github.io/main/pages/guides/guides-html/${guidePath}`)
             .then(response => response.text())
             .then(content => {
                 guideContent.innerHTML = content;
