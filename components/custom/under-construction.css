@@ -1,11 +1,9 @@
 .stage-container {
     text-align: center;
     background: var(--section-background);
-    padding: 40px 50px;
     border-radius: 10px;
     animation: scaleUp 1s ease-out forwards;
     margin-top: 40px;
-    width: 66%;
 }
 .stage-container h1 {
     font-size: 3rem;

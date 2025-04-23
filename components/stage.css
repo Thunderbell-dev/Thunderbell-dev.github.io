@@ -1,7 +1,7 @@
 .stage-container {
-    width: 100%;
-    max-width: 75%;
-    margin: 20px auto;
+    justify-self: center;
+    width: calc(100% - 120px);
+    margin-top: 40px;
     padding: 20px;
     background: var(--secondary-background);
     border-radius: var(--global-border-radius);
@@ -14,10 +14,7 @@
 
 @media (max-width: 965px) {
     .stage-container {
-        max-width: 90%;
-        padding: 15px;
-        margin: 15px;
-        justify-self: center;
+       
     }
 
     .stage-pic img {

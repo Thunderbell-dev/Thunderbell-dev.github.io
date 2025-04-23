@@ -6,8 +6,13 @@
   align-self: center;
 }
 
+.container-box{
+  width: 100%;
+}
+
 .mad-march-hare-chicken{
-  scale: 2;
+  width: 15%;
+  height: auto;
 }
 
 #fat-arrow {
@@ -99,7 +104,13 @@
 }
 
 
-/* Optional: responsive für mobile Geräte */
+@media (max-width: 1780px) {
+  .container-box{
+    width: unset;
+  }
+}
+
+
 @media (max-width: 768px) {
 
   .strategy-grid-container,
