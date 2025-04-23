@@ -13,10 +13,6 @@
 }
 
 @media (max-width: 965px) {
-    .stage-container {
-       
-    }
-
     .stage-pic img {
         border-radius: calc(var(--global-border-radius) / 2);
     }
