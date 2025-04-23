@@ -232,7 +232,7 @@ main.content {
     background-color: var(--secondary-background);
     flex: 0 0 calc((100% / 8) - 10px);
     border-radius: calc(var(--global-border-radius) + 10px);
-    line-height: 1.6rem;
+    padding: 5px;
 }
 
 /* ========== MAP ========== */
