@@ -1,12 +1,12 @@
 const imageMap_Misc = {
-    ":Angler:": "/images/public/icons/nostale/Misc/Angler.gif",
-    ":Chef:": "/images/public/icons/nostale/Misc/Chef.gif",
-    ":Chicken:": "/images/public/icons/nostale/Misc/Chicken.gif",
+    ":Angler:": "/images/public/icons/nostale/Misc/Angler.webp",
+    ":Chef:": "/images/public/icons/nostale/Misc/Chef.webp",
+    ":Chicken:": "/images/public/icons/nostale/Misc/Chicken.webp",
     ":Jajamaru:": "/images/public/icons/nostale/Misc/Jajamaru.webp",
-    ":PetTrainer:": "/images/public/icons/nostale/Misc/PetTrainer.gif",
-    ":Pirate:": "/images/public/icons/nostale/Misc/Pirate.gif",
-    ":Pyjama:": "/images/public/icons/nostale/Misc/Pyjama.gif",
-    ":Wedding:": "/images/public/icons/nostale/Misc/Wedding.gif",
+    ":PetTrainer:": "/images/public/icons/nostale/Misc/PetTrainer.webp",
+    ":Pirate:": "/images/public/icons/nostale/Misc/Pirate.webp",
+    ":Pyjama:": "/images/public/icons/nostale/Misc/Pyjama.webp",
+    ":Wedding:": "/images/public/icons/nostale/Misc/Wedding.webp",
 };
 
 document.addEventListener("guideLoaded", function () {

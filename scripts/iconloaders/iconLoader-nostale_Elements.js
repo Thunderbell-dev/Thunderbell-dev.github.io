@@ -1,7 +1,7 @@
 const imageMap_Elements = {
     ":Dark:": "/images/public/icons/nostale/Elements/Dark.webp",
     ":Distance:": "/images/public/icons/nostale/Elements/Distance.webp",
-    ":ElementalForces:": "/images/public/icons/nostale/Elements/ElementalForces.gif",
+    ":ElementalForces:": "/images/public/icons/nostale/Elements/ElementalForces.webp",
     ":Fire:": "/images/public/icons/nostale/Elements/Fire.webp",
     ":Light:": "/images/public/icons/nostale/Elements/Light.webp",
     ":Magic:": "/images/public/icons/nostale/Elements/Magic.webp",

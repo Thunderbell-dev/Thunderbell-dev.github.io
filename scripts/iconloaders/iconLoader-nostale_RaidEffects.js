@@ -4,7 +4,7 @@ const imageMap_RaidEffects = {
     ":Broken-Hearted:": "/images/public/icons/nostale/RaidEffects/Broken-Hearted.webp",
     ":Contagion:": "/images/public/icons/nostale/RaidEffects/Contagion.webp",
     ":DeadlyBlackout:": "/images/public/icons/nostale/RaidEffects/DeadlyBlackout.webp",
-    ":Eggstra:": "/images/public/icons/nostale/RaidEffects/Eggstra.gif",
+    ":Eggstra:": "/images/public/icons/nostale/RaidEffects/Eggstra.webp",
     ":Eggstra1:": "/images/public/icons/nostale/RaidEffects/Eggstra1.webp",
     ":Eggstra2:": "/images/public/icons/nostale/RaidEffects/Eggstra2.webp",
     ":Eggstra3:": "/images/public/icons/nostale/RaidEffects/Eggstra3.webp",

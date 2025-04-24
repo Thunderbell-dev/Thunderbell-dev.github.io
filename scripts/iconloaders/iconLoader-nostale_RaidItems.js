@@ -1,7 +1,7 @@
 const imageMap_RaidItems = {
     ":45Wand:": "/images/public/icons/nostale/RaidItems/45Wand.webp",
     ":Acorn:": "/images/public/icons/nostale/RaidItems/Acorn.webp",
-    ":Acorns:": "/images/public/icons/nostale/RaidItems/Acorns.gif",
+    ":Acorns:": "/images/public/icons/nostale/RaidItems/Acorns.webp",
     ":AmuletFire:": "/images/public/icons/nostale/RaidItems/AmuletFire.webp",
     ":Ancelloan:": "/images/public/icons/nostale/RaidItems/Ancelloan.webp",
     ":BaseTP:": "/images/public/icons/nostale/RaidItems/BaseTP.webp",
@@ -19,7 +19,7 @@ const imageMap_RaidItems = {
     ":EvoFruit:": "/images/public/icons/nostale/RaidItems/EvoFruit.webp",
     ":Fool:": "/images/public/icons/nostale/RaidItems/Fool.webp",
     ":FriendshipWings:": "/images/public/icons/nostale/RaidItems/FriendshipWings.webp",
-    ":Gems:": "/images/public/icons/nostale/RaidItems/Gems.gif",
+    ":Gems:": "/images/public/icons/nostale/RaidItems/Gems.webp",
     ":GlacierStone:": "/images/public/icons/nostale/RaidItems/GlacierStone.webp",
     ":Gold:": "/images/public/icons/nostale/RaidItems/Gold.webp",
     ":GoldenAcorn:": "/images/public/icons/nostale/RaidItems/GoldenAcorn.webp",
