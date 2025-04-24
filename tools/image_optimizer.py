@@ -1,83 +1,76 @@
 import os
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageSequence
+import imageio
+import shutil
 
 def sanitize_filename(file_path):
-    """
-    Removes '¤' and spaces from the filename.
-    """
     new_name = file_path.name.replace('¤', '').replace(' ', '').replace('·', '')
     new_path = file_path.parent / new_name
-    if new_path != file_path:  # Rename only if different
+    if new_path != file_path:
         file_path.rename(new_path)
     return new_path
 
-def convert_images_to_webp(input_folder, output_folder, quality=75):
-    """
-    Converts all PNG, JPEG, and GIF images in the input folder (including subdirectories)
-    to WebP format while preserving the directory structure in the output folder.
-    GIF and WebP files are copied directly. Existing WebP files are skipped.
-    If both GIF and WebP with the same name exist, both are skipped.
-    """
+def resize_gif_and_convert_to_webp(input_gif_path, output_webp_path, duration_multiplier=100):
+    with Image.open(input_gif_path) as im:
+        frames = []
+        durations = []
+        for frame in ImageSequence.Iterator(im):
+            resized_frame = frame.convert("RGBA").resize((32, 32), Image.LANCZOS)
+            frames.append(resized_frame)
+            frame_duration = frame.info.get('duration', 100)
+            durations.append(frame_duration * duration_multiplier)
+        imageio.mimsave(output_webp_path, frames, duration=[d / 1000 for d in durations], format='WEBP')
+        print(f"✅ Converted GIF to WebP with extended duration: {output_webp_path}")
+
+def convert_images_to_webp(input_folder, output_folder, quality=75, duration_multiplier=100):
     input_path = Path(input_folder)
     output_path = Path(output_folder)
-    
+
     if not input_path.exists():
         print(f"Input folder {input_folder} does not exist.")
         return
-    
-    for img_file in input_path.rglob("*.*"):  # Recursively find all files
-        if img_file.suffix.lower() in ['.png', '.jpg', '.jpeg', '.gif', '.webp']:
-            try:
-                # Sanitize filename
-                img_file = sanitize_filename(img_file)
-                
-                # Define output file path with preserved structure
-                relative_path = img_file.relative_to(input_path)
-                target_path = output_path / relative_path.parent
-                target_path.mkdir(parents=True, exist_ok=True)
-                
-                # Output path for the WebP version
-                webp_path = target_path / f"{img_file.stem}.webp"
-                gif_path = target_path / f"{img_file.stem}.gif"
-                
-                # If both GIF and WebP files exist with the same name, skip
-                if gif_path.exists() and webp_path.exists():
-                    print(f"Skipped (both .gif and .webp exist with same name): {img_file}")
-                    continue
-                
-                # If it's already a WebP, just copy it
-                if img_file.suffix.lower() == '.webp':
-                    target_webp_path = target_path / img_file.name
-                    if target_webp_path.exists():
-                        continue  # Skip the WebP file if it already exists
-                    with open(img_file, 'rb') as fsrc, open(target_webp_path, 'wb') as fdst:
-                        fdst.write(fsrc.read())
-                    print(f"Copied: {img_file} -> {target_webp_path}")
-                    continue  # Skip the conversion for WebP files
-                
-                # Check if the WebP file already exists (for PNG/JPEG)
-                if webp_path.exists():
-                    continue  # Skip if the WebP file already exists
-                
-                # Copy GIF files directly
-                if img_file.suffix.lower() == '.gif':
-                    if gif_path.exists():
-                        continue  # Skip if the GIF file already exists
-                    target_gif_path = target_path / img_file.name
-                    with open(img_file, 'rb') as fsrc, open(target_gif_path, 'wb') as fdst:
-                        fdst.write(fsrc.read())
-                    print(f"Copied: {img_file} -> {target_gif_path}")
-                else:
-                    # Convert PNG/JPEG to WebP
-                    with Image.open(img_file) as img:
-                        img.save(webp_path, "WEBP", quality=quality)
-                        print(f"Converted: {img_file} -> {webp_path}")
-            except Exception as e:
-                print(f"Error processing {img_file}: {e}")
 
-# Define paths
+    for img_file in input_path.rglob("*.*"):
+        try:
+            img_file = sanitize_filename(img_file)
+            relative_path = img_file.relative_to(input_path)
+            target_path = output_path / relative_path.parent
+            target_path.mkdir(parents=True, exist_ok=True)
+
+            stem = img_file.stem
+            ext = img_file.suffix.lower()
+
+            webp_path = target_path / f"{stem}.webp"
+
+            if ext == '.webp':
+                if webp_path.exists():
+                    print(f"⏭️ Skipped (WebP already exists): {img_file}")
+                else:
+                    shutil.copy(img_file, webp_path)
+                    print(f"✅ Copied WebP file: {img_file} -> {webp_path}")
+                continue
+
+            if webp_path.exists():
+                print(f"⏭️ Skipped (WebP already exists): {img_file}")
+                continue
+
+            if ext == '.gif' and 'icons' in img_file.parts:
+                resize_gif_and_convert_to_webp(img_file, webp_path, duration_multiplier)
+
+            elif ext in ['.png', '.jpg', '.jpeg']:
+                with Image.open(img_file) as img:
+                    img.save(webp_path, "WEBP", quality=quality)
+                    print(f"✅ Converted image to WebP: {img_file} -> {webp_path}")
+
+            elif ext == '.gif':
+                shutil.copy(img_file, target_path / img_file.name)
+                print(f"✅ Copied GIF file: {img_file} -> {target_path / img_file.name}")
+
+        except Exception as e:
+            print(f"❌ Error processing {img_file}: {e}")
+
 input_directory = "../../purrfactory-backup/images/"
 output_directory = "../images/public"
 
-convert_images_to_webp(input_directory, output_directory)
+convert_images_to_webp(input_directory, output_directory, quality=75, duration_multiplier=1200)
