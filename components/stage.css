@@ -9,11 +9,8 @@
 
 .stage-pic img {
     max-height: 600px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
     border-radius: var(--global-border-radius);
-}
-
-@media (max-width: 965px) {
-    .stage-pic img {
-        border-radius: calc(var(--global-border-radius) / 2);
-    }
 }
