@@ -1,40 +1,32 @@
-function replaceIcons() {
-    const mdContent = document.getElementById("md-content");
-    if (!mdContent) return;
+function replaceTextWithImages(imageMap) {
+    const guideContent = document.getElementById("guide-content");
+    const textNodes = getTextNodes(guideContent);
 
-    const iconMap = {
-        ":Congratz:": "🎉",
-        ":Hype:": "🥳",
-        ":Daze:": "🤩",
-        ":Hanw:": "🥰",
-        ":PrettyPlease:": "🙏",
-        ":Badump:": "💓",
-        ":YesSir:": "🫡",
-        ":Help:": "🆘",
-        ":yarn:": "🧶",
-        ":UrWelcome:": "🤗",
-        ":Thinker:": "🤔",
-        ":Idea:": "💡",
-        ":Scheme:": "📝",
-        ":Beggar:": "🙏",
-        ":confetti_ball:": "🎊",
-        ":Aristocat:": "😺", 
-        ":Newspaper:": "📰",
-        ":newspaper:":  "📰",
-        ":lady_beetle:": "🐞", 
-        ":BONK:": "💥",
-        ":star2:": "🌟",
+    textNodes.forEach(node => {
+        let newText = node.textContent;
 
-        // Image icons
-        // ":Daze:": '<img src="/images/public/Kitten.webp" alt="Daze Icon" class="icon">',
+        Object.keys(imageMap).forEach(placeholder => {
+            const imgSrc = imageMap[placeholder];
+            const regex = new RegExp(placeholder, 'g');
+            newText = newText.replace(regex, (match) => {
+                return `<img src="${imgSrc}" alt="${placeholder} Icon" class="icon">`;
+            });
+        });
 
-        // FontAwesome icons
-        ":PinkiePaw:": '<i class="fas fa-paw" style="color: pink;"></i>',
-    };
-
-    mdContent.innerHTML = mdContent.innerHTML.replace(/:\w+:/g, match => {
-        return iconMap[match] ? `<span class="emoji">${iconMap[match]}</span>` : match;
+        if (newText !== node.textContent) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = newText;
+            node.replaceWith(...tempDiv.childNodes);
+        }
     });
 }
 
-document.addEventListener("DOMContentLoaded", replaceIcons);
+function getTextNodes(element) {
+    const textNodes = [];
+    const walk = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walk.nextNode()) {
+        textNodes.push(node);
+    }
+    return textNodes;
+}

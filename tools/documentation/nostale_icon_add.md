@@ -105,5 +105,5 @@ JavaScript file updated successfully with a new imageMap!
 If an error occurs, an error message will be displayed, such as:
 
 ```txt
-Error: The file ../scripts/icon-loader-nostale.js does not exist.
+Error: The file ../scripts/icon-loader.js does not exist.
 ```

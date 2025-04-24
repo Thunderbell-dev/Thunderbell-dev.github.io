@@ -1,0 +1,38 @@
+const imageMap_Mechanics = {
+    ":angrychicken:": "/images/public/icons/nostale/Mechanics/angrychicken.webp",
+    ":BigChicken:": "/images/public/icons/nostale/Mechanics/BigChicken.webp",
+    ":Bomb:": "/images/public/icons/nostale/Mechanics/Bomb.webp",
+    ":BoneTP:": "/images/public/icons/nostale/Mechanics/BoneTP.gif",
+    ":ChickenEgg:": "/images/public/icons/nostale/Mechanics/ChickenEgg.webp",
+    ":ChickenKing_1:": "/images/public/icons/nostale/Mechanics/ChickenKing_1.webp",
+    ":ChickenKing_2:": "/images/public/icons/nostale/Mechanics/ChickenKing_2.webp",
+    ":ChickenQueen:": "/images/public/icons/nostale/Mechanics/ChickenQueen.webp",
+    ":chicknorris:": "/images/public/icons/nostale/Mechanics/chicknorris.webp",
+    ":ChickyEggBomb:": "/images/public/icons/nostale/Mechanics/ChickyEggBomb.webp",
+    ":Ding:": "/images/public/icons/nostale/Mechanics/Ding.gif",
+    ":EasterEggBomb:": "/images/public/icons/nostale/Mechanics/EasterEggBomb.webp",
+    ":Egg:": "/images/public/icons/nostale/Mechanics/Egg.webp",
+    ":Eggplayer:": "/images/public/icons/nostale/Mechanics/Eggplayer.webp",
+    ":Gourd:": "/images/public/icons/nostale/Mechanics/Gourd.webp",
+    ":hen:": "/images/public/icons/nostale/Mechanics/hen.webp",
+    ":IceFlower:": "/images/public/icons/nostale/Mechanics/IceFlower.webp",
+    ":Lever:": "/images/public/icons/nostale/Mechanics/Lever.gif",
+    ":LoD:": "/images/public/icons/nostale/Mechanics/LoD.webp",
+    ":LoL:": "/images/public/icons/nostale/Mechanics/LoL.webp",
+    ":Mine:": "/images/public/icons/nostale/Mechanics/Mine.webp",
+    ":Mini-Jaja:": "/images/public/icons/nostale/Mechanics/Mini-Jaja.webp",
+    ":MiniPeng:": "/images/public/icons/nostale/Mechanics/MiniPeng.gif",
+    ":RainbowLamp:": "/images/public/icons/nostale/Mechanics/RainbowLamp.webp",
+    ":RiceCake:": "/images/public/icons/nostale/Mechanics/RiceCake.webp",
+    ":Rope:": "/images/public/icons/nostale/Mechanics/Rope.webp",
+    ":SealedVessel:": "/images/public/icons/nostale/Mechanics/SealedVessel.webp",
+    ":SmallChicken:": "/images/public/icons/nostale/Mechanics/SmallChicken.webp",
+    ":smallchickenicon:": "/images/public/icons/nostale/Mechanics/smallchickenicon.webp",
+    ":Teleport:": "/images/public/icons/nostale/Mechanics/Teleport.gif",
+    ":Trigger:": "/images/public/icons/nostale/Mechanics/Trigger.gif",
+    ":Voke_2:": "/images/public/icons/nostale/Mechanics/Voke_2.gif",
+};
+
+document.addEventListener("guideLoaded", function () {
+    replaceTextWithImages(imageMap_Mechanics);
+});

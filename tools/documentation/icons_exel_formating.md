@@ -2,12 +2,12 @@
 
 ## Description
 
-This Python script extracts key-value pairs representing icon names and their corresponding image paths from a JavaScript file (`icon-loader-nostale.js`). It uses regular expressions (regex) to search the file for these pairs and then outputs the results into two separate files: one for the keys (icon names) and one for the values (image paths).
+This Python script extracts key-value pairs representing icon names and their corresponding image paths from a JavaScript file (`icon-loader.js`). It uses regular expressions (regex) to search the file for these pairs and then outputs the results into two separate files: one for the keys (icon names) and one for the values (image paths).
 
 ### Functionality
 
 1. **Reading the JavaScript File**:  
-   The script opens and reads a JavaScript file (`icon-loader-nostale.js`) containing data about game icons. The entire content of the file is loaded into memory as a string for further processing.
+   The script opens and reads a JavaScript file (`icon-loader.js`) containing data about game icons. The entire content of the file is loaded into memory as a string for further processing.
 
 2. **Regular Expression**:  
    A regular expression pattern (`pattern`) is used to search for key-value pairs in the JavaScript file. The pattern specifically matches:
@@ -60,5 +60,5 @@ And the output in `values_output.txt` would be:
 
 ### Notes
 
-- The script assumes that the JavaScript file (`icon-loader-nostale.js`) is located in a directory one level above the script's current directory.
+- The script assumes that the JavaScript file (`icon-loader.js`) is located in a directory one level above the script's current directory.
 - The output is written to the same directory where the script is executed.
