@@ -9,7 +9,7 @@ function replaceTextWithImages(imageMap) {
             const imgSrc = imageMap[placeholder];
             const regex = new RegExp(placeholder, 'g');
             newText = newText.replace(regex, (match) => {
-                return `<img src="${imgSrc}" alt="${placeholder} Icon" class="icon">`;
+                return `<img src="${imgSrc}" alt="${placeholder} Icon" class="icon" width="32" height="32" loading="lazy" decoding="async">`;
             });
         });
 
